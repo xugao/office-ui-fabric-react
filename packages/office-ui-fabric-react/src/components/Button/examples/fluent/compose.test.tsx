@@ -1,27 +1,14 @@
 import { getClassName } from './compose';
+import { ClassCache } from './ClassCache';
 
 describe('compose', () => {
   describe('getClassName', () => {
     it('returns nothing in the default case', () => {
-      expect(getClassName({}, {}, '')).toEqual({});
+      expect(getClassName(new ClassCache(), {}, {}, '')).toEqual({});
     });
 
     it('returns classNames for a single slot', () => {
-      expect(
-        getClassName(
-          {
-            components: {
-              foo: {
-                styles: () => ({
-                  root: {}
-                })
-              }
-            }
-          },
-          {},
-          'foo'
-        )
-      ).toEqual({ root: '' });
+      expect(getClassName(new ClassCache(), {}, {}, '')).toEqual({});
     });
 
     it('returns customized classNames for a single slot', () => {
@@ -33,6 +20,7 @@ describe('compose', () => {
       };
       expect(
         getClassName(
+          new ClassCache(),
           {
             components: {
               foo: {
@@ -64,6 +52,7 @@ describe('compose', () => {
       };
       expect(
         getClassName(
+          new ClassCache(),
           {
             components: {
               foo: {
@@ -102,6 +91,7 @@ describe('compose', () => {
       };
       expect(
         getClassName(
+          new ClassCache(),
           {
             components: {
               foo: {
@@ -122,6 +112,57 @@ describe('compose', () => {
           cssRenderer
         )
       ).toEqual({ root: 'correct' });
+    });
+  });
+
+  describe('caching', () => {
+    it('uses the cache for a simple variant', () => {
+      let counter = 0;
+      const cssRenderer = (args: any) => `class-${counter++}`;
+      const theme = {
+        components: {
+          foo: {
+            variants: {
+              primary: {
+                true: {
+                  root: {
+                    background: '#fff'
+                  }
+                }
+              }
+            }
+          }
+        }
+      };
+      const cache = new ClassCache();
+      const originalClassNames = getClassName(cache, theme, { primary: true }, 'foo', cssRenderer);
+      const nextRenderClassNames = getClassName(cache, theme, { primary: true }, 'foo', cssRenderer);
+      expect(nextRenderClassNames).toEqual(originalClassNames);
+    });
+
+    it('skips the cache for a separate theme', () => {
+      let counter = 0;
+      const cssRenderer = (args: any) => `class-${counter++}`;
+      const theme = {
+        components: {
+          foo: {
+            variants: {
+              primary: {
+                true: {
+                  root: {
+                    background: '#fff'
+                  }
+                }
+              }
+            }
+          }
+        }
+      };
+      const anotherTheme = { ...theme };
+      const cache = new ClassCache();
+      const originalClassNames = getClassName(cache, theme, { primary: true }, 'foo', cssRenderer);
+      const nextRenderClassNames = getClassName(cache, anotherTheme, { primary: true }, 'foo', cssRenderer);
+      expect(nextRenderClassNames).not.toEqual(originalClassNames);
     });
   });
 });

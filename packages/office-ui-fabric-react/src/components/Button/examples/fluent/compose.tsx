@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ProviderContext } from '../Provider';
 import { mergeCss } from '@uifabric/merge-styles';
+import { VariantBasedCacheKeyStrategy, ClassCache } from './ClassCache';
 
 // TODO:
 // 1. how do we know the slots for component?
@@ -38,7 +39,13 @@ const getProps = (cssMap: any, props: any) => {
   return newProps;
 };
 
-export const getClassName = (theme: any, componentProps: any, componentName: string, cssRenderer: (args: any) => string = mergeCss) => {
+export const getClassName = (
+  cache: ClassCache,
+  theme: any,
+  componentProps: any,
+  componentName: string,
+  cssRenderer: (args: any) => string = mergeCss
+) => {
   const stylesAdditions: any = {};
   const variantNames: string[] = [];
 
@@ -66,6 +73,7 @@ export const getClassName = (theme: any, componentProps: any, componentName: str
       });
     });
   }
+  variantNames.sort();
 
   const mergedSlotStyles: any = {};
 
@@ -78,18 +86,25 @@ export const getClassName = (theme: any, componentProps: any, componentName: str
     });
   });
 
-  const cssMap: any = {};
-  slotNames.forEach(slotName => {
-    cssMap[slotName] = cssRenderer(mergedSlotStyles[slotName]);
-  });
+  const mutableCacheEntry: any = {};
+  const cacheKey = new VariantBasedCacheKeyStrategy(variantNames, componentProps);
+  const cacheEntry = cache.getOrSet(theme, cacheKey.toString(), mutableCacheEntry);
 
-  return cssMap;
+  if (cacheEntry !== mutableCacheEntry) {
+    return cacheEntry;
+  }
+  slotNames.forEach(slotName => {
+    mutableCacheEntry[slotName] = cssRenderer(mergedSlotStyles[slotName]);
+  });
+  return mutableCacheEntry;
 };
 
-export const compose = (displayName: string, BaseComponent: any) => (props: any) => {
-  const theme = (React.useContext(ProviderContext) as any)!;
-  const cssMap = getClassName(theme, props, displayName);
-  const newProps = getProps(cssMap, props);
-
-  return <BaseComponent {...newProps} />;
+export const compose = (displayName: string, BaseComponent: any) => {
+  const cache = new ClassCache();
+  return (props: any) => {
+    const theme = (React.useContext(ProviderContext) as any)!;
+    const cssMap = getClassName(cache, theme, props, displayName);
+    const newProps = getProps(cssMap, props);
+    return <BaseComponent {...newProps} />;
+  };
 };
