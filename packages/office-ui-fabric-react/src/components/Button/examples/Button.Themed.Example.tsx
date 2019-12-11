@@ -8,6 +8,22 @@ import { FluentMenu } from './fluent/FluentMenu';
 const oddRedBorder = mergeCss({ border: '10px solid red' });
 const example = mergeCss({ margin: 20 });
 
+const MenuItemText = (props: any) => {
+  return <span {...props}>{props.children}</span>;
+};
+
+// This is a bad API... :(
+const items = [
+  { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Bla' } } },
+  { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Foo' } } }
+];
+
+// Much better in my opinion
+// const items = [
+//   { slots: { text: MenuItemText }, text: { id: 'blabla', children: 'Bla' } },
+//   { slots: { text: MenuItemText }, text: { id: 'blabla', children: 'Foo' } }
+// ];
+
 const Icon: React.FunctionComponent<any> = props => <span {...props}>@</span>;
 export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
   const onClick = React.useCallback(() => console.log('clicked button'), []);
@@ -59,12 +75,8 @@ export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
 
       <h1>Menu</h1>
       <Provider theme={PlannerFluentTheme}>
-        <FluentMenu rounded slotProps={{ items: [{ slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla' } } }] }} />
+        <FluentMenu rounded slotProps={{ items }} />
       </Provider>
     </div>
   );
-};
-
-const MenuItemText = (props: any) => {
-  return <span {...props}>asdf</span>;
 };
