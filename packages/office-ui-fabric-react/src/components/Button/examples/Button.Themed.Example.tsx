@@ -3,6 +3,7 @@ import { mergeCss } from '@uifabric/merge-styles';
 import { Provider } from './Provider';
 import { FluentTheme, PlannerFluentTheme } from './fluent/FluentTheme';
 import { FluentButton } from './fluent/FluentButton';
+import { FluentMenu } from './fluent/FluentMenu';
 
 const oddRedBorder = mergeCss({ border: '10px solid red' });
 const example = mergeCss({ margin: 20 });
@@ -55,6 +56,15 @@ export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
 
       <h1>Planner Fluent Theme</h1>
       <Provider theme={PlannerFluentTheme}>{variants()}</Provider>
+
+      <h1>Menu</h1>
+      <Provider theme={PlannerFluentTheme}>
+        <FluentMenu rounded slotProps={{ items: [{ slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla' } } }] }} />
+      </Provider>
     </div>
   );
+};
+
+const MenuItemText = (props: any) => {
+  return <span {...props}>asdf</span>;
 };

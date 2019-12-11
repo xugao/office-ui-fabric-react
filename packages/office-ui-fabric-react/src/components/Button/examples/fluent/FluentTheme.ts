@@ -61,16 +61,34 @@ export const PlannerFluentTheme: IFluentThemeShape = {
     fontFace: 'Futura'
   },
   components: {
-    FluentButton: FluentButtonTheme
+    FluentButton: FluentButtonTheme,
+    FluentMenu: {
+      styles: () => ({
+        root: {
+          border: '1px solid red'
+        }
+      }),
+      variants: {
+        rounded: {
+          true: {
+            root: { borderRadius: '10px' }
+          }
+        }
+      }
+    },
+    FluentMenuItem: {
+      styles: () => ({
+        root: {
+          border: '1px solid blue'
+        }
+      }),
+      variants: {
+        rounded: {
+          true: {
+            root: { borderRadius: '20' } // FluentMenu should propagate this prop to the FluentMenuItem...
+          }
+        }
+      }
+    }
   }
 };
-
-/**
- *
-  const rootClassName = mergeCss({
-    fontFamily: theme.typography.fontFace,
-    fontSize: theme.typography.ramp[5],
-    backgroundColor: theme.colors.brand.strongest(),
-    color: theme.colors.neutral.weakest()
-  });
- */

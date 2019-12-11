@@ -26,8 +26,8 @@ import { mergeCss } from '@uifabric/merge-styles';
  * 1, 2
  */
 
-const getProps = (cssMap: any, props: any) => {
-  const newProps = { ...props, slotProps: props.slotProps || {} };
+const getProps = (cssMap: any, props: any, slots: any = {}) => {
+  const newProps = { ...props, slotProps: props.slotProps || {}, slots: { ...props.slots, ...slots } };
   Object.keys(cssMap).forEach(slotName => {
     if (!newProps.slotProps[slotName]) {
       newProps.slotProps[slotName] = {};
@@ -90,6 +90,22 @@ export const compose = (displayName: string, BaseComponent: any) => (props: any)
   const theme = (React.useContext(ProviderContext) as any)!;
   const cssMap = getClassName(theme, props, displayName);
   const newProps = getProps(cssMap, props);
+
+  return <BaseComponent {...newProps} />;
+};
+
+export const composeNew = ({
+  themeName,
+  baseComponent: BaseComponent,
+  slots = {}
+}: {
+  themeName: string;
+  baseComponent: any;
+  slots: { [key: string]: any };
+}) => (props: any) => {
+  const theme = (React.useContext(ProviderContext) as any)!;
+  const cssMap = getClassName(theme, props, themeName);
+  const newProps = getProps(cssMap, props, slots);
 
   return <BaseComponent {...newProps} />;
 };
