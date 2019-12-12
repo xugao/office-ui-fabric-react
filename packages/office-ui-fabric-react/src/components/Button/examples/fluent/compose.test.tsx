@@ -165,4 +165,80 @@ describe('compose', () => {
       expect(nextRenderClassNames).not.toEqual(originalClassNames);
     });
   });
+
+  it('correctly merges variants', () => {
+    const cssRendererImportant = (args: any) => {
+      if (args.background === 'red') {
+        return 'correct';
+      }
+      return 'incorrect';
+    };
+    expect(
+      getClassName(
+        new ClassCache(),
+        {
+          components: {
+            foo: {
+              variants: {
+                primary: {
+                  true: {
+                    root: {
+                      background: '#fff'
+                    }
+                  }
+                },
+                important: {
+                  true: {
+                    root: {
+                      background: 'red'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        { primary: true, important: true },
+        'foo',
+        cssRendererImportant
+      )
+    ).toEqual({ root: 'correct' });
+
+    const cssRendererPrimary = (args: any) => {
+      if (args.background === '#fff') {
+        return 'correct';
+      }
+      return 'incorrect';
+    };
+    expect(
+      getClassName(
+        new ClassCache(),
+        {
+          components: {
+            foo: {
+              variants: {
+                important: {
+                  true: {
+                    root: {
+                      background: 'red'
+                    }
+                  }
+                },
+                primary: {
+                  true: {
+                    root: {
+                      background: '#fff'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        { important: true, primary: true },
+        'foo',
+        cssRendererPrimary
+      )
+    ).toEqual({ root: 'correct' });
+  });
 });
