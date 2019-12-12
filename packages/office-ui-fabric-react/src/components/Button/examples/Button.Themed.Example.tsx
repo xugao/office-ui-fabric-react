@@ -3,9 +3,41 @@ import { mergeCss } from '@uifabric/merge-styles';
 import { Provider } from './Provider';
 import { FluentTheme, PlannerFluentTheme } from './fluent/FluentTheme';
 import { FluentButton } from './fluent/FluentButton';
+import { FluentMenu } from './fluent/FluentMenu';
+import { FluentMenuItem } from './fluent/FluentMenuItem';
 
 const oddRedBorder = mergeCss({ border: '10px solid red' });
 const example = mergeCss({ margin: 20 });
+
+const MenuItemText = (props: any) => {
+  return <span {...props}>{props.children}</span>;
+};
+
+// This is a bad API... :(
+const items = [
+  {
+    slots: { text: MenuItemText, menu: FluentMenu },
+    slotProps: {
+      text: { id: 'blabla', children: 'Bla' },
+      menu: {
+        slotProps: {
+          items: [
+            { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Boo' } } },
+            { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Coo' } } }
+          ]
+        }
+      }
+    },
+    rounded: true
+  },
+  { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Foo' } } }
+];
+
+// Much better in my opinion
+// const items = [
+//   { slots: { text: MenuItemText }, text: { id: 'blabla', children: 'Bla' } },
+//   { slots: { text: MenuItemText }, text: { id: 'blabla', children: 'Foo' } }
+// ];
 
 const Icon: React.FunctionComponent<any> = props => <span {...props}>@</span>;
 export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
@@ -37,6 +69,11 @@ export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
           </FluentButton>
         </div>
         <div className={example}>
+          <FluentButton onClick={onClick} shadowed tiny bigIcon>
+            Shadowed tiny bigIcon
+          </FluentButton>
+        </div>
+        <div className={example}>
           <FluentButton onClick={onClick}>A standard fluent button</FluentButton>
         </div>
 
@@ -55,6 +92,12 @@ export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
 
       <h1>Planner Fluent Theme</h1>
       <Provider theme={PlannerFluentTheme}>{variants()}</Provider>
+
+      <h1>Menu</h1>
+      <Provider theme={PlannerFluentTheme}>
+        <FluentMenu rounded slotProps={{ items }} />
+        <FluentMenuItem slots={{ menu: FluentMenu }} slotProps={{ menu: { slotProps: { items: items } } }} />
+      </Provider>
     </div>
   );
 };

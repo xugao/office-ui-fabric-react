@@ -27,8 +27,8 @@ import { VariantBasedCacheKeyStrategy, ClassCache } from './ClassCache';
  * 1, 2
  */
 
-const getProps = (cssMap: any, props: any) => {
-  const newProps = { ...props, slotProps: props.slotProps || {} };
+const getProps = (cssMap: any, props: any, slots: any = {}) => {
+  const newProps = { ...props, slotProps: props.slotProps || {}, slots: { ...props.slots, ...slots } };
   Object.keys(cssMap).forEach(slotName => {
     if (!newProps.slotProps[slotName]) {
       newProps.slotProps[slotName] = {};
@@ -73,7 +73,6 @@ export const getClassName = (
       });
     });
   }
-  variantNames.sort();
 
   const mergedSlotStyles: any = {};
 
@@ -99,12 +98,12 @@ export const getClassName = (
   return mutableCacheEntry;
 };
 
-export const compose = (displayName: string, BaseComponent: any) => {
+export const compose = (displayName: string, BaseComponent: any, settings = { slots: {} }) => {
   const cache = new ClassCache();
   return (props: any) => {
     const theme = (React.useContext(ProviderContext) as any)!;
     const cssMap = getClassName(cache, theme, props, displayName);
-    const newProps = getProps(cssMap, props);
+    const newProps = getProps(cssMap, props, settings.slots);
     return <BaseComponent {...newProps} />;
   };
 };
