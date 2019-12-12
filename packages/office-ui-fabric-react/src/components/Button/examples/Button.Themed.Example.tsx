@@ -69,6 +69,11 @@ export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
           </FluentButton>
         </div>
         <div className={example}>
+          <FluentButton onClick={onClick} shadowed tiny bigIcon>
+            Shadowed tiny bigIcon
+          </FluentButton>
+        </div>
+        <div className={example}>
           <FluentButton onClick={onClick}>A standard fluent button</FluentButton>
         </div>
 
