@@ -4,6 +4,7 @@ import { Provider } from './Provider';
 import { FluentTheme, PlannerFluentTheme } from './fluent/FluentTheme';
 import { FluentButton } from './fluent/FluentButton';
 import { FluentMenu } from './fluent/FluentMenu';
+import { FluentMenuItem } from './fluent/FluentMenuItem';
 
 const oddRedBorder = mergeCss({ border: '10px solid red' });
 const example = mergeCss({ margin: 20 });
@@ -14,7 +15,21 @@ const MenuItemText = (props: any) => {
 
 // This is a bad API... :(
 const items = [
-  { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Bla' } } },
+  {
+    slots: { text: MenuItemText, menu: FluentMenu },
+    slotProps: {
+      text: { id: 'blabla', children: 'Bla' },
+      menu: {
+        slotProps: {
+          items: [
+            { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Boo' } } },
+            { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Coo' } } }
+          ]
+        }
+      }
+    },
+    rounded: true
+  },
   { slots: { text: MenuItemText }, slotProps: { text: { id: 'blabla', children: 'Foo' } } }
 ];
 
@@ -76,6 +91,7 @@ export const ButtonThemedExample: React.FunctionComponent<{}> = props => {
       <h1>Menu</h1>
       <Provider theme={PlannerFluentTheme}>
         <FluentMenu rounded slotProps={{ items }} />
+        <FluentMenuItem slots={{ menu: FluentMenu }} slotProps={{ menu: { slotProps: { items: items } } }} />
       </Provider>
     </div>
   );

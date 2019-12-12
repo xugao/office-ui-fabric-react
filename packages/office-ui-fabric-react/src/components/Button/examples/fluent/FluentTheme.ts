@@ -65,7 +65,8 @@ export const PlannerFluentTheme: IFluentThemeShape = {
     FluentMenu: {
       styles: () => ({
         root: {
-          border: '1px solid red'
+          border: '1px solid red',
+          padding: '10px'
         }
       }),
       variants: {
@@ -85,7 +86,7 @@ export const PlannerFluentTheme: IFluentThemeShape = {
       variants: {
         rounded: {
           true: {
-            root: { borderRadius: '20' } // FluentMenu should propagate this prop to the FluentMenuItem...
+            root: { borderRadius: '20px' } // FluentMenu should propagate this prop to the FluentMenuItem...
           }
         }
       }

@@ -99,28 +99,12 @@ export const getClassName = (
   return mutableCacheEntry;
 };
 
-export const compose = (displayName: string, BaseComponent: any) => {
+export const compose = (displayName: string, BaseComponent: any, settings = { slots: {} }) => {
   const cache = new ClassCache();
   return (props: any) => {
     const theme = (React.useContext(ProviderContext) as any)!;
     const cssMap = getClassName(cache, theme, props, displayName);
-    const newProps = getProps(cssMap, props);
+    const newProps = getProps(cssMap, props, settings.slots);
     return <BaseComponent {...newProps} />;
   };
-};
-
-export const composeNew = ({
-  themeName,
-  baseComponent: BaseComponent,
-  slots = {}
-}: {
-  themeName: string;
-  baseComponent: any;
-  slots: { [key: string]: any };
-}) => (props: any) => {
-  const theme = (React.useContext(ProviderContext) as any)!;
-  const cssMap = getClassName(theme, props, themeName);
-  const newProps = getProps(cssMap, props, slots);
-
-  return <BaseComponent {...newProps} />;
 };
