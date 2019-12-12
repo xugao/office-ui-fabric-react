@@ -57,20 +57,18 @@ export const getClassName = (
   const slotNames: string[] = Object.keys(componentStyles);
 
   if (theme && theme.components && theme.components[componentName] && theme.components[componentName].variants) {
-    theme.components[componentName].variants.forEach((variants: any) => {
-      Object.keys(variants).forEach(variantName => {
-        stylesAdditions[variantName] = {};
-        variantNames.push(variantName);
-        Object.keys(variants[variantName]).forEach(enumValue => {
-          const variant: any = {};
-          stylesAdditions[variantName][enumValue] = variant;
+    Object.keys(theme.components[componentName].variants).forEach(variantName => {
+      stylesAdditions[variantName] = {};
+      variantNames.push(variantName);
+      Object.keys(theme.components[componentName].variants[variantName]).forEach(enumValue => {
+        const variant: any = {};
+        stylesAdditions[variantName][enumValue] = variant;
 
-          Object.keys(variants[variantName][enumValue]).forEach(slotName => {
-            if (!slotNames.find(s => s === slotName)) {
-              slotNames.push(slotName);
-            }
-            variant[slotName] = variants[variantName][enumValue][slotName];
-          });
+        Object.keys(theme.components[componentName].variants[variantName][enumValue]).forEach(slotName => {
+          if (!slotNames.find(s => s === slotName)) {
+            slotNames.push(slotName);
+          }
+          variant[slotName] = theme.components[componentName].variants[variantName][enumValue][slotName];
         });
       });
     });

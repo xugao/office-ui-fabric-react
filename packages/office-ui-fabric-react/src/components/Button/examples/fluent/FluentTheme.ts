@@ -20,42 +20,32 @@ export const FluentButtonTheme = {
       color: colors.neutral.weakest()
     }
   }),
-  variants: [
-    {
-      tiny: {
-        true: {
-          root: { fontSize: '20%' }
-        }
+  variants: {
+    tiny: {
+      true: {
+        root: { fontSize: '20%' }
       }
     },
-    {
-      large: {
-        true: {
-          root: { fontSize: '400%' }
-        }
+    large: {
+      true: {
+        root: { fontSize: '400%' }
       }
     },
-    {
-      size: {
-        s: { root: { fontSize: '100%' } },
-        m: { root: { fontSize: '200%' } },
-        l: { root: { fontSize: '400%' } }
-      }
+    size: {
+      s: { root: { fontSize: '100%' } },
+      m: { root: { fontSize: '200%' } },
+      l: { root: { fontSize: '400%' } }
     },
-    {
-      shadowed: {
-        true: { root: { fontSize: '77%', boxShadow: '10px 5px 5px purple' } }
-      }
+    shadowed: {
+      true: { root: { fontSize: '77%', boxShadow: '10px 5px 5px purple' } }
     },
-    {
-      bigIcon: {
-        true: {
-          root: { fontSize: '300%' },
-          icon: { fontSize: '300%' }
-        }
+    bigIcon: {
+      true: {
+        root: { fontSize: '300%' },
+        icon: { fontSize: '300%' }
       }
     }
-  ]
+  }
 };
 
 export const PlannerFluentTheme: IFluentThemeShape = {
@@ -76,15 +66,13 @@ export const PlannerFluentTheme: IFluentThemeShape = {
           padding: '10px'
         }
       }),
-      variants: [
-        {
-          rounded: {
-            true: {
-              root: { borderRadius: '10px' }
-            }
+      variants: {
+        rounded: {
+          true: {
+            root: { borderRadius: '10px' }
           }
         }
-      ]
+      }
     },
     FluentMenuItem: {
       styles: () => ({
@@ -92,15 +80,13 @@ export const PlannerFluentTheme: IFluentThemeShape = {
           border: '1px solid blue'
         }
       }),
-      variants: [
-        {
-          rounded: {
-            true: {
-              root: { borderRadius: '20px' } // FluentMenu should propagate this prop to the FluentMenuItem...
-            }
+      variants: {
+        rounded: {
+          true: {
+            root: { borderRadius: '20px' } // FluentMenu should propagate this prop to the FluentMenuItem...
           }
         }
-      ]
+      }
     }
   }
 };
