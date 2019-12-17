@@ -55,7 +55,7 @@ export class ComboBoxBasicExample extends React.Component<{}, IComboBoxBasicExam
           {/* This example demonstrates various props, but only `options` is required. */}
           <ComboBox
             defaultSelectedKey="C"
-            label="Single-select ComboBox (uncontrolled, allowFreeform: T, autoComplete: T)"
+            label="Single-select ComboBox"
             allowFreeform
             autoComplete="on"
             options={INITIAL_OPTIONS}

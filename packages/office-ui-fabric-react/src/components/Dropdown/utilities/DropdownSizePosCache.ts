@@ -1,4 +1,4 @@
-import { IDropdownOption, DropdownMenuItemType } from '../Dropdown.types';
+import { ISelectableOption, SelectableOptionMenuItemType } from 'office-ui-fabric-react/lib/';
 
 /**
  * A utility class to cache size and position in cache.
@@ -17,11 +17,11 @@ export class DropdownSizePosCache {
   /**
    * Invalidates the cache and recalculate the size of selectable options.
    */
-  public updateOptions(options: IDropdownOption[]) {
+  public updateOptions(options: ISelectableOption[]) {
     const displayOnlyOptionsCache = [];
     let size = 0;
     for (let i = 0; i < options.length; i++) {
-      if (options[i].itemType === DropdownMenuItemType.Divider || options[i].itemType === DropdownMenuItemType.Header) {
+      if (options[i].itemType === SelectableOptionMenuItemType.Divider || options[i].itemType === SelectableOptionMenuItemType.Header) {
         displayOnlyOptionsCache.push(i);
       } else if (!options[i].hidden) {
         size++;

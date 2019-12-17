@@ -27,6 +27,7 @@ import { KeytipData } from '../../KeytipData';
 import { Label } from '../../Label';
 import { SelectableOptionMenuItemType, getAllSelectedOptions } from '../../utilities/selectableOption/index';
 import { BaseButton, Button } from '../Button/index';
+import { DropdownSizePosCache } from '../Dropdown/utilities/DropdownSizePosCache';
 
 export interface IComboBoxState {
   /** The open state */
@@ -122,6 +123,8 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
     buttonIconProps: { iconName: 'ChevronDown' }
   };
 
+  private _sizePosCache: DropdownSizePosCache = new DropdownSizePosCache();
+
   private _root = React.createRef<HTMLDivElement>();
 
   /** The input aspect of the comboBox */
@@ -190,6 +193,7 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
     this._processingClearPendingInfo = false;
 
     const initialSelectedIndices: number[] = this._getSelectedIndices(props.options, selectedKeys);
+    this._sizePosCache.updateOptions(props.options);
 
     this.state = {
       isOpen: false,
@@ -242,6 +246,13 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
           suggestedDisplayValue: undefined
         });
       }
+    }
+
+    if (
+      newProps.options !== this.props.options && // preexisting code assumes purity of the options...
+      !newProps.multiSelect // only relevant in single selection
+    ) {
+      this._sizePosCache.updateOptions(newProps.options);
     }
   }
 
@@ -403,7 +414,7 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
                 aria-activedescendant={this._getAriaActiveDescentValue()}
                 aria-required={required}
                 aria-disabled={disabled}
-                aria-owns={isOpen ? id + '-list' : undefined}
+                // aria-owns={id + '-list'}
                 spellCheck={false}
                 defaultVisibleValue={this._currentVisibleValue}
                 suggestedDisplayValue={suggestedDisplayValue}
@@ -432,18 +443,17 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
             </div>
           )}
         </KeytipData>
-        {(persistMenu || isOpen) &&
-          onRenderContainer(
-            {
-              ...this.props,
-              onRenderList,
-              onRenderItem,
-              onRenderOption,
-              options: this.state.currentOptions.map((item, index) => ({ ...item, index: index })),
-              onDismiss: this._onDismiss
-            },
-            this._onRenderContainer
-          )}
+        {onRenderContainer(
+          {
+            ...this.props,
+            onRenderList,
+            onRenderItem,
+            onRenderOption,
+            options: this.state.currentOptions.map((item, index) => ({ ...item, index: index })),
+            onDismiss: this._onDismiss
+          },
+          this._onRenderContainer
+        )}
         <div
           role="region"
           aria-live="polite"
@@ -1140,7 +1150,6 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
       onRenderUpperContent = this._onRenderUpperContent,
       onRenderLowerContent = this._onRenderLowerContent,
       useComboBoxAsMenuWidth,
-      persistMenu,
       shouldRestoreFocus = true
     } = props;
 
@@ -1165,7 +1174,7 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
         setInitialFocus={false}
         calloutWidth={useComboBoxAsMenuWidth && this._comboBoxWrapper.current ? comboBoxMenuWidth && comboBoxMenuWidth : dropdownWidth}
         calloutMaxWidth={dropdownMaxWidth ? dropdownMaxWidth : comboBoxMenuWidth}
-        hidden={persistMenu ? !isOpen : undefined}
+        hidden={!isOpen}
         shouldRestoreFocus={shouldRestoreFocus}
       >
         {onRenderUpperContent(this.props, this._onRenderUpperContent)}
@@ -1272,6 +1281,8 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
           onMouseMove={this._onOptionMouseMove.bind(this, item.index)}
           onMouseLeave={this._onOptionMouseLeave}
           role="option"
+          aria-posinset={this._sizePosCache.positionInSet(item.index)}
+          aria-setsize={this._sizePosCache.optionSetSize}
           aria-selected={isSelected ? 'true' : 'false'}
           ariaLabel={this._getPreviewText(item)}
           disabled={item.disabled}
@@ -2057,10 +2068,8 @@ export class ComboBox extends BaseComponent<IComboBoxProps, IComboBoxState> {
    */
   private _getAriaActiveDescentValue(): string | undefined {
     let descendantText =
-      this.state.isOpen && this.state.selectedIndices && this.state.selectedIndices.length >= 0
-        ? this._id + '-list' + this.state.selectedIndices[0]
-        : undefined;
-    if (this.state.isOpen && this.state.focused && this.state.currentPendingValueValidIndex !== -1) {
+      this.state.selectedIndices && this.state.selectedIndices.length >= 0 ? this._id + '-list' + this.state.selectedIndices[0] : undefined;
+    if (this.state.focused && this.state.currentPendingValueValidIndex !== -1) {
       descendantText = this._id + '-list' + this.state.currentPendingValueValidIndex;
     }
     return descendantText;
