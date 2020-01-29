@@ -86,22 +86,20 @@ export function transformExample(params: ITransformExampleParams): ITransformedC
 
   // Generate Fabric wrapper stuff for the component if appropriate
   let finalComponent = component;
+
   if (identifiersByGlobal.Fabric) {
     // If this is a Fabric example, wrap in a <Fabric> (and add an import for that if needed),
     // and initialize icons in case the example uses them.
     finalComponent = component + 'Wrapper';
 
-    // rename to avoid conflict with window.Fabric
-    const renamedFabricComponent = 'FabricComponent';
-
     // If eval-ing the code, the component can't use JSX format
     const wrapperCode = returnFunction
-      ? `React.createElement(${renamedFabricComponent}, null, React.createElement(${component}, null))`
-      : `<${renamedFabricComponent}><${component} /></${renamedFabricComponent}>`;
+      ? `React.createElement(Fabric, null, React.createElement(${component}, null))`
+      : `<Fabric><${component} /></Fabric>`;
     lines.push('', `const ${finalComponent} = () => ${wrapperCode};`);
 
     if (identifiersByGlobal.Fabric.indexOf('Fabric') === -1) {
-      identifiersByGlobal.Fabric.push(`Fabric: ${renamedFabricComponent}`);
+      identifiersByGlobal.Fabric.push('Fabric');
     }
 
     if (identifiersByGlobal.Fabric.indexOf('initializeIcons') === -1) {
