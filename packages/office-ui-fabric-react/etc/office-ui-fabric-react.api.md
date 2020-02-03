@@ -3277,7 +3277,7 @@ export interface IDetailsColumnProps extends React.ClassAttributes<DetailsColumn
     isDropped?: boolean;
     onColumnClick?: (ev: React.MouseEvent<HTMLElement>, column: IColumn) => void;
     onColumnContextMenu?: (column: IColumn, ev: React.MouseEvent<HTMLElement>) => void;
-    onRenderColumnHeaderTooltip?: IRenderFunction<ITooltipHostProps>;
+    onRenderColumnHeaderTooltip?: IRenderFunction<IDetailsColumnRenderTooltipProps>;
     parentId?: string;
     // @deprecated (undocumented)
     setDraggedItemIndex?: (itemIndex: number) => void;
@@ -3287,6 +3287,11 @@ export interface IDetailsColumnProps extends React.ClassAttributes<DetailsColumn
         itemIndex: number;
     }, event?: MouseEvent) => void;
     useFastIcons?: boolean;
+}
+
+// @public (undocumented)
+export interface IDetailsColumnRenderTooltipProps extends ITooltipHostProps {
+    column?: IColumn;
 }
 
 // @public (undocumented)
@@ -3367,7 +3372,7 @@ export interface IDetailsHeaderBaseProps extends React.ClassAttributes<DetailsHe
     onColumnContextMenu?: (column: IColumn, ev: React.MouseEvent<HTMLElement>) => void;
     onColumnIsSizingChanged?: (column: IColumn, isSizing: boolean) => void;
     onColumnResized?: (column: IColumn, newWidth: number, columnIndex: number) => void;
-    onRenderColumnHeaderTooltip?: IRenderFunction<ITooltipHostProps>;
+    onRenderColumnHeaderTooltip?: IRenderFunction<IDetailsColumnRenderTooltipProps>;
     onRenderDetailsCheckbox?: IRenderFunction<IDetailsCheckboxProps>;
     onToggleCollapseAll?: (isAllCollapsed: boolean) => void;
     selectAllVisibility?: SelectAllVisibility;
@@ -4281,6 +4286,7 @@ export interface IDragDropContext {
 // @public
 export interface IDragDropEvents {
     canDrag?: (item?: any) => boolean;
+    canDragGroups?: boolean;
     canDrop?: (dropContext?: IDragDropContext, dragContext?: IDragDropContext) => boolean;
     onDragEnd?: (item?: any, event?: DragEvent) => void;
     onDragEnter?: (item?: any, event?: DragEvent) => string;
@@ -4433,6 +4439,30 @@ export interface IDropHintDetails {
     originX: number;
     // (undocumented)
     startX: number;
+}
+
+// @public (undocumented)
+export interface IEditingSelectedPeopleItemProps extends ISelectedPeopleItemProps {
+    // (undocumented)
+    floatingPickerProps?: IBaseFloatingPickerProps<IPersonaProps>;
+    // (undocumented)
+    getEditingItemText?: (item: IExtendedPersonaProps) => string;
+    // (undocumented)
+    onEditingComplete: (oldItem: any, newItem: any) => void;
+    // (undocumented)
+    onRenderFloatingPicker?: React.ComponentType<IBaseFloatingPickerProps<IPersonaProps>>;
+}
+
+// @public (undocumented)
+export interface IEditingSelectedPeopleItemStyles {
+    // (undocumented)
+    input: IStyle;
+    // (undocumented)
+    root: IStyle;
+}
+
+// @public (undocumented)
+export interface IEditingSelectedPeopleItemStylesProps {
 }
 
 // @public
