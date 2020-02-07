@@ -34,14 +34,14 @@ export class DetailsListBasicExample extends React.Component<{}, IDetailsListBas
       onSelectionChanged: () => this.setState({ selectionDetails: this._getSelectionDetails() })
     });
 
-    const theme = createTheme({
-      semanticColors: {
-        listText: 'red',
-        listBackground: 'pink'
-      }
-    });
+    // const theme = createTheme({
+    //   semanticColors: {
+    //     listText: 'red',
+    //     listBackground: 'pink'
+    //   }
+    // });
 
-    loadTheme(theme);
+    // loadTheme(theme);
 
     // Populate with items for demos.
     this._allItems = [];

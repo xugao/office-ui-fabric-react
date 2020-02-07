@@ -61,48 +61,56 @@ export const getStyles = (props: IDetailsRowStyleProps): IDetailsRowStyles => {
     enableUpdateAnimations
   } = props;
 
-  const { palette, fonts } = theme;
-  const { neutralPrimary, white, neutralSecondary, neutralLighter, neutralLight, neutralDark, neutralQuaternaryAlt } = palette;
-  const { focusBorder } = theme.semanticColors;
+  const { fonts, semanticColors } = theme;
+  const {
+    focusBorder,
+    listBackground,
+    listHeaderText,
+    listHeaderHovered,
+    listItemText,
+    listItemBackgroundHovered,
+    listItemBackgroundChecked,
+    listItemBackgroundCheckedHovered
+  } = semanticColors;
 
   const classNames = getGlobalClassNames(DetailsRowGlobalClassNames, theme);
 
   const colors = {
     // Default
-    defaultHeaderText: neutralPrimary,
-    defaultMetaText: neutralSecondary,
-    defaultBackground: white,
+    defaultHeaderText: listHeaderText,
+    defaultMetaText: listItemText,
+    defaultBackground: listBackground,
 
     // Default Hover
-    defaultHoverHeaderText: neutralDark,
-    defaultHoverMetaText: neutralPrimary,
-    defaultHoverBackground: neutralLighter,
+    defaultHoverHeaderText: listHeaderHovered,
+    defaultHoverMetaText: listHeaderText,
+    defaultHoverBackground: listItemBackgroundHovered,
 
     // Selected
-    selectedHeaderText: neutralDark,
-    selectedMetaText: neutralPrimary,
-    selectedBackground: neutralLight,
+    selectedHeaderText: listHeaderHovered,
+    selectedMetaText: listHeaderText,
+    selectedBackground: listItemBackgroundChecked,
 
     // Selected Hover
-    selectedHoverHeaderText: neutralDark,
-    selectedHoverMetaText: neutralPrimary,
-    selectedHoverBackground: neutralQuaternaryAlt,
+    selectedHoverHeaderText: listHeaderHovered,
+    selectedHoverMetaText: listHeaderText,
+    selectedHoverBackground: listItemBackgroundCheckedHovered,
 
     // Focus
-    focusHeaderText: neutralDark,
-    focusMetaText: neutralPrimary,
-    focusBackground: neutralLight,
-    focusHoverBackground: neutralQuaternaryAlt
+    focusHeaderText: listHeaderHovered,
+    focusMetaText: listHeaderText,
+    focusBackground: listItemBackgroundChecked,
+    focusHoverBackground: listItemBackgroundCheckedHovered
   };
 
   // Selected row styles
   const selectedStyles: IStyle = [
-    getFocusStyle(theme, { inset: -1, borderColor: focusBorder, outlineColor: white }),
+    getFocusStyle(theme, { inset: -1, borderColor: focusBorder, outlineColor: listBackground }),
     classNames.isSelected,
     {
       color: colors.selectedMetaText,
       background: colors.selectedBackground,
-      borderBottom: `1px solid ${white}`,
+      borderBottom: `1px solid ${listBackground}`,
       selectors: {
         '&:before': {
           position: 'absolute',
@@ -113,7 +121,7 @@ export const getStyles = (props: IDetailsRowStyleProps): IDetailsRowStyles => {
           left: 0,
           right: 0,
           content: '',
-          borderTop: `1px solid ${white}`
+          borderTop: `1px solid ${listBackground}`
         },
 
         // Selected State hover
@@ -243,7 +251,7 @@ export const getStyles = (props: IDetailsRowStyleProps): IDetailsRowStyles => {
           maxWidth: '100%'
         },
 
-        [IsFocusableSelector]: getFocusStyle(theme, { inset: -1, borderColor: neutralSecondary, outlineColor: white })
+        [IsFocusableSelector]: getFocusStyle(theme, { inset: -1, borderColor: listItemText, outlineColor: listBackground })
       }
     },
 
@@ -272,9 +280,9 @@ export const getStyles = (props: IDetailsRowStyleProps): IDetailsRowStyles => {
       droppingClassName,
       theme.fonts.small,
       isCheckVisible && classNames.isCheckVisible,
-      getFocusStyle(theme, { borderColor: focusBorder, outlineColor: white }),
+      getFocusStyle(theme, { borderColor: focusBorder, outlineColor: listBackground }),
       {
-        borderBottom: `1px solid ${neutralLighter}`,
+        borderBottom: `1px solid ${listItemBackgroundHovered}`,
         background: colors.defaultBackground,
         color: colors.defaultMetaText,
         display: 'inline-flex', // This ensures that the row always tries to consume is minimum width and does not compress.

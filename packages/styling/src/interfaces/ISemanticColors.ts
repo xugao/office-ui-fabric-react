@@ -343,9 +343,15 @@ export interface ISemanticColors extends ISemanticTextColors {
   listBackground: string;
 
   /**
+   * @deprecated
    * The default text color for list item titles and text in column fields.
    */
   listText: string;
+
+  /**
+   * The text color for list text in list rows.
+   */
+  listItemText: string;
 
   /**
    * The background color of a hovered list item.
@@ -361,6 +367,16 @@ export interface ISemanticColors extends ISemanticTextColors {
    * The background color of a checked and hovered list item.
    */
   listItemBackgroundCheckedHovered: string;
+
+  /**
+   * The text color for list header.
+   */
+  listHeaderText: string;
+
+  /**
+   * The hovered text color for list header.
+   */
+  listHeaderHovered: string;
 
   /**
    * The background color for a hovered list header.

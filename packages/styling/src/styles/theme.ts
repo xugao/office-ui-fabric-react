@@ -258,11 +258,13 @@ function _makeSemanticColorsFromPalette(p: IPalette, isInverted: boolean, depCom
 
     // LISTS
     listBackground: p.white,
-    listText: p.neutralPrimary,
+    listItemText: p.neutralSecondary,
     listItemBackgroundHovered: p.neutralLighter,
     listItemBackgroundChecked: p.neutralLight,
     listItemBackgroundCheckedHovered: p.neutralQuaternaryAlt,
 
+    listHeaderText: p.neutralPrimary,
+    listHeaderHovered: p.neutralDark,
     listHeaderBackgroundHovered: p.neutralLighter,
     listHeaderBackgroundPressed: p.neutralLight,
 
@@ -287,7 +289,8 @@ function _makeSemanticColorsFromPalette(p: IPalette, isInverted: boolean, depCom
 
     // Deprecated slots, second pass by _fixDeprecatedSlots() later for self-referential slots
     listTextColor: '',
-    menuItemBackgroundChecked: p.neutralLight
+    menuItemBackgroundChecked: p.neutralLight,
+    listText: p.neutralPrimary
   };
 
   return _fixDeprecatedSlots(toReturn, depComments!);
