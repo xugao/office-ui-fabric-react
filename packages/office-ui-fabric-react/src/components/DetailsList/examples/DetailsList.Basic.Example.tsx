@@ -4,7 +4,7 @@ import { TextField } from 'office-ui-fabric-react/lib/TextField';
 import { DetailsList, DetailsListLayoutMode, Selection, IColumn } from 'office-ui-fabric-react/lib/DetailsList';
 import { MarqueeSelection } from 'office-ui-fabric-react/lib/MarqueeSelection';
 import { Fabric } from 'office-ui-fabric-react/lib/Fabric';
-import { mergeStyles } from 'office-ui-fabric-react/lib/Styling';
+import { mergeStyles, createTheme, loadTheme } from 'office-ui-fabric-react/lib/Styling';
 
 const exampleChildClass = mergeStyles({
   display: 'block',
@@ -33,6 +33,15 @@ export class DetailsListBasicExample extends React.Component<{}, IDetailsListBas
     this._selection = new Selection({
       onSelectionChanged: () => this.setState({ selectionDetails: this._getSelectionDetails() })
     });
+
+    const theme = createTheme({
+      semanticColors: {
+        listText: 'red',
+        listBackground: 'pink'
+      }
+    });
+
+    loadTheme(theme);
 
     // Populate with items for demos.
     this._allItems = [];
