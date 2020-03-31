@@ -155,7 +155,6 @@ const _getClasses = (
     });
 
     if (!specialStyleEval) {
-      console.log('compose: mergeCssSets: ' + name);
       classes = mergeCssSets([styles], { rtl: theme.direction === 'rtl' });
     }
 

@@ -38,7 +38,6 @@ export const ThemeProvider = (props: React.PropsWithChildren<IThemeProviderProps
     };
   }
 
-  console.log('rendering the theme provider', customizerContext);
   return (
     <ThemeContext.Provider value={fullTheme}>
       <Box dir={direction} {...rest} />

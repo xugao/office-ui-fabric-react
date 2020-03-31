@@ -72,7 +72,6 @@ export function classNamesFunction<TStyleProps extends {}, TStyleSet extends ISt
       currentMemoizedClassNames = _memoizedClassNames;
       map = new Map();
       resultCount = 0;
-      console.log(`getClassNames - ${options.componentName}`, 'On reset of our stylesheet, reset memoized cache');
     }
 
     if (!options.disableCaching) {
@@ -80,15 +79,10 @@ export function classNamesFunction<TStyleProps extends {}, TStyleSet extends ISt
       current = _traverseMap(current, styleProps);
     }
 
-    if (disableCaching) {
-      console.log('getClassNames disabled Caching');
-    }
-    console.log(`getClassNames - ${options.componentName} - map`, map, (current as any)[RetVal]);
     if (disableCaching || !(current as any)[RetVal]) {
       if (styleFunctionOrObject === undefined) {
         (current as any)[RetVal] = {} as IProcessedStyleSet<TStyleSet>;
       } else {
-        console.log(`mergeCssSets - ${options.componentName}`, resultCount);
         (current as any)[RetVal] = mergeCssSets(
           [
             (typeof styleFunctionOrObject === 'function'
@@ -97,7 +91,6 @@ export function classNamesFunction<TStyleProps extends {}, TStyleSet extends ISt
           ],
           { rtl: !!rtl },
         );
-        console.log(`getClassNames - ${options.componentName} - map after ${RetVal}`, map);
       }
 
       if (!disableCaching) {
