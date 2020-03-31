@@ -25,6 +25,7 @@ module.exports = resources.createServeConfig({
       'office-ui-fabric-react/lib': path.resolve(__dirname, '../../packages/office-ui-fabric-react/src'),
       'office-ui-fabric-react/src': path.resolve(__dirname, '../../packages/office-ui-fabric-react/src'),
       '@uifabric/theme-samples$': path.join(__dirname, '../../packages/theme-samples/src'),
+      '@uifabric/react-theming$': path.join(__dirname, '../../packages/react-theming/src'),
       'Props.ts.js': 'Props',
       'Example.tsx.js': 'Example',
     },

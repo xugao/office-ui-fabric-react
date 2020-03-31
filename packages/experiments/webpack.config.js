@@ -10,6 +10,7 @@ const alias = {
   '@uifabric/experiments': path.join(__dirname, 'lib'),
   '@uifabric/fluent-theme$': path.join(__dirname, '../../packages/fluent-theme/src'),
   '@uifabric/theme-samples$': path.join(__dirname, '../../packages/theme-samples/src'),
+  '@uifabric/react-theming$': path.join(__dirname, '../../packages/react-theming/src'),
 };
 
 module.exports = [

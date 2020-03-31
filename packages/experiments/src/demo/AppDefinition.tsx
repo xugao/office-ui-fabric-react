@@ -10,6 +10,12 @@ export const AppDefinition: IAppDefinition = {
     {
       links: [
         {
+          component: require<any>('../compose/ComposeExample').ComposeExample,
+          key: 'Compose',
+          name: 'Compose',
+          url: '#/examples/compose',
+        },
+        {
           component: require<any>('../components/Button/ButtonPage').ButtonPage,
           key: 'Button',
           name: 'Button',
