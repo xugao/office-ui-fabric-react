@@ -69,6 +69,7 @@
     "@uifabric/utilities": "^7.15.4",
     "@uifabric/variants": "^7.1.35",
     "@uifabric/react-theming": "^0.0.1",
+    "perf-test": "^7.0.0",
     "deep-assign": "^2.0.0",
     "office-ui-fabric-react": "^7.105.5",
     "prop-types": "^15.7.2",

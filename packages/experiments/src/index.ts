@@ -19,5 +19,5 @@ export * from './Tile';
 export * from './TilesList';
 export * from './Toggle';
 export * from './VirtualizedList';
-
+export * from './compose/ChoiceGroupCompose';
 import './version';

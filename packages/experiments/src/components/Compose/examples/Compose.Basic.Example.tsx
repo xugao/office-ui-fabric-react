@@ -2,7 +2,8 @@ import { IComponentDemoPageProps } from '@uifabric/example-app-base';
 import { ITheme, ThemeProvider } from '@uifabric/react-theming';
 import { Label } from 'office-ui-fabric-react';
 import * as React from 'react';
-import { MyLabel } from './../../../compose/Label/Label';
+import { ChoiceGroup } from 'perf-test/lib/scenarios/ChoiceGroup';
+import { ChoiceGroupNew } from 'perf-test/lib/scenarios/ChoiceGroupNew';
 
 const theme: ITheme = {
   direction: 'ltr',
@@ -54,12 +55,9 @@ export const StyledLabelBasicExample: React.FunctionComponent<IComponentDemoPage
     <ThemeProvider theme={theme}>
       <button onClick={onIncrement}>increment</button>
       <Label required>Lorem ipsum dolor sit amet {count}</Label>
-      <Label required>Lorem ipsum dolor sit amet</Label>
-      <Label required>Lorem ipsum dolor sit amet</Label>
-      <Label required>Lorem ipsum dolor sit amet</Label>
-      <Label required>Lorem ipsum dolor sit amet</Label>
-      <Label required>Lorem ipsum dolor sit amet</Label>
-      <Label required>Lorem ipsum dolor sit amet</Label>
     </ThemeProvider>
   );
 };
+
+export const OriginalChoiceGroupExample = ChoiceGroup;
+export const ComposedChoiceGroupExample = ChoiceGroupNew;
