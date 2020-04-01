@@ -69,7 +69,7 @@ export const ChoiceGroupNew = () => (
           text: 'Option D',
         },
       ]}
-      label="Pick one"
+      // label="Pick one"
       required={true}
     />
   </ThemeProvider>

@@ -4,6 +4,8 @@ import { Label } from 'office-ui-fabric-react';
 import * as React from 'react';
 import { ChoiceGroup } from 'perf-test/lib/scenarios/ChoiceGroup';
 import { ChoiceGroupNew } from 'perf-test/lib/scenarios/ChoiceGroupNew';
+import { ChoiceGroupBase } from 'perf-test/lib/scenarios/ChoiceGroupBase';
+import { ComposeExample } from '../../../compose/ComposeExample';
 
 const theme: ITheme = {
   direction: 'ltr',
@@ -48,6 +50,8 @@ const theme: ITheme = {
   schemes: {},
 };
 
+export const FullExample = ComposeExample;
+
 export const StyledLabelBasicExample: React.FunctionComponent<IComponentDemoPageProps> = props => {
   const [count, setCount] = React.useState(0);
   const onIncrement = () => setCount(count + 1);
@@ -59,5 +63,6 @@ export const StyledLabelBasicExample: React.FunctionComponent<IComponentDemoPage
   );
 };
 
-export const OriginalChoiceGroupExample = ChoiceGroup;
+export const ChoiceGroupBaseExample = ChoiceGroupBase;
+export const ChoiceGroupExample = ChoiceGroup;
 export const ComposedChoiceGroupExample = ChoiceGroupNew;

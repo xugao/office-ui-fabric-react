@@ -23,6 +23,5 @@ export const MyChoiceGroup = compose(
   },
   {
     tokens: legacyTokenMapper,
-    styles: legacyStyleMapper(getStyles),
   },
 );
