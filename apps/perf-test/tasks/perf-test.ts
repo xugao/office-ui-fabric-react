@@ -1,6 +1,7 @@
 // @ts-check
 
 const fs = require('fs');
+const { readFileSync } = require('fs-extra');
 const path = require('path');
 const flamegrill = require('flamegrill');
 const scenarioIterations = require('../src/scenarioIterations');
@@ -204,6 +205,7 @@ const urlForMaster = process.env.SYSTEM_PULLREQUEST_TARGETBRANCH
   : 'http://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/perf-test/index.html';
 
 const outDir = path.join(__dirname, '../dist');
+const reportDir = path.join(__dirname, '../reports');
 const tempDir = path.join(__dirname, '../logfiles');
 
 module.exports = async function getPerfRegressions() {
@@ -252,8 +254,10 @@ module.exports = async function getPerfRegressions() {
       console.log(`Unexpected files already present in ${tempDir}`);
       tempContents.forEach(logFile => {
         const logFilePath = path.join(tempDir, logFile);
-        console.log(`Deleting ${logFilePath}`);
-        fs.unlinkSync(logFilePath);
+        if (!logFilePath.indexOf('-prev')) {
+          console.log(`Deleting ${logFilePath}`);
+          fs.unlinkSync(logFilePath);
+        }
       });
     }
   }
@@ -268,10 +272,23 @@ module.exports = async function getPerfRegressions() {
   console.log(`Writing comment to file:\n${comment}`);
 
   // Write results to file
-  fs.writeFileSync(path.join(outDir, 'perfCounts.html'), comment);
+  const reportPath = path.join(reportDir, 'perfCounts.html');
+  let reportContent;
+  try {
+    if (await fs.existsSync(reportPath)) {
+      reportContent = await readFileSync(reportPath);
+    } else {
+      console.warn('No previous results');
+    }
+  } catch (err) {
+    console.error(err);
+  }
 
-  // console.log(`##vso[task.setvariable variable=PerfCommentFilePath;]apps/perf-test/dist/perfCounts.html`);
-  // console.log(`##vso[task.setvariable variable=PerfCommentStatus;]${status}`);
+  if (reportContent) {
+    fs.writeFileSync(path.join(reportDir, 'perfCounts-prev.html'), reportContent);
+  }
+
+  fs.writeFileSync(reportPath, comment);
 };
 
 /**
