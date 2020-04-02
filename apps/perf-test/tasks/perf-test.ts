@@ -236,7 +236,7 @@ module.exports = async function getPerfRegressions() {
     // Array.from({ length: 20 }, (entry, index) => {
     scenarios[scenarioName] = {
       // scenarios[scenarioName + index] = {
-      baseline: `${urlForMaster}?scenario=${scenarioName}&iterations=${iterations}`,
+      // baseline: `${urlForMaster}?scenario=${scenarioName}&iterations=${iterations}`,
       scenario: `${urlForDeploy}?scenario=${scenarioName}&iterations=${iterations}`,
     };
   });
@@ -263,21 +263,15 @@ module.exports = async function getPerfRegressions() {
   /** @type {CookResults} */
   const scenarioResults = await flamegrill.cook(scenarios, scenarioConfig);
 
-  let comment = createReport(scenarioResults);
+  const comment = createReport(scenarioResults);
 
-  comment = comment.concat(getFluentPerfRegressions());
-
-  // TODO: determine status according to perf numbers
-  const status = 'success';
-
-  console.log(`Perf evaluation status: ${status}`);
   console.log(`Writing comment to file:\n${comment}`);
 
   // Write results to file
   fs.writeFileSync(path.join(outDir, 'perfCounts.html'), comment);
 
-  console.log(`##vso[task.setvariable variable=PerfCommentFilePath;]apps/perf-test/dist/perfCounts.html`);
-  console.log(`##vso[task.setvariable variable=PerfCommentStatus;]${status}`);
+  // console.log(`##vso[task.setvariable variable=PerfCommentFilePath;]apps/perf-test/dist/perfCounts.html`);
+  // console.log(`##vso[task.setvariable variable=PerfCommentStatus;]${status}`);
 };
 
 /**
@@ -287,17 +281,7 @@ module.exports = async function getPerfRegressions() {
  * @returns {string}
  */
 function createReport(testResults) {
-  const report = '## [Perf Analysis](https://github.com/microsoft/fluentui/wiki/Perf-Testing)\n'
-
-    // Show only significant changes by default.
-    .concat(createScenarioTable(testResults, false))
-
-    // Show all results in a collapsible table.
-    .concat('<details><summary>All results</summary><p>')
-    .concat(createScenarioTable(testResults, true))
-    .concat('</p></details>\n\n');
-
-  return report;
+  return createScenarioTable(testResults, true);
 }
 
 /**
@@ -321,26 +305,14 @@ function createScenarioTable(testResults, showAll) {
   }
 
   const result = `
-  <table>
-  <tr>
-    <th>Scenario</th>
-    <th>
-      <a href="https://github.com/microsoft/fluentui/wiki/Perf-Testing#why-are-results-listed-in-ticks-instead-of-time-units">Master Ticks</a>
-    </th>
-    <th>
-      <a href="https://github.com/microsoft/fluentui/wiki/Perf-Testing#why-are-results-listed-in-ticks-instead-of-time-units">PR Ticks</a>
-    </th>
-    <th>Status</th>
-  </tr>`.concat(
+  <table>`.concat(
     resultsToDisplay
       .map(key => {
         const testResult = testResults[key];
 
         return `<tr>
             <td>${scenarioNames[key] || key}</td>
-            ${getCell(testResult, true)}
             ${getCell(testResult, false)}
-            ${getRegression(testResult)}
            </tr>`;
       })
       .join('\n')
