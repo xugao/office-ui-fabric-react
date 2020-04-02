@@ -8,8 +8,6 @@ const scenarioIterations = require('../src/scenarioIterations');
 const scenarioNames = require('../src/scenarioNames');
 const { argv } = require('@uifabric/build').just;
 
-import { getFluentPerfRegressions } from './fluentPerfRegressions';
-
 // TODO: consolidate with newer version of fluent perf-test
 
 // Flamegrill Types
@@ -211,6 +209,7 @@ const tempDir = path.join(__dirname, '../logfiles');
 module.exports = async function getPerfRegressions() {
   const iterationsArgv = /** @type {number} */ argv().iterations;
   const iterationsArg = Number.isInteger(iterationsArgv) && iterationsArgv;
+  const tag = argv().tag;
 
   const scenariosAvailable = fs
     .readdirSync(path.join(__dirname, '../src/scenarios'))
@@ -244,18 +243,18 @@ module.exports = async function getPerfRegressions() {
   });
   // });
 
-  console.log(`\nRunning scenarios:`);
-  console.dir(scenarios);
+  // console.log(`\nRunning scenarios:`);
+  // console.dir(scenarios);
 
   if (fs.existsSync(tempDir)) {
     const tempContents = fs.readdirSync(tempDir);
 
     if (tempContents.length > 0) {
-      console.log(`Unexpected files already present in ${tempDir}`);
+      // console.log(`Unexpected files already present in ${tempDir}`);
       tempContents.forEach(logFile => {
         const logFilePath = path.join(tempDir, logFile);
         if (!logFilePath.indexOf('-prev')) {
-          console.log(`Deleting ${logFilePath}`);
+          // console.log(`Deleting ${logFilePath}`);
           fs.unlinkSync(logFilePath);
         }
       });
@@ -269,10 +268,12 @@ module.exports = async function getPerfRegressions() {
 
   const comment = createReport(scenarioResults);
 
-  console.log(`Writing comment to file:\n${comment}`);
+  // console.log(`Writing comment to file:\n${comment}`);
 
   // Write results to file
-  const reportPath = path.join(reportDir, 'perfCounts.html');
+  const resultFileNamePrefix = tag ? `perfCounts-${tag}` : 'perfCounts';
+
+  const reportPath = path.join(reportDir, resultFileNamePrefix + '.json');
   let reportContent;
   try {
     if (await fs.existsSync(reportPath)) {
@@ -285,10 +286,10 @@ module.exports = async function getPerfRegressions() {
   }
 
   if (reportContent) {
-    fs.writeFileSync(path.join(reportDir, 'perfCounts-prev.html'), reportContent);
+    fs.writeFileSync(path.join(reportDir, resultFileNamePrefix + '-prev.json'), reportContent);
   }
 
-  fs.writeFileSync(reportPath, comment);
+  fs.writeFileSync(reportPath, JSON.stringify(scenarioResults, null, 4));
 };
 
 /**
@@ -336,7 +337,7 @@ function createScenarioTable(testResults, showAll) {
       .concat(`</table>`),
   );
 
-  console.log('result: ' + result);
+  // console.log('result: ' + result);
 
   return result;
 }
@@ -363,7 +364,7 @@ function getCell(testResult, getBaseline) {
   const cell = errorFile
     ? `<a href="${urlForDeployPath}/${path.basename(errorFile)}">err</a>`
     : flamegraphFile
-    ? `<a href="${urlForDeployPath}/${path.basename(flamegraphFile)}">${numTicks}</a>`
+    ? `${numTicks}`
     : `n/a`;
 
   return `<td>${cell}</td>`;
