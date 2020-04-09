@@ -137,6 +137,7 @@
     "screener-runner": "^0.10.43",
     "semver": "^6.2.0",
     "source-map-loader": "^0.2.4",
+    "storybook-addon-performance": "^0.7.0",
     "style-loader": "^0.21.0",
     "through2": "^2.0.3",
     "tmp": "^0.0.33",
