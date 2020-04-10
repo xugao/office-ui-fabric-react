@@ -14,5 +14,12 @@ export const config: BeachballConfig = {
       renderHeader,
       renderEntry,
     },
+    groups: [
+      {
+        masterPackageName: '@fluentui/react-northstar',
+        changelogPath: 'packages/fluentui',
+        include: ['packages/fluentui/*'],
+      },
+    ],
   },
 };
