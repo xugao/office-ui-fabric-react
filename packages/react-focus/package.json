@@ -61,5 +61,12 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "beachball": {
+    "disallowedChangeTypes": [
+      "major",
+      "minor",
+      "patch"
+    ]
   }
 }
