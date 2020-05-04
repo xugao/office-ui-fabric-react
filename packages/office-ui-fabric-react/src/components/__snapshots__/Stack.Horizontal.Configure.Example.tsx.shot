@@ -365,31 +365,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                 ms-Checkbox
                 is-enabled
                 {
-                  display: flex;
                   margin-right: 10px;
-                  position: relative;
-                }
-                &:hover .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkbox {
-                  border-color: Highlight;
-                }
-                &:focus .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                &:hover .ms-Checkbox-checkmark {
-                  color: #605e5c;
-                  opacity: 1;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkmark {
-                  color: Highlight;
-                }
-                &:hover .ms-Checkbox-text {
-                  color: #201f1e;
-                }
-                &:focus .ms-Checkbox-text {
-                  color: #201f1e;
                 }
           >
             <input
@@ -398,18 +374,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
               checked={false}
               className=
 
-                  {
-                    background: none;
-                    opacity: 0;
-                    position: absolute;
-                  }
-                  .ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline-offset: 2px;
-                    outline: 1px solid #605e5c;
-                  }
-                  @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline: 1px solid ActiveBorder;
-                  }
+
               id="checkbox-1"
               onBlur={[Function]}
               onChange={[Function]}
@@ -419,50 +384,13 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
             <label
               className=
                   ms-Checkbox-label
-                  {
-                    -moz-osx-font-smoothing: grayscale;
-                    -webkit-font-smoothing: antialiased;
-                    align-items: flex-start;
-                    cursor: pointer;
-                    display: flex;
-                    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-                    font-size: 14px;
-                    font-weight: 400;
-                    position: relative;
-                    text-align: left;
-                    user-select: none;
-                  }
-                  &::before {
-                    bottom: 0px;
-                    content: "";
-                    left: 0px;
-                    pointer-events: none;
-                    position: absolute;
-                    right: 0px;
-                    top: 0px;
-                  }
+
               htmlFor="checkbox-1"
             >
               <div
                 className=
                     ms-Checkbox-checkbox
-                    {
-                      align-items: center;
-                      border-radius: 2px;
-                      border: 1px solid #323130;
-                      box-sizing: border-box;
-                      display: flex;
-                      flex-shrink: 0;
-                      height: 20px;
-                      justify-content: center;
-                      margin-right: 4px;
-                      overflow: hidden;
-                      position: relative;
-                      transition-duration: 200ms;
-                      transition-property: background, border, border-color;
-                      transition-timing-function: cubic-bezier(.4, 0, .23, 1);
-                      width: 20px;
-                    }
+
               >
                 <i
                   aria-hidden={true}
@@ -471,17 +399,11 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                       {
                         -moz-osx-font-smoothing: grayscale;
                         -webkit-font-smoothing: antialiased;
-                        color: #ffffff;
                         display: inline-block;
                         font-family: "FabricMDL2Icons";
                         font-style: normal;
                         font-weight: normal;
-                        opacity: 0;
                         speak: none;
-                      }
-                      @media screen and (-ms-high-contrast: active){& {
-                        -ms-high-contrast-adjust: none;
-                        color: Window;
                       }
                   data-icon-name="CheckMark"
                 >
@@ -492,12 +414,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                 aria-hidden="true"
                 className=
                     ms-Checkbox-text
-                    {
-                      color: #323130;
-                      font-size: 14px;
-                      line-height: 20px;
-                      margin-left: 4px;
-                    }
+
               >
                 Shadow around items
               </span>
@@ -507,32 +424,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
             className=
                 ms-Checkbox
                 is-enabled
-                {
-                  display: flex;
-                  position: relative;
-                }
-                &:hover .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkbox {
-                  border-color: Highlight;
-                }
-                &:focus .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                &:hover .ms-Checkbox-checkmark {
-                  color: #605e5c;
-                  opacity: 1;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkmark {
-                  color: Highlight;
-                }
-                &:hover .ms-Checkbox-text {
-                  color: #201f1e;
-                }
-                &:focus .ms-Checkbox-text {
-                  color: #201f1e;
-                }
+
           >
             <input
               aria-checked="false"
@@ -540,18 +432,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
               checked={false}
               className=
 
-                  {
-                    background: none;
-                    opacity: 0;
-                    position: absolute;
-                  }
-                  .ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline-offset: 2px;
-                    outline: 1px solid #605e5c;
-                  }
-                  @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline: 1px solid ActiveBorder;
-                  }
+
               id="checkbox-2"
               onBlur={[Function]}
               onChange={[Function]}
@@ -561,50 +442,13 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
             <label
               className=
                   ms-Checkbox-label
-                  {
-                    -moz-osx-font-smoothing: grayscale;
-                    -webkit-font-smoothing: antialiased;
-                    align-items: flex-start;
-                    cursor: pointer;
-                    display: flex;
-                    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-                    font-size: 14px;
-                    font-weight: 400;
-                    position: relative;
-                    text-align: left;
-                    user-select: none;
-                  }
-                  &::before {
-                    bottom: 0px;
-                    content: "";
-                    left: 0px;
-                    pointer-events: none;
-                    position: absolute;
-                    right: 0px;
-                    top: 0px;
-                  }
+
               htmlFor="checkbox-2"
             >
               <div
                 className=
                     ms-Checkbox-checkbox
-                    {
-                      align-items: center;
-                      border-radius: 2px;
-                      border: 1px solid #323130;
-                      box-sizing: border-box;
-                      display: flex;
-                      flex-shrink: 0;
-                      height: 20px;
-                      justify-content: center;
-                      margin-right: 4px;
-                      overflow: hidden;
-                      position: relative;
-                      transition-duration: 200ms;
-                      transition-property: background, border, border-color;
-                      transition-timing-function: cubic-bezier(.4, 0, .23, 1);
-                      width: 20px;
-                    }
+
               >
                 <i
                   aria-hidden={true}
@@ -613,17 +457,11 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                       {
                         -moz-osx-font-smoothing: grayscale;
                         -webkit-font-smoothing: antialiased;
-                        color: #ffffff;
                         display: inline-block;
                         font-family: "FabricMDL2Icons";
                         font-style: normal;
                         font-weight: normal;
-                        opacity: 0;
                         speak: none;
-                      }
-                      @media screen and (-ms-high-contrast: active){& {
-                        -ms-high-contrast-adjust: none;
-                        color: Window;
                       }
                   data-icon-name="CheckMark"
                 >
@@ -634,12 +472,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                 aria-hidden="true"
                 className=
                     ms-Checkbox-text
-                    {
-                      color: #323130;
-                      font-size: 14px;
-                      line-height: 20px;
-                      margin-left: 4px;
-                    }
+
               >
                 Prevent item overflow
               </span>
@@ -709,31 +542,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                 ms-Checkbox
                 is-enabled
                 {
-                  display: flex;
                   margin-bottom: 10px;
-                  position: relative;
-                }
-                &:hover .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkbox {
-                  border-color: Highlight;
-                }
-                &:focus .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                &:hover .ms-Checkbox-checkmark {
-                  color: #605e5c;
-                  opacity: 1;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkmark {
-                  color: Highlight;
-                }
-                &:hover .ms-Checkbox-text {
-                  color: #201f1e;
-                }
-                &:focus .ms-Checkbox-text {
-                  color: #201f1e;
                 }
           >
             <input
@@ -742,18 +551,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
               checked={false}
               className=
 
-                  {
-                    background: none;
-                    opacity: 0;
-                    position: absolute;
-                  }
-                  .ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline-offset: 2px;
-                    outline: 1px solid #605e5c;
-                  }
-                  @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline: 1px solid ActiveBorder;
-                  }
+
               id="checkbox-3"
               onBlur={[Function]}
               onChange={[Function]}
@@ -763,50 +561,13 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
             <label
               className=
                   ms-Checkbox-label
-                  {
-                    -moz-osx-font-smoothing: grayscale;
-                    -webkit-font-smoothing: antialiased;
-                    align-items: flex-start;
-                    cursor: pointer;
-                    display: flex;
-                    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-                    font-size: 14px;
-                    font-weight: 400;
-                    position: relative;
-                    text-align: left;
-                    user-select: none;
-                  }
-                  &::before {
-                    bottom: 0px;
-                    content: "";
-                    left: 0px;
-                    pointer-events: none;
-                    position: absolute;
-                    right: 0px;
-                    top: 0px;
-                  }
+
               htmlFor="checkbox-3"
             >
               <div
                 className=
                     ms-Checkbox-checkbox
-                    {
-                      align-items: center;
-                      border-radius: 2px;
-                      border: 1px solid #323130;
-                      box-sizing: border-box;
-                      display: flex;
-                      flex-shrink: 0;
-                      height: 20px;
-                      justify-content: center;
-                      margin-right: 4px;
-                      overflow: hidden;
-                      position: relative;
-                      transition-duration: 200ms;
-                      transition-property: background, border, border-color;
-                      transition-timing-function: cubic-bezier(.4, 0, .23, 1);
-                      width: 20px;
-                    }
+
               >
                 <i
                   aria-hidden={true}
@@ -815,17 +576,11 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                       {
                         -moz-osx-font-smoothing: grayscale;
                         -webkit-font-smoothing: antialiased;
-                        color: #ffffff;
                         display: inline-block;
                         font-family: "FabricMDL2Icons";
                         font-style: normal;
                         font-weight: normal;
-                        opacity: 0;
                         speak: none;
-                      }
-                      @media screen and (-ms-high-contrast: active){& {
-                        -ms-high-contrast-adjust: none;
-                        color: Window;
                       }
                   data-icon-name="CheckMark"
                 >
@@ -836,12 +591,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                 aria-hidden="true"
                 className=
                     ms-Checkbox-text
-                    {
-                      color: #323130;
-                      font-size: 14px;
-                      line-height: 20px;
-                      margin-left: 4px;
-                    }
+
               >
                 Wrap items
               </span>
@@ -851,32 +601,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
             className=
                 ms-Checkbox
                 is-enabled
-                {
-                  display: flex;
-                  position: relative;
-                }
-                &:hover .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkbox {
-                  border-color: Highlight;
-                }
-                &:focus .ms-Checkbox-checkbox {
-                  border-color: #323130;
-                }
-                &:hover .ms-Checkbox-checkmark {
-                  color: #605e5c;
-                  opacity: 1;
-                }
-                @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkmark {
-                  color: Highlight;
-                }
-                &:hover .ms-Checkbox-text {
-                  color: #201f1e;
-                }
-                &:focus .ms-Checkbox-text {
-                  color: #201f1e;
-                }
+
           >
             <input
               aria-checked="false"
@@ -884,18 +609,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
               checked={false}
               className=
 
-                  {
-                    background: none;
-                    opacity: 0;
-                    position: absolute;
-                  }
-                  .ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline-offset: 2px;
-                    outline: 1px solid #605e5c;
-                  }
-                  @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus + label::before {
-                    outline: 1px solid ActiveBorder;
-                  }
+
               id="checkbox-4"
               onBlur={[Function]}
               onChange={[Function]}
@@ -905,50 +619,13 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
             <label
               className=
                   ms-Checkbox-label
-                  {
-                    -moz-osx-font-smoothing: grayscale;
-                    -webkit-font-smoothing: antialiased;
-                    align-items: flex-start;
-                    cursor: pointer;
-                    display: flex;
-                    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-                    font-size: 14px;
-                    font-weight: 400;
-                    position: relative;
-                    text-align: left;
-                    user-select: none;
-                  }
-                  &::before {
-                    bottom: 0px;
-                    content: "";
-                    left: 0px;
-                    pointer-events: none;
-                    position: absolute;
-                    right: 0px;
-                    top: 0px;
-                  }
+
               htmlFor="checkbox-4"
             >
               <div
                 className=
                     ms-Checkbox-checkbox
-                    {
-                      align-items: center;
-                      border-radius: 2px;
-                      border: 1px solid #323130;
-                      box-sizing: border-box;
-                      display: flex;
-                      flex-shrink: 0;
-                      height: 20px;
-                      justify-content: center;
-                      margin-right: 4px;
-                      overflow: hidden;
-                      position: relative;
-                      transition-duration: 200ms;
-                      transition-property: background, border, border-color;
-                      transition-timing-function: cubic-bezier(.4, 0, .23, 1);
-                      width: 20px;
-                    }
+
               >
                 <i
                   aria-hidden={true}
@@ -957,17 +634,11 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                       {
                         -moz-osx-font-smoothing: grayscale;
                         -webkit-font-smoothing: antialiased;
-                        color: #ffffff;
                         display: inline-block;
                         font-family: "FabricMDL2Icons";
                         font-style: normal;
                         font-weight: normal;
-                        opacity: 0;
                         speak: none;
-                      }
-                      @media screen and (-ms-high-contrast: active){& {
-                        -ms-high-contrast-adjust: none;
-                        color: Window;
                       }
                   data-icon-name="CheckMark"
                 >
@@ -978,12 +649,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                 aria-hidden="true"
                 className=
                     ms-Checkbox-text
-                    {
-                      color: #323130;
-                      font-size: 14px;
-                      line-height: 20px;
-                      margin-left: 4px;
-                    }
+
               >
                 Shrink items
               </span>
@@ -3460,32 +3126,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
         className=
             ms-Checkbox
             is-enabled
-            {
-              display: flex;
-              position: relative;
-            }
-            &:hover .ms-Checkbox-checkbox {
-              border-color: #323130;
-            }
-            @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkbox {
-              border-color: Highlight;
-            }
-            &:focus .ms-Checkbox-checkbox {
-              border-color: #323130;
-            }
-            &:hover .ms-Checkbox-checkmark {
-              color: #605e5c;
-              opacity: 1;
-            }
-            @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkmark {
-              color: Highlight;
-            }
-            &:hover .ms-Checkbox-text {
-              color: #201f1e;
-            }
-            &:focus .ms-Checkbox-text {
-              color: #201f1e;
-            }
+
       >
         <input
           aria-checked="false"
@@ -3493,18 +3134,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
           checked={false}
           className=
 
-              {
-                background: none;
-                opacity: 0;
-                position: absolute;
-              }
-              .ms-Fabric--isFocusVisible &:focus + label::before {
-                outline-offset: 2px;
-                outline: 1px solid #605e5c;
-              }
-              @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus + label::before {
-                outline: 1px solid ActiveBorder;
-              }
+
           id="checkbox-14"
           onBlur={[Function]}
           onChange={[Function]}
@@ -3514,50 +3144,13 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
         <label
           className=
               ms-Checkbox-label
-              {
-                -moz-osx-font-smoothing: grayscale;
-                -webkit-font-smoothing: antialiased;
-                align-items: flex-start;
-                cursor: pointer;
-                display: flex;
-                font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-                font-size: 14px;
-                font-weight: 400;
-                position: relative;
-                text-align: left;
-                user-select: none;
-              }
-              &::before {
-                bottom: 0px;
-                content: "";
-                left: 0px;
-                pointer-events: none;
-                position: absolute;
-                right: 0px;
-                top: 0px;
-              }
+
           htmlFor="checkbox-14"
         >
           <div
             className=
                 ms-Checkbox-checkbox
-                {
-                  align-items: center;
-                  border-radius: 2px;
-                  border: 1px solid #323130;
-                  box-sizing: border-box;
-                  display: flex;
-                  flex-shrink: 0;
-                  height: 20px;
-                  justify-content: center;
-                  margin-right: 4px;
-                  overflow: hidden;
-                  position: relative;
-                  transition-duration: 200ms;
-                  transition-property: background, border, border-color;
-                  transition-timing-function: cubic-bezier(.4, 0, .23, 1);
-                  width: 20px;
-                }
+
           >
             <i
               aria-hidden={true}
@@ -3566,17 +3159,11 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
                   {
                     -moz-osx-font-smoothing: grayscale;
                     -webkit-font-smoothing: antialiased;
-                    color: #ffffff;
                     display: inline-block;
                     font-family: "FabricMDL2Icons";
                     font-style: normal;
                     font-weight: normal;
-                    opacity: 0;
                     speak: none;
-                  }
-                  @media screen and (-ms-high-contrast: active){& {
-                    -ms-high-contrast-adjust: none;
-                    color: Window;
                   }
               data-icon-name="CheckMark"
             >
@@ -3587,12 +3174,7 @@ exports[`Component Examples renders Stack.Horizontal.Configure.Example.tsx corre
             aria-hidden="true"
             className=
                 ms-Checkbox-text
-                {
-                  color: #323130;
-                  font-size: 14px;
-                  line-height: 20px;
-                  margin-left: 4px;
-                }
+
           >
             Hide empty children
           </span>
