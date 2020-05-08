@@ -4083,9 +4083,7 @@ exports[`Component Examples renders ResizeGroup.OverflowSet.Example.tsx correctl
           }
     >
       <div
-        className=
-            ms-Dropdown-container
-
+        className="ms-Dropdown-container"
       >
         <label
           className=
