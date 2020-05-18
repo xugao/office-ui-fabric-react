@@ -6,6 +6,9 @@ $checkboxSize: 20px;
 $checkboxTransitionDuration: 200ms;
 $checkboxTransitionTiming: cubic-bezier(0.4, 0, 0.23, 1);
 
+:root {
+  --checkbox-test: 20px;
+}
 .root {
   position: relative;
   display: flex;

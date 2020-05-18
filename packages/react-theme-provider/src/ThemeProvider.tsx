@@ -18,6 +18,8 @@ export interface ThemeProviderProps extends React.HTMLAttributes<HTMLDivElement>
   theme?: Theme;
 }
 
+let classCount = 0;
+
 /**
  * ThemeProvider, used for providing css variables and registering stylesheets.
  */
@@ -41,11 +43,36 @@ export const ThemeProvider = React.forwardRef<HTMLDivElement, ThemeProviderProps
     // Register stylesheets as needed.
     useStylesheet(fullTheme.stylesheets);
 
+    const themeScopeClass = React.useMemo<string>(() => {
+      const cn = `css-${classCount}`;
+      classCount++;
+      return cn;
+    }, [inlineStyle]);
+
+    const themeScopeClasses = React.useMemo<string[]>(() => {
+      return (parentTheme.__classes__ || []).concat([themeScopeClass]);
+    }, [parentTheme.__classes__, themeScopeClass]);
+
+    useStylesheet(fullTheme.stylesheets);
+
+    const stylesheet = React.useMemo<string>(() => {
+      const normalizedStyle = Object.entries(inlineStyle)
+        .map(([key, value]) => {
+          return `${key}: ${value};`;
+        })
+        .join('');
+      return cx(themeScopeClasses.map((c: string) => `.${c}`)) + '{' + normalizedStyle + '}';
+    }, [inlineStyle]);
+
+    useStylesheet(stylesheet);
+
+    fullTheme.__classes__ = themeScopeClasses;
+
     // Provide the theme in case it's required through context.
     // tslint:disable:jsx-ban-props
     return (
       <ThemeContext.Provider value={fullTheme}>
-        <div {...rest} ref={ref} className={cx(className, classes.root)} style={inlineStyle} />
+        <div {...rest} ref={ref} className={cx(className, classes.root)} />
       </ThemeContext.Provider>
     );
     // tslint:enable:jsx-ban-props

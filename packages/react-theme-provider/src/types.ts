@@ -68,6 +68,8 @@ export interface ThemePrepared {
   };
 
   stylesheets: string[];
+
+  __classes__?: string[];
 }
 
 /**

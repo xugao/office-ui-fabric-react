@@ -5,6 +5,8 @@ import { ICheckboxProps, ICheckboxStyleProps, ICheckboxStyles } from './Checkbox
 import { KeytipData } from '../../KeytipData';
 import { useId, useControllableValue, useMergedRefs } from '@uifabric/react-hooks';
 import { useFocusRects } from 'office-ui-fabric-react';
+import { useTheme } from '@fluentui/react-theme-provider';
+import cx from 'classnames';
 
 const getClassNames = classNamesFunction<ICheckboxStyleProps, ICheckboxStyles>({
   useStaticStyles: true,
@@ -52,6 +54,8 @@ export const CheckboxBase = React.forwardRef((props: ICheckboxProps, forwardedRe
     isUsingCustomLabelRender: !!props.onRenderLabel,
   });
 
+  const newTheme = useTheme();
+
   const onRenderLabel = (): JSX.Element | null => {
     return label ? (
       <span aria-hidden="true" className={classNames.text} title={title}>
@@ -75,7 +79,7 @@ export const CheckboxBase = React.forwardRef((props: ICheckboxProps, forwardedRe
   return (
     <KeytipData keytipProps={keytipProps} disabled={disabled}>
       {(keytipAttributes: any): JSX.Element => (
-        <div className={classNames.root} title={title} ref={mergedRootRefs}>
+        <div className={cx(newTheme.__classes__, classNames.root)} title={title} ref={mergedRootRefs}>
           <input
             type="checkbox"
             {...inputProps}
