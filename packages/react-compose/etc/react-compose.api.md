@@ -96,7 +96,7 @@ export function mergeProps<TProps, TState = TProps>(state: TState, options: Comp
 // @public (undocumented)
 export type PropsOfElement<E extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>> = JSX.LibraryManagedAttributes<E, React.ComponentPropsWithRef<E>>;
 
-// @public (undocumented)
+// @public
 export interface ResolveClassesOptions {
     // (undocumented)
     dynamicClasses?: (ClassDictionary | ClassFunction)[];

@@ -1,4 +1,4 @@
-import { GenericDictionary, ClassDictionary, ClassFunction } from './types';
+import { GenericDictionary, ClassDictionary, ResolveClassesOptions } from './types';
 
 const RETURN_VALUE = '__retval__';
 const MAX_CACHE_COUNT = 50;
@@ -7,12 +7,6 @@ const MAX_CACHE_COUNT = 50;
 interface RecursiveMemoNode extends Map<any, RecursiveMemoNode> {
   // tslint:disable-next-line:no-any
   [RETURN_VALUE]?: any;
-}
-
-export interface ResolveClassesOptions {
-  state: GenericDictionary;
-  slots: GenericDictionary;
-  dynamicClasses?: (ClassDictionary | ClassFunction)[];
 }
 
 /**

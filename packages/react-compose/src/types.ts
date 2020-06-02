@@ -109,3 +109,12 @@ export type ComposePreparedOptions<TProps = {}, TState = TProps> = {
   resolveSlotProps: <TResolvedProps>(props: TResolvedProps) => Record<string, object>;
   shorthandConfig: ShorthandConfig<TProps>;
 };
+
+/**
+ * Options for classes resolver created using `createClassResolver`.
+ */
+export interface ResolveClassesOptions {
+  state: GenericDictionary;
+  slots: GenericDictionary;
+  dynamicClasses?: (ClassDictionary | ClassFunction)[];
+}
