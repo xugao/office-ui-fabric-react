@@ -73,7 +73,7 @@ export type ComposePreparedOptions<TProps = {}, TState = TProps> = {
 export type ComposeRenderFunction<TElementType extends React.ElementType = 'div', TProps = {}> = (props: TProps, ref: React.Ref<TElementType extends keyof HTMLElementTagNameMap ? HTMLElementTagNameMap[TElementType] : TElementType>, composeOptions: ComposePreparedOptions) => React.ReactElement | null;
 
 // @public
-export const createClassResolver: (classes: Record<string, string>) => (state: Record<string, any>, slots: Record<string, any>) => Record<string, string>;
+export const createClassResolver: (staticClasses: Record<string, string>) => (options: ResolveClassesOptions, deps?: any[] | undefined) => Record<string, string>;
 
 // @public
 export type GenericDictionary = Record<string, any>;
@@ -95,6 +95,16 @@ export function mergeProps<TProps, TState = TProps>(state: TState, options: Comp
 
 // @public (undocumented)
 export type PropsOfElement<E extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>> = JSX.LibraryManagedAttributes<E, React.ComponentPropsWithRef<E>>;
+
+// @public (undocumented)
+export interface ResolveClassesOptions {
+    // (undocumented)
+    dynamicClasses?: (ClassDictionary | ClassFunction)[];
+    // (undocumented)
+    slots: GenericDictionary;
+    // (undocumented)
+    state: GenericDictionary;
+}
 
 // @public (undocumented)
 export interface ShorthandConfig<TProps> {
