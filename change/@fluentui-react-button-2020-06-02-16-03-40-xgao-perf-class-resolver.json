@@ -1,0 +1,8 @@
+{
+  "type": "patch",
+  "comment": "pass deps to createClassResolver",
+  "packageName": "@fluentui/react-button",
+  "email": "xgao@microsoft.com",
+  "dependentChangeType": "patch",
+  "date": "2020-06-02T23:03:18.195Z"
+}
