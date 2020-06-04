@@ -82,7 +82,7 @@ describe('createClassResolver', () => {
     });
   });
 
-  it('return memoized results', () => {
+  fit('return memoized results', () => {
     const expected = {
       root: 'root primary',
       slot1: 'slot1 primary',
@@ -95,7 +95,7 @@ describe('createClassResolver', () => {
           state: { primary: true },
           slots,
         },
-        [true],
+        [true, 'foo'],
       ),
     ).toEqual(expected);
 
@@ -105,7 +105,7 @@ describe('createClassResolver', () => {
           state: {},
           slots: {},
         },
-        [true],
+        [true, 'foo'],
       ),
     ).toEqual(expected);
   });

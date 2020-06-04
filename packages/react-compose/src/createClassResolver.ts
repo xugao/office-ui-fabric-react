@@ -24,15 +24,7 @@ interface RecursiveMemoNode extends Map<any, RecursiveMemoNode> {
  * the component `state` contains a truthy matching prop name.
  */
 export const createClassResolver = (staticClasses: ClassDictionary) => {
-  const cacheMap: RecursiveMemoNode = new Map();
-  let cacheMissCount = 0;
-  let disableCaching = false;
-
-  return (
-    options: ResolveClassesOptions,
-    // tslint:disable-next-line:no-any
-    deps?: any[],
-  ): ClassDictionary => {
+  return memoize((options: ResolveClassesOptions) => {
     const { state, slots, dynamicClasses } = options;
     const classMap: GenericDictionary = {};
     const modifiers: string[] = [];
@@ -40,15 +32,6 @@ export const createClassResolver = (staticClasses: ClassDictionary) => {
     let classesList = [staticClasses];
     if (dynamicClasses) {
       classesList = classesList.concat(dynamicClasses.map(c => (typeof c === 'function' ? c(state, slots) : c)));
-    }
-
-    let current = cacheMap;
-    if (!disableCaching && deps) {
-      current = traverseMap(cacheMap, deps);
-      const cacheResult = current[RETURN_VALUE];
-      if (cacheResult) {
-        return cacheResult;
-      }
     }
 
     // Add the default className to root
@@ -80,17 +63,8 @@ export const createClassResolver = (staticClasses: ClassDictionary) => {
     // Convert the className arrays to strings.
     Object.keys(classMap).forEach((key: string) => (classMap[key] = classMap[key].concat(modifiers).join(' ')));
 
-    if (!disableCaching && deps) {
-      current[RETURN_VALUE] = classMap;
-      cacheMissCount++;
-
-      if (cacheMissCount > MAX_CACHE_COUNT) {
-        disableCaching = true;
-      }
-    }
-
     return classMap;
-  };
+  });
 };
 
 /**
@@ -140,4 +114,40 @@ function normalizeValue(value: any): string {
     default:
       return value;
   }
+}
+
+// tslint:disable-next-line:no-any
+type ClassResolver = (options: ResolveClassesOptions, deps?: any[]) => ClassDictionary;
+
+function memoize(getValue: ClassResolver): ClassResolver {
+  const cacheMap: RecursiveMemoNode = new Map();
+  let cacheMissCount = 0;
+  let disableCaching = false;
+
+  // tslint:disable-next-line:no-any
+  const memoizedGetValue: ClassResolver = (options: ResolveClassesOptions, deps?: any[]): any => {
+    let current = cacheMap;
+    if (!disableCaching && deps) {
+      current = traverseMap(cacheMap, deps);
+      const cacheResult = current[RETURN_VALUE];
+      if (cacheResult) {
+        return cacheResult;
+      }
+    }
+
+    const value = getValue(options);
+
+    if (!disableCaching && deps) {
+      current[RETURN_VALUE] = value;
+      cacheMissCount++;
+
+      if (cacheMissCount > MAX_CACHE_COUNT) {
+        disableCaching = true;
+      }
+    }
+
+    return value;
+  };
+
+  return memoizedGetValue;
 }
