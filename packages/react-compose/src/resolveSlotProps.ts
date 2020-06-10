@@ -44,19 +44,19 @@ export function resolveSlotProps<TProps, TState>(
         slotProp = { [mappedProp]: slotProp };
       }
 
-      // If the children is a function, replace the slot.
       if (typeof slotProp.children === 'function') {
         const { children, ...restProps } = slotProp;
-        slotProp.children = slotProp.children(slot, restProps);
-
+        // If the children is a function, replace the slot.
+        slotProps[slotName] = {
+          children: slotProp.children({ DefaultSlot: slot, props: { ...slotProps[slotName], ...restProps } }),
+        };
         slots[slotName] = React.Fragment;
+      } else {
+        slotProps[slotName] = {
+          ...slotProps[slotName],
+          ...slotProp,
+        };
       }
-
-      // Assign the slot's props.
-      slotProps[slotName] = {
-        ...slotProps[slotName],
-        ...slotProp,
-      };
     }
 
     // Ensure no slots are falsey
