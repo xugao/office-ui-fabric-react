@@ -34,25 +34,7 @@ exports[`Component Examples renders VerticalDivider.Basic.Example.tsx correctly 
   >
     Some text before the divider. 
   </p>
-  <span
-    className=
-
-        {
-          align-items: center;
-          display: inline-flex;
-          height: 100%;
-        }
-  >
-    <span
-      className=
-
-          {
-            background-color: #c8c6c4;
-            height: 100%;
-            width: 1px;
-          }
-    />
-  </span>
+  <Styled />
   <p
     className=
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
-import * as renderer from 'react-test-renderer';
+import { shallow, ShallowWrapper } from 'enzyme';
+import toJSON from 'enzyme-to-json';
 import chalk from 'chalk';
 import * as glob from 'glob';
 import * as path from 'path';
-
 import { resetIds } from '../Utilities';
 
 import * as DataUtil from '@uifabric/example-data';
@@ -212,9 +212,9 @@ describe('Component Examples', () => {
         );
       }
 
-      let component: renderer.ReactTestRenderer;
+      let component: ShallowWrapper;
       try {
-        component = renderer.create(<ComponentUnderTest />);
+        component = shallow(<ComponentUnderTest />);
       } catch (e) {
         // Log with console.log so that the console.warn/error overrides from jest-setup.js don't re-throw the
         // exception in a way that hides the stack/info; and then manually re-throw
@@ -228,8 +228,7 @@ describe('Component Examples', () => {
         throw e;
       }
 
-      const tree = component.toJSON();
-      (expect(tree) as any).toMatchSpecificSnapshot(exampleFile);
+      expect(toJSON(component, { mode: 'deep' }) as any).toMatchSpecificSnapshot(exampleFile);
     });
   }
 });

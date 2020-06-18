@@ -1,119 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Examples renders Stack.Vertical.Grow.Example.tsx correctly 1`] = `
-<div
-  className=
-      ms-Stack
-      {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: auto;
-        width: auto;
-      }
-      & > * {
-        text-overflow: ellipsis;
-      }
-      & > *:not(:first-child) {
-        margin-top: 5px;
-      }
-      & > *:not(.ms-StackItem) {
-        flex-shrink: 1;
-      }
+<Stack
+  tokens={
+    Object {
+      "childrenGap": 5,
+    }
+  }
 >
-  <div
-    className=
-        ms-Stack
-        {
-          background: #71afe5;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          height: 250px;
-          padding-bottom: 10px;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-top: 10px;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-top: 5px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 1;
-        }
+  <Stack
+    styles={
+      Object {
+        "root": Object {
+          "background": "#71afe5",
+          "height": 250,
+        },
+      }
+    }
+    tokens={
+      Object {
+        "childrenGap": 5,
+        "padding": 10,
+      }
+    }
   >
-    <div
-      className=
-          ms-StackItem
-          {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            align-items: center;
-            background: #0078d4;
-            color: #ffffff;
-            display: flex;
-            flex-grow: 3;
-            flex-shrink: 1;
-            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            height: auto;
-            justify-content: center;
-            width: auto;
-          }
+    <StackItem
+      grow={3}
+      styles={
+        Object {
+          "root": Object {
+            "alignItems": "center",
+            "background": "#0078d4",
+            "color": "#ffffff",
+            "display": "flex",
+            "justifyContent": "center",
+          },
+        }
+      }
     >
       Grow is 3
-    </div>
-    <div
-      className=
-          ms-StackItem
-          {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            align-items: center;
-            background: #0078d4;
-            color: #ffffff;
-            display: flex;
-            flex-grow: 2;
-            flex-shrink: 1;
-            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            height: auto;
-            justify-content: center;
-            width: auto;
-          }
+    </StackItem>
+    <StackItem
+      grow={2}
+      styles={
+        Object {
+          "root": Object {
+            "alignItems": "center",
+            "background": "#0078d4",
+            "color": "#ffffff",
+            "display": "flex",
+            "justifyContent": "center",
+          },
+        }
+      }
     >
       Grow is 2
-    </div>
-    <div
-      className=
-          ms-StackItem
-          {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            align-items: center;
-            background: #0078d4;
-            color: #ffffff;
-            display: flex;
-            flex-grow: 1;
-            flex-shrink: 1;
-            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            height: auto;
-            justify-content: center;
-            width: auto;
-          }
+    </StackItem>
+    <StackItem
+      grow={true}
+      styles={
+        Object {
+          "root": Object {
+            "alignItems": "center",
+            "background": "#0078d4",
+            "color": "#ffffff",
+            "display": "flex",
+            "justifyContent": "center",
+          },
+        }
+      }
     >
       Grow is 1
-    </div>
-  </div>
-</div>
+    </StackItem>
+  </Stack>
+</Stack>
 `;

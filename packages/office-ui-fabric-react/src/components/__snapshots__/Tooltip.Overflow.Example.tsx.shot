@@ -2,138 +2,12 @@
 
 exports[`Component Examples renders Tooltip.Overflow.Example.tsx correctly 1`] = `
 <div>
-  <div
-    className=
-        ms-Toggle
-        is-enabled
-        {
-          -moz-osx-font-smoothing: grayscale;
-          -webkit-font-smoothing: antialiased;
-          align-items: center;
-          display: flex;
-          font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-          font-size: 14px;
-          font-weight: 400;
-          margin-bottom: 8px;
-        }
-  >
-    <label
-      className=
-          ms-Label
-          ms-Toggle-label
-          {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            box-shadow: none;
-            box-sizing: border-box;
-            color: #323130;
-            display: block;
-            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 0px;
-            margin-left: 16px;
-            margin-right: 0px;
-            margin-top: 0px;
-            order: 1;
-            overflow-wrap: break-word;
-            padding-bottom: 5px;
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 5px;
-            word-break: break-all;
-            word-wrap: break-word;
-          }
-      htmlFor="Toggle1"
-      id="Toggle1-label"
-    >
-      Force text to overflow
-    </label>
-    <div
-      className=
-          ms-Toggle-innerContainer
-          {
-            display: inline-flex;
-            position: relative;
-          }
-    >
-      <button
-        aria-checked={false}
-        aria-labelledby="Toggle1-label"
-        checked={false}
-        className=
-            ms-Toggle-background
-            {
-              align-items: center;
-              background: #ffffff;
-              border-radius: 10px;
-              border: 1px solid #605e5c;
-              box-sizing: border-box;
-              cursor: pointer;
-              display: flex;
-              font-size: 20px;
-              height: 20px;
-              outline: transparent;
-              padding-bottom: 0;
-              padding-left: 3px;
-              padding-right: 3px;
-              padding-top: 0;
-              position: relative;
-              transition: all 0.1s ease;
-              width: 40px;
-            }
-            &::-moz-focus-inner {
-              border: 0;
-            }
-            .ms-Fabric--isFocusVisible &:focus:after {
-              border: 1px solid #ffffff;
-              bottom: -2px;
-              content: "";
-              left: -2px;
-              outline: 1px solid #605e5c;
-              position: absolute;
-              right: -2px;
-              top: -2px;
-              z-index: 1;
-            }
-            &:hover {
-              border-color: #323130;
-            }
-            &:hover .ms-Toggle-thumb {
-              background-color: #201f1e;
-            }
-            @media screen and (-ms-high-contrast: active){&:hover .ms-Toggle-thumb {
-              border-color: Highlight;
-            }
-            @media screen and (-ms-high-contrast: active){&:hover {
-              border-color: Highlight;
-            }
-        data-is-focusable={true}
-        id="Toggle1"
-        onChange={[Function]}
-        onClick={[Function]}
-        role="switch"
-        type="button"
-      >
-        <span
-          className=
-              ms-Toggle-thumb
-              {
-                background-color: #605e5c;
-                border-color: transparent;
-                border-radius: 50%;
-                border-style: solid;
-                border-width: .28em;
-                box-sizing: border-box;
-                display: block;
-                height: 12px;
-                transition: all 0.1s ease;
-                width: 12px;
-              }
-        />
-      </button>
-    </div>
-  </div>
+  <StyledToggleBase
+    checked={false}
+    inlineLabel={true}
+    label="Force text to overflow"
+    onChange={[Function]}
+  />
   <div
     className=
 
@@ -144,33 +18,9 @@ exports[`Component Examples renders Tooltip.Overflow.Example.tsx correctly 1`] =
           padding-bottom: 10px;
         }
   >
-    <label
-      className=
-          ms-Label
-          {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            box-shadow: none;
-            box-sizing: border-box;
-            color: #323130;
-            display: block;
-            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 0px;
-            margin-left: 0px;
-            margin-right: 0px;
-            margin-top: 0px;
-            overflow-wrap: break-word;
-            padding-bottom: 5px;
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 5px;
-            word-wrap: break-word;
-          }
-    >
+    <StyledLabelBase>
       Show tooltip when parent's content overflows
-    </label>
+    </StyledLabelBase>
     <div
       className=
 
@@ -186,29 +36,27 @@ exports[`Component Examples renders Tooltip.Overflow.Example.tsx correctly 1`] =
           }
     >
       This is the parent element.
-      <div
-        className=
-            ms-TooltipHost
-            {
-              background-color: #deecf9;
-              display: block;
-              padding-bottom: 10px;
-              padding-left: 10px;
-              padding-right: 10px;
-              padding-top: 10px;
-            }
-        onBlurCapture={[Function]}
-        onFocusCapture={[Function]}
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <StyledTooltipHostBase
+        content="If the parent element's content overflows, hovering here will show a tooltip (anchored to the parent element)."
+        id="text-tooltip0"
+        onTooltipToggle={[Function]}
+        overflowMode={0}
+        styles={
+          Object {
+            "root": Object {
+              "backgroundColor": "#deecf9",
+              "display": "block",
+              "padding": 10,
+            },
+          }
+        }
       >
         This is the TooltipHost area.
          
         <span>
           If the parent element's content overflows, hovering here will show a tooltip (anchored to the parent element).
         </span>
-      </div>
+      </StyledTooltipHostBase>
     </div>
   </div>
   <div
@@ -221,53 +69,27 @@ exports[`Component Examples renders Tooltip.Overflow.Example.tsx correctly 1`] =
           padding-bottom: 10px;
         }
   >
-    <label
-      className=
-          ms-Label
-          {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            box-shadow: none;
-            box-sizing: border-box;
-            color: #323130;
-            display: block;
-            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 0px;
-            margin-left: 0px;
-            margin-right: 0px;
-            margin-top: 0px;
-            overflow-wrap: break-word;
-            padding-bottom: 5px;
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 5px;
-            word-wrap: break-word;
-          }
-    >
+    <StyledLabelBase>
       Show tooltip when TooltipHost's content overflows
-    </label>
-    <div
-      className=
-          ms-TooltipHost
-          {
-            background-color: #deecf9;
-            display: block;
-            padding-bottom: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 10px;
-          }
-      onBlurCapture={[Function]}
-      onFocusCapture={[Function]}
-      onKeyDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+    </StyledLabelBase>
+    <StyledTooltipHostBase
+      content="If the TooltipHost's content overflows, hovering here will show a tooltip (anchored to the TooltipHost)."
+      hostClassName=""
+      onTooltipToggle={[Function]}
+      overflowMode={1}
+      styles={
+        Object {
+          "root": Object {
+            "backgroundColor": "#deecf9",
+            "display": "block",
+            "padding": 10,
+          },
+        }
+      }
     >
       This is the TooltipHost area. 
       If the TooltipHost's content overflows, hovering here will show a tooltip (anchored to the TooltipHost).
-    </div>
+    </StyledTooltipHostBase>
   </div>
 </div>
 `;

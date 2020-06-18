@@ -22,17 +22,14 @@ exports[`Component Examples renders Tooltip.Display.Example.tsx correctly 1`] = 
   , as in the following example.
   <br />
   <br />
-  <div
-    className=
-        ms-TooltipHost
-        {
-          display: inline;
-        }
-    onBlurCapture={[Function]}
-    onFocusCapture={[Function]}
-    onKeyDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+  <StyledTooltipHostBase
+    calloutProps={
+      Object {
+        "gapSpace": 0,
+      }
+    }
+    content="Incorrect positioning"
+    id="tooltip10"
   >
     <button
       aria-describedby="tooltip10"
@@ -45,19 +42,23 @@ exports[`Component Examples renders Tooltip.Display.Example.tsx correctly 1`] = 
     >
       Hover for incorrect positioning
     </button>
-  </div>
+  </StyledTooltipHostBase>
    
-  <div
-    className=
-        ms-TooltipHost
-        {
-          display: inline-block;
-        }
-    onBlurCapture={[Function]}
-    onFocusCapture={[Function]}
-    onKeyDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+  <StyledTooltipHostBase
+    calloutProps={
+      Object {
+        "gapSpace": 0,
+      }
+    }
+    content="Correct positioning"
+    id="tooltip21"
+    styles={
+      Object {
+        "root": Object {
+          "display": "inline-block",
+        },
+      }
+    }
   >
     <button
       aria-describedby="tooltip21"
@@ -70,6 +71,6 @@ exports[`Component Examples renders Tooltip.Display.Example.tsx correctly 1`] = 
     >
       Hover for correct positioning
     </button>
-  </div>
+  </StyledTooltipHostBase>
 </div>
 `;

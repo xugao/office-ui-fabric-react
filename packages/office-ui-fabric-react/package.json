@@ -55,6 +55,7 @@
     "chalk": "^2.1.0",
     "enzyme": "~3.10.0",
     "enzyme-adapter-react-16": "^1.15.0",
+    "enzyme-to-json": "^3.5.0",
     "glob": "^7.1.2",
     "jest-snapshot": "~24.9.0",
     "office-ui-fabric-core": "^11.0.0",

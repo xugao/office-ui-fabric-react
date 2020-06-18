@@ -1,189 +1,2044 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly 1`] = `
-<div
-  className=
-
-      {
-        cursor: default;
-        position: relative;
-      }
+<StyledMarqueeSelectionBase
+  isEnabled={true}
+  selection={
+    Selection {
+      "_anchoredIndex": 0,
+      "_canSelectItem": [Function],
+      "_changeEventSuppressionCount": 0,
+      "_exemptedCount": 0,
+      "_exemptedIndices": Object {},
+      "_getKey": [Function],
+      "_isModal": false,
+      "_items": Array [
+        Object {
+          "height": 100,
+          "key": 0,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 1,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 2,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 3,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 4,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 5,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 6,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 7,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 8,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 9,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 10,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 11,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 12,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 13,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 14,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 15,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 16,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 17,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 18,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 19,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 20,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 21,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 22,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 23,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 24,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 25,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 26,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 27,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 28,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 29,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 30,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 31,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 32,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 33,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 34,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 35,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 36,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 37,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 38,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 39,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 40,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 41,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 42,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 43,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 44,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 45,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 46,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 47,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 48,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 49,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 50,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 51,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 52,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 53,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 54,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 55,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 56,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 57,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 58,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 59,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 60,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 61,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 62,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 63,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 64,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 65,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 66,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 67,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 68,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 69,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 70,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 71,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 72,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 73,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 74,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 75,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 76,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 77,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 78,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 79,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 80,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 81,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 82,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 83,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 84,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 85,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 86,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 87,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 88,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 89,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 90,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 91,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 92,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 93,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 94,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 95,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 96,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 97,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 98,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 99,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 100,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 101,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 102,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 103,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 104,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 105,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 106,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 107,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 108,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 109,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 110,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 111,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 112,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 113,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 114,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 115,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 116,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 117,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 118,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 119,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 120,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 121,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 122,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 123,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 124,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 125,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 126,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 127,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 128,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 129,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 130,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 131,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 132,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 133,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 134,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 135,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 136,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 137,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 138,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 139,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 140,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 141,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 142,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 143,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 144,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 145,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 146,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 147,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 148,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 149,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 150,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 151,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 152,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 153,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 154,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 155,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 156,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 157,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 158,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 159,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 160,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 161,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 162,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 163,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 164,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 165,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 166,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 167,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 168,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 169,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 170,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 171,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 172,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 173,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 174,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 175,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 176,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 177,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 178,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 179,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 180,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 181,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 182,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 183,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 184,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 185,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 186,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 187,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 188,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 189,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 190,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 191,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 192,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 193,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 194,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 195,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 196,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 197,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 198,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 199,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 200,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 201,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 202,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 203,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 204,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 205,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 206,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 207,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 208,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 209,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 210,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 211,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 212,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 213,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 214,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 215,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 216,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 217,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 218,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 219,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 220,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 221,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 222,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 223,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 224,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 225,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 226,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 227,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 228,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 229,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 230,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 231,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 232,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 233,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 234,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 235,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 236,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 237,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 238,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 239,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 240,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 241,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 242,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 243,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 244,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 245,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 246,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 247,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 248,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+        Object {
+          "height": 100,
+          "key": 249,
+          "url": "http://placehold.it/50x100",
+          "width": 50,
+        },
+      ],
+      "_keyToIndexMap": Object {
+        "0": 0,
+        "1": 1,
+        "10": 10,
+        "100": 100,
+        "101": 101,
+        "102": 102,
+        "103": 103,
+        "104": 104,
+        "105": 105,
+        "106": 106,
+        "107": 107,
+        "108": 108,
+        "109": 109,
+        "11": 11,
+        "110": 110,
+        "111": 111,
+        "112": 112,
+        "113": 113,
+        "114": 114,
+        "115": 115,
+        "116": 116,
+        "117": 117,
+        "118": 118,
+        "119": 119,
+        "12": 12,
+        "120": 120,
+        "121": 121,
+        "122": 122,
+        "123": 123,
+        "124": 124,
+        "125": 125,
+        "126": 126,
+        "127": 127,
+        "128": 128,
+        "129": 129,
+        "13": 13,
+        "130": 130,
+        "131": 131,
+        "132": 132,
+        "133": 133,
+        "134": 134,
+        "135": 135,
+        "136": 136,
+        "137": 137,
+        "138": 138,
+        "139": 139,
+        "14": 14,
+        "140": 140,
+        "141": 141,
+        "142": 142,
+        "143": 143,
+        "144": 144,
+        "145": 145,
+        "146": 146,
+        "147": 147,
+        "148": 148,
+        "149": 149,
+        "15": 15,
+        "150": 150,
+        "151": 151,
+        "152": 152,
+        "153": 153,
+        "154": 154,
+        "155": 155,
+        "156": 156,
+        "157": 157,
+        "158": 158,
+        "159": 159,
+        "16": 16,
+        "160": 160,
+        "161": 161,
+        "162": 162,
+        "163": 163,
+        "164": 164,
+        "165": 165,
+        "166": 166,
+        "167": 167,
+        "168": 168,
+        "169": 169,
+        "17": 17,
+        "170": 170,
+        "171": 171,
+        "172": 172,
+        "173": 173,
+        "174": 174,
+        "175": 175,
+        "176": 176,
+        "177": 177,
+        "178": 178,
+        "179": 179,
+        "18": 18,
+        "180": 180,
+        "181": 181,
+        "182": 182,
+        "183": 183,
+        "184": 184,
+        "185": 185,
+        "186": 186,
+        "187": 187,
+        "188": 188,
+        "189": 189,
+        "19": 19,
+        "190": 190,
+        "191": 191,
+        "192": 192,
+        "193": 193,
+        "194": 194,
+        "195": 195,
+        "196": 196,
+        "197": 197,
+        "198": 198,
+        "199": 199,
+        "2": 2,
+        "20": 20,
+        "200": 200,
+        "201": 201,
+        "202": 202,
+        "203": 203,
+        "204": 204,
+        "205": 205,
+        "206": 206,
+        "207": 207,
+        "208": 208,
+        "209": 209,
+        "21": 21,
+        "210": 210,
+        "211": 211,
+        "212": 212,
+        "213": 213,
+        "214": 214,
+        "215": 215,
+        "216": 216,
+        "217": 217,
+        "218": 218,
+        "219": 219,
+        "22": 22,
+        "220": 220,
+        "221": 221,
+        "222": 222,
+        "223": 223,
+        "224": 224,
+        "225": 225,
+        "226": 226,
+        "227": 227,
+        "228": 228,
+        "229": 229,
+        "23": 23,
+        "230": 230,
+        "231": 231,
+        "232": 232,
+        "233": 233,
+        "234": 234,
+        "235": 235,
+        "236": 236,
+        "237": 237,
+        "238": 238,
+        "239": 239,
+        "24": 24,
+        "240": 240,
+        "241": 241,
+        "242": 242,
+        "243": 243,
+        "244": 244,
+        "245": 245,
+        "246": 246,
+        "247": 247,
+        "248": 248,
+        "249": 249,
+        "25": 25,
+        "26": 26,
+        "27": 27,
+        "28": 28,
+        "29": 29,
+        "3": 3,
+        "30": 30,
+        "31": 31,
+        "32": 32,
+        "33": 33,
+        "34": 34,
+        "35": 35,
+        "36": 36,
+        "37": 37,
+        "38": 38,
+        "39": 39,
+        "4": 4,
+        "40": 40,
+        "41": 41,
+        "42": 42,
+        "43": 43,
+        "44": 44,
+        "45": 45,
+        "46": 46,
+        "47": 47,
+        "48": 48,
+        "49": 49,
+        "5": 5,
+        "50": 50,
+        "51": 51,
+        "52": 52,
+        "53": 53,
+        "54": 54,
+        "55": 55,
+        "56": 56,
+        "57": 57,
+        "58": 58,
+        "59": 59,
+        "6": 6,
+        "60": 60,
+        "61": 61,
+        "62": 62,
+        "63": 63,
+        "64": 64,
+        "65": 65,
+        "66": 66,
+        "67": 67,
+        "68": 68,
+        "69": 69,
+        "7": 7,
+        "70": 70,
+        "71": 71,
+        "72": 72,
+        "73": 73,
+        "74": 74,
+        "75": 75,
+        "76": 76,
+        "77": 77,
+        "78": 78,
+        "79": 79,
+        "8": 8,
+        "80": 80,
+        "81": 81,
+        "82": 82,
+        "83": 83,
+        "84": 84,
+        "85": 85,
+        "86": 86,
+        "87": 87,
+        "88": 88,
+        "89": 89,
+        "9": 9,
+        "90": 90,
+        "91": 91,
+        "92": 92,
+        "93": 93,
+        "94": 94,
+        "95": 95,
+        "96": 96,
+        "97": 97,
+        "98": 98,
+        "99": 99,
+      },
+      "_onSelectionChanged": [Function],
+      "_selectedItems": null,
+      "_unselectableCount": 0,
+      "_unselectableIndices": Object {
+        "0": false,
+        "1": false,
+        "10": false,
+        "100": false,
+        "101": false,
+        "102": false,
+        "103": false,
+        "104": false,
+        "105": false,
+        "106": false,
+        "107": false,
+        "108": false,
+        "109": false,
+        "11": false,
+        "110": false,
+        "111": false,
+        "112": false,
+        "113": false,
+        "114": false,
+        "115": false,
+        "116": false,
+        "117": false,
+        "118": false,
+        "119": false,
+        "12": false,
+        "120": false,
+        "121": false,
+        "122": false,
+        "123": false,
+        "124": false,
+        "125": false,
+        "126": false,
+        "127": false,
+        "128": false,
+        "129": false,
+        "13": false,
+        "130": false,
+        "131": false,
+        "132": false,
+        "133": false,
+        "134": false,
+        "135": false,
+        "136": false,
+        "137": false,
+        "138": false,
+        "139": false,
+        "14": false,
+        "140": false,
+        "141": false,
+        "142": false,
+        "143": false,
+        "144": false,
+        "145": false,
+        "146": false,
+        "147": false,
+        "148": false,
+        "149": false,
+        "15": false,
+        "150": false,
+        "151": false,
+        "152": false,
+        "153": false,
+        "154": false,
+        "155": false,
+        "156": false,
+        "157": false,
+        "158": false,
+        "159": false,
+        "16": false,
+        "160": false,
+        "161": false,
+        "162": false,
+        "163": false,
+        "164": false,
+        "165": false,
+        "166": false,
+        "167": false,
+        "168": false,
+        "169": false,
+        "17": false,
+        "170": false,
+        "171": false,
+        "172": false,
+        "173": false,
+        "174": false,
+        "175": false,
+        "176": false,
+        "177": false,
+        "178": false,
+        "179": false,
+        "18": false,
+        "180": false,
+        "181": false,
+        "182": false,
+        "183": false,
+        "184": false,
+        "185": false,
+        "186": false,
+        "187": false,
+        "188": false,
+        "189": false,
+        "19": false,
+        "190": false,
+        "191": false,
+        "192": false,
+        "193": false,
+        "194": false,
+        "195": false,
+        "196": false,
+        "197": false,
+        "198": false,
+        "199": false,
+        "2": false,
+        "20": false,
+        "200": false,
+        "201": false,
+        "202": false,
+        "203": false,
+        "204": false,
+        "205": false,
+        "206": false,
+        "207": false,
+        "208": false,
+        "209": false,
+        "21": false,
+        "210": false,
+        "211": false,
+        "212": false,
+        "213": false,
+        "214": false,
+        "215": false,
+        "216": false,
+        "217": false,
+        "218": false,
+        "219": false,
+        "22": false,
+        "220": false,
+        "221": false,
+        "222": false,
+        "223": false,
+        "224": false,
+        "225": false,
+        "226": false,
+        "227": false,
+        "228": false,
+        "229": false,
+        "23": false,
+        "230": false,
+        "231": false,
+        "232": false,
+        "233": false,
+        "234": false,
+        "235": false,
+        "236": false,
+        "237": false,
+        "238": false,
+        "239": false,
+        "24": false,
+        "240": false,
+        "241": false,
+        "242": false,
+        "243": false,
+        "244": false,
+        "245": false,
+        "246": false,
+        "247": false,
+        "248": false,
+        "249": false,
+        "25": false,
+        "26": false,
+        "27": false,
+        "28": false,
+        "29": false,
+        "3": false,
+        "30": false,
+        "31": false,
+        "32": false,
+        "33": false,
+        "34": false,
+        "35": false,
+        "36": false,
+        "37": false,
+        "38": false,
+        "39": false,
+        "4": false,
+        "40": false,
+        "41": false,
+        "42": false,
+        "43": false,
+        "44": false,
+        "45": false,
+        "46": false,
+        "47": false,
+        "48": false,
+        "49": false,
+        "5": false,
+        "50": false,
+        "51": false,
+        "52": false,
+        "53": false,
+        "54": false,
+        "55": false,
+        "56": false,
+        "57": false,
+        "58": false,
+        "59": false,
+        "6": false,
+        "60": false,
+        "61": false,
+        "62": false,
+        "63": false,
+        "64": false,
+        "65": false,
+        "66": false,
+        "67": false,
+        "68": false,
+        "69": false,
+        "7": false,
+        "70": false,
+        "71": false,
+        "72": false,
+        "73": false,
+        "74": false,
+        "75": false,
+        "76": false,
+        "77": false,
+        "78": false,
+        "79": false,
+        "8": false,
+        "80": false,
+        "81": false,
+        "82": false,
+        "83": false,
+        "84": false,
+        "85": false,
+        "86": false,
+        "87": false,
+        "88": false,
+        "89": false,
+        "9": false,
+        "90": false,
+        "91": false,
+        "92": false,
+        "93": false,
+        "94": false,
+        "95": false,
+        "96": false,
+        "97": false,
+        "98": false,
+        "99": false,
+      },
+      "count": 0,
+      "mode": 2,
+    }
+  }
 >
-  <div
+  <StyledCheckboxBase
     className=
-        ms-Checkbox
-        is-checked
-        is-enabled
+
         {
-          display: flex;
           margin-bottom: 10px;
           margin-left: 0;
           margin-right: 0;
           margin-top: 10px;
-          position: relative;
         }
-        &:hover .ms-Checkbox-checkbox {
-          background: #005a9e;
-          border-color: #005a9e;
-        }
-        &:focus .ms-Checkbox-checkbox {
-          background: #005a9e;
-          border-color: #005a9e;
-        }
-        @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkbox {
-          background: Window;
-          border-color: Highlight;
-        }
-        @media screen and (-ms-high-contrast: active){&:focus .ms-Checkbox-checkbox {
-          background: Highlight;
-        }
-        @media screen and (-ms-high-contrast: active){&:focus:hover .ms-Checkbox-checkbox {
-          background: Highlight;
-        }
-        @media screen and (-ms-high-contrast: active){&:focus:hover .ms-Checkbox-checkmark {
-          color: Window;
-        }
-        @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-checkmark {
-          color: Highlight;
-        }
-        &:hover .ms-Checkbox-text {
-          color: #201f1e;
-        }
-        @media screen and (-ms-high-contrast: active){&:hover .ms-Checkbox-text {
-          color: WindowText;
-        }
-        &:focus .ms-Checkbox-text {
-          color: #201f1e;
-        }
-        @media screen and (-ms-high-contrast: active){&:focus .ms-Checkbox-text {
-          color: WindowText;
-        }
-  >
-    <input
-      aria-checked="true"
-      aria-label="Is marquee enabled"
-      checked={true}
-      className=
-
-          {
-            background: none;
-            opacity: 0;
-            position: absolute;
-          }
-          .ms-Fabric--isFocusVisible &:focus + label::before {
-            outline-offset: 2px;
-            outline: 1px solid #605e5c;
-          }
-          @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus + label::before {
-            outline: 1px solid ActiveBorder;
-          }
-      id="checkbox-0"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      type="checkbox"
-    />
-    <label
-      className=
-          ms-Checkbox-label
-          {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            align-items: flex-start;
-            cursor: pointer;
-            display: flex;
-            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            position: relative;
-            user-select: none;
-          }
-          &::before {
-            bottom: 0px;
-            content: "";
-            left: 0px;
-            pointer-events: none;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-          }
-      htmlFor="checkbox-0"
-    >
-      <div
-        className=
-            ms-Checkbox-checkbox
-            {
-              align-items: center;
-              background: #0078d4;
-              border-color: #0078d4;
-              border-radius: 2px;
-              border: 1px solid #323130;
-              box-sizing: border-box;
-              display: flex;
-              flex-shrink: 0;
-              height: 20px;
-              justify-content: center;
-              margin-right: 4px;
-              overflow: hidden;
-              position: relative;
-              transition-duration: 200ms;
-              transition-property: background, border, border-color;
-              transition-timing-function: cubic-bezier(.4, 0, .23, 1);
-              width: 20px;
-            }
-            @media screen and (-ms-high-contrast: active){& {
-              background: Highlight;
-              border-color: Highlight;
-            }
-            @media screen and (-ms-high-contrast: active) and (forced-colors: active){& {
-              forced-color-adjust: none;
-            }
-      >
-        <i
-          aria-hidden={true}
-          className=
-              ms-Checkbox-checkmark
-              {
-                -moz-osx-font-smoothing: grayscale;
-                -webkit-font-smoothing: antialiased;
-                color: #ffffff;
-                display: inline-block;
-                font-family: "FabricMDL2Icons";
-                font-style: normal;
-                font-weight: normal;
-                opacity: 1;
-                speak: none;
-              }
-              @media screen and (-ms-high-contrast: active){& {
-                -ms-high-contrast-adjust: none;
-                color: Window;
-              }
-          data-icon-name="CheckMark"
-        >
-          
-        </i>
-      </div>
-      <span
-        aria-hidden="true"
-        className=
-            ms-Checkbox-text
-            {
-              color: #323130;
-              font-size: 14px;
-              line-height: 20px;
-              margin-left: 4px;
-            }
-            @media screen and (-ms-high-contrast: active){& {
-              color: WindowText;
-            }
-            @media screen and (-ms-high-contrast: active) and (forced-colors: active){& {
-              forced-color-adjust: none;
-            }
-      >
-        Is marquee enabled
-      </span>
-    </label>
-  </div>
+    defaultChecked={true}
+    label="Is marquee enabled"
+    onChange={[Function]}
+  />
   <p>
     Drag a rectangle around the items below to select them:
   </p>
@@ -227,6 +2082,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={0}
+      key="0"
       style={
         Object {
           "height": 100,
@@ -258,6 +2114,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={1}
+      key="1"
       style={
         Object {
           "height": 100,
@@ -289,6 +2146,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={2}
+      key="2"
       style={
         Object {
           "height": 100,
@@ -320,6 +2178,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={3}
+      key="3"
       style={
         Object {
           "height": 100,
@@ -351,6 +2210,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={4}
+      key="4"
       style={
         Object {
           "height": 100,
@@ -382,6 +2242,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={5}
+      key="5"
       style={
         Object {
           "height": 100,
@@ -413,6 +2274,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={6}
+      key="6"
       style={
         Object {
           "height": 100,
@@ -444,6 +2306,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={7}
+      key="7"
       style={
         Object {
           "height": 100,
@@ -475,6 +2338,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={8}
+      key="8"
       style={
         Object {
           "height": 100,
@@ -506,6 +2370,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={9}
+      key="9"
       style={
         Object {
           "height": 100,
@@ -537,6 +2402,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={10}
+      key="10"
       style={
         Object {
           "height": 100,
@@ -568,6 +2434,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={11}
+      key="11"
       style={
         Object {
           "height": 100,
@@ -599,6 +2466,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={12}
+      key="12"
       style={
         Object {
           "height": 100,
@@ -630,6 +2498,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={13}
+      key="13"
       style={
         Object {
           "height": 100,
@@ -661,6 +2530,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={14}
+      key="14"
       style={
         Object {
           "height": 100,
@@ -692,6 +2562,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={15}
+      key="15"
       style={
         Object {
           "height": 100,
@@ -723,6 +2594,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={16}
+      key="16"
       style={
         Object {
           "height": 100,
@@ -754,6 +2626,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={17}
+      key="17"
       style={
         Object {
           "height": 100,
@@ -785,6 +2658,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={18}
+      key="18"
       style={
         Object {
           "height": 100,
@@ -816,6 +2690,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={19}
+      key="19"
       style={
         Object {
           "height": 100,
@@ -847,6 +2722,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={20}
+      key="20"
       style={
         Object {
           "height": 100,
@@ -878,6 +2754,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={21}
+      key="21"
       style={
         Object {
           "height": 100,
@@ -909,6 +2786,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={22}
+      key="22"
       style={
         Object {
           "height": 100,
@@ -940,6 +2818,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={23}
+      key="23"
       style={
         Object {
           "height": 100,
@@ -971,6 +2850,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={24}
+      key="24"
       style={
         Object {
           "height": 100,
@@ -1002,6 +2882,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={25}
+      key="25"
       style={
         Object {
           "height": 100,
@@ -1033,6 +2914,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={26}
+      key="26"
       style={
         Object {
           "height": 100,
@@ -1064,6 +2946,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={27}
+      key="27"
       style={
         Object {
           "height": 100,
@@ -1095,6 +2978,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={28}
+      key="28"
       style={
         Object {
           "height": 100,
@@ -1126,6 +3010,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={29}
+      key="29"
       style={
         Object {
           "height": 100,
@@ -1157,6 +3042,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={30}
+      key="30"
       style={
         Object {
           "height": 100,
@@ -1188,6 +3074,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={31}
+      key="31"
       style={
         Object {
           "height": 100,
@@ -1219,6 +3106,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={32}
+      key="32"
       style={
         Object {
           "height": 100,
@@ -1250,6 +3138,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={33}
+      key="33"
       style={
         Object {
           "height": 100,
@@ -1281,6 +3170,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={34}
+      key="34"
       style={
         Object {
           "height": 100,
@@ -1312,6 +3202,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={35}
+      key="35"
       style={
         Object {
           "height": 100,
@@ -1343,6 +3234,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={36}
+      key="36"
       style={
         Object {
           "height": 100,
@@ -1374,6 +3266,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={37}
+      key="37"
       style={
         Object {
           "height": 100,
@@ -1405,6 +3298,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={38}
+      key="38"
       style={
         Object {
           "height": 100,
@@ -1436,6 +3330,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={39}
+      key="39"
       style={
         Object {
           "height": 100,
@@ -1467,6 +3362,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={40}
+      key="40"
       style={
         Object {
           "height": 100,
@@ -1498,6 +3394,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={41}
+      key="41"
       style={
         Object {
           "height": 100,
@@ -1529,6 +3426,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={42}
+      key="42"
       style={
         Object {
           "height": 100,
@@ -1560,6 +3458,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={43}
+      key="43"
       style={
         Object {
           "height": 100,
@@ -1591,6 +3490,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={44}
+      key="44"
       style={
         Object {
           "height": 100,
@@ -1622,6 +3522,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={45}
+      key="45"
       style={
         Object {
           "height": 100,
@@ -1653,6 +3554,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={46}
+      key="46"
       style={
         Object {
           "height": 100,
@@ -1684,6 +3586,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={47}
+      key="47"
       style={
         Object {
           "height": 100,
@@ -1715,6 +3618,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={48}
+      key="48"
       style={
         Object {
           "height": 100,
@@ -1746,6 +3650,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={49}
+      key="49"
       style={
         Object {
           "height": 100,
@@ -1777,6 +3682,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={50}
+      key="50"
       style={
         Object {
           "height": 100,
@@ -1808,6 +3714,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={51}
+      key="51"
       style={
         Object {
           "height": 100,
@@ -1839,6 +3746,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={52}
+      key="52"
       style={
         Object {
           "height": 100,
@@ -1870,6 +3778,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={53}
+      key="53"
       style={
         Object {
           "height": 100,
@@ -1901,6 +3810,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={54}
+      key="54"
       style={
         Object {
           "height": 100,
@@ -1932,6 +3842,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={55}
+      key="55"
       style={
         Object {
           "height": 100,
@@ -1963,6 +3874,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={56}
+      key="56"
       style={
         Object {
           "height": 100,
@@ -1994,6 +3906,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={57}
+      key="57"
       style={
         Object {
           "height": 100,
@@ -2025,6 +3938,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={58}
+      key="58"
       style={
         Object {
           "height": 100,
@@ -2056,6 +3970,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={59}
+      key="59"
       style={
         Object {
           "height": 100,
@@ -2087,6 +4002,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={60}
+      key="60"
       style={
         Object {
           "height": 100,
@@ -2118,6 +4034,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={61}
+      key="61"
       style={
         Object {
           "height": 100,
@@ -2149,6 +4066,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={62}
+      key="62"
       style={
         Object {
           "height": 100,
@@ -2180,6 +4098,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={63}
+      key="63"
       style={
         Object {
           "height": 100,
@@ -2211,6 +4130,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={64}
+      key="64"
       style={
         Object {
           "height": 100,
@@ -2242,6 +4162,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={65}
+      key="65"
       style={
         Object {
           "height": 100,
@@ -2273,6 +4194,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={66}
+      key="66"
       style={
         Object {
           "height": 100,
@@ -2304,6 +4226,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={67}
+      key="67"
       style={
         Object {
           "height": 100,
@@ -2335,6 +4258,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={68}
+      key="68"
       style={
         Object {
           "height": 100,
@@ -2366,6 +4290,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={69}
+      key="69"
       style={
         Object {
           "height": 100,
@@ -2397,6 +4322,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={70}
+      key="70"
       style={
         Object {
           "height": 100,
@@ -2428,6 +4354,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={71}
+      key="71"
       style={
         Object {
           "height": 100,
@@ -2459,6 +4386,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={72}
+      key="72"
       style={
         Object {
           "height": 100,
@@ -2490,6 +4418,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={73}
+      key="73"
       style={
         Object {
           "height": 100,
@@ -2521,6 +4450,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={74}
+      key="74"
       style={
         Object {
           "height": 100,
@@ -2552,6 +4482,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={75}
+      key="75"
       style={
         Object {
           "height": 100,
@@ -2583,6 +4514,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={76}
+      key="76"
       style={
         Object {
           "height": 100,
@@ -2614,6 +4546,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={77}
+      key="77"
       style={
         Object {
           "height": 100,
@@ -2645,6 +4578,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={78}
+      key="78"
       style={
         Object {
           "height": 100,
@@ -2676,6 +4610,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={79}
+      key="79"
       style={
         Object {
           "height": 100,
@@ -2707,6 +4642,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={80}
+      key="80"
       style={
         Object {
           "height": 100,
@@ -2738,6 +4674,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={81}
+      key="81"
       style={
         Object {
           "height": 100,
@@ -2769,6 +4706,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={82}
+      key="82"
       style={
         Object {
           "height": 100,
@@ -2800,6 +4738,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={83}
+      key="83"
       style={
         Object {
           "height": 100,
@@ -2831,6 +4770,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={84}
+      key="84"
       style={
         Object {
           "height": 100,
@@ -2862,6 +4802,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={85}
+      key="85"
       style={
         Object {
           "height": 100,
@@ -2893,6 +4834,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={86}
+      key="86"
       style={
         Object {
           "height": 100,
@@ -2924,6 +4866,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={87}
+      key="87"
       style={
         Object {
           "height": 100,
@@ -2955,6 +4898,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={88}
+      key="88"
       style={
         Object {
           "height": 100,
@@ -2986,6 +4930,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={89}
+      key="89"
       style={
         Object {
           "height": 100,
@@ -3017,6 +4962,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={90}
+      key="90"
       style={
         Object {
           "height": 100,
@@ -3048,6 +4994,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={91}
+      key="91"
       style={
         Object {
           "height": 100,
@@ -3079,6 +5026,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={92}
+      key="92"
       style={
         Object {
           "height": 100,
@@ -3110,6 +5058,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={93}
+      key="93"
       style={
         Object {
           "height": 100,
@@ -3141,6 +5090,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={94}
+      key="94"
       style={
         Object {
           "height": 100,
@@ -3172,6 +5122,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={95}
+      key="95"
       style={
         Object {
           "height": 100,
@@ -3203,6 +5154,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={96}
+      key="96"
       style={
         Object {
           "height": 100,
@@ -3234,6 +5186,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={97}
+      key="97"
       style={
         Object {
           "height": 100,
@@ -3265,6 +5218,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={98}
+      key="98"
       style={
         Object {
           "height": 100,
@@ -3296,6 +5250,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={99}
+      key="99"
       style={
         Object {
           "height": 100,
@@ -3327,6 +5282,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={100}
+      key="100"
       style={
         Object {
           "height": 100,
@@ -3358,6 +5314,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={101}
+      key="101"
       style={
         Object {
           "height": 100,
@@ -3389,6 +5346,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={102}
+      key="102"
       style={
         Object {
           "height": 100,
@@ -3420,6 +5378,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={103}
+      key="103"
       style={
         Object {
           "height": 100,
@@ -3451,6 +5410,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={104}
+      key="104"
       style={
         Object {
           "height": 100,
@@ -3482,6 +5442,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={105}
+      key="105"
       style={
         Object {
           "height": 100,
@@ -3513,6 +5474,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={106}
+      key="106"
       style={
         Object {
           "height": 100,
@@ -3544,6 +5506,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={107}
+      key="107"
       style={
         Object {
           "height": 100,
@@ -3575,6 +5538,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={108}
+      key="108"
       style={
         Object {
           "height": 100,
@@ -3606,6 +5570,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={109}
+      key="109"
       style={
         Object {
           "height": 100,
@@ -3637,6 +5602,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={110}
+      key="110"
       style={
         Object {
           "height": 100,
@@ -3668,6 +5634,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={111}
+      key="111"
       style={
         Object {
           "height": 100,
@@ -3699,6 +5666,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={112}
+      key="112"
       style={
         Object {
           "height": 100,
@@ -3730,6 +5698,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={113}
+      key="113"
       style={
         Object {
           "height": 100,
@@ -3761,6 +5730,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={114}
+      key="114"
       style={
         Object {
           "height": 100,
@@ -3792,6 +5762,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={115}
+      key="115"
       style={
         Object {
           "height": 100,
@@ -3823,6 +5794,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={116}
+      key="116"
       style={
         Object {
           "height": 100,
@@ -3854,6 +5826,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={117}
+      key="117"
       style={
         Object {
           "height": 100,
@@ -3885,6 +5858,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={118}
+      key="118"
       style={
         Object {
           "height": 100,
@@ -3916,6 +5890,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={119}
+      key="119"
       style={
         Object {
           "height": 100,
@@ -3947,6 +5922,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={120}
+      key="120"
       style={
         Object {
           "height": 100,
@@ -3978,6 +5954,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={121}
+      key="121"
       style={
         Object {
           "height": 100,
@@ -4009,6 +5986,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={122}
+      key="122"
       style={
         Object {
           "height": 100,
@@ -4040,6 +6018,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={123}
+      key="123"
       style={
         Object {
           "height": 100,
@@ -4071,6 +6050,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={124}
+      key="124"
       style={
         Object {
           "height": 100,
@@ -4102,6 +6082,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={125}
+      key="125"
       style={
         Object {
           "height": 100,
@@ -4133,6 +6114,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={126}
+      key="126"
       style={
         Object {
           "height": 100,
@@ -4164,6 +6146,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={127}
+      key="127"
       style={
         Object {
           "height": 100,
@@ -4195,6 +6178,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={128}
+      key="128"
       style={
         Object {
           "height": 100,
@@ -4226,6 +6210,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={129}
+      key="129"
       style={
         Object {
           "height": 100,
@@ -4257,6 +6242,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={130}
+      key="130"
       style={
         Object {
           "height": 100,
@@ -4288,6 +6274,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={131}
+      key="131"
       style={
         Object {
           "height": 100,
@@ -4319,6 +6306,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={132}
+      key="132"
       style={
         Object {
           "height": 100,
@@ -4350,6 +6338,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={133}
+      key="133"
       style={
         Object {
           "height": 100,
@@ -4381,6 +6370,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={134}
+      key="134"
       style={
         Object {
           "height": 100,
@@ -4412,6 +6402,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={135}
+      key="135"
       style={
         Object {
           "height": 100,
@@ -4443,6 +6434,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={136}
+      key="136"
       style={
         Object {
           "height": 100,
@@ -4474,6 +6466,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={137}
+      key="137"
       style={
         Object {
           "height": 100,
@@ -4505,6 +6498,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={138}
+      key="138"
       style={
         Object {
           "height": 100,
@@ -4536,6 +6530,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={139}
+      key="139"
       style={
         Object {
           "height": 100,
@@ -4567,6 +6562,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={140}
+      key="140"
       style={
         Object {
           "height": 100,
@@ -4598,6 +6594,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={141}
+      key="141"
       style={
         Object {
           "height": 100,
@@ -4629,6 +6626,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={142}
+      key="142"
       style={
         Object {
           "height": 100,
@@ -4660,6 +6658,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={143}
+      key="143"
       style={
         Object {
           "height": 100,
@@ -4691,6 +6690,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={144}
+      key="144"
       style={
         Object {
           "height": 100,
@@ -4722,6 +6722,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={145}
+      key="145"
       style={
         Object {
           "height": 100,
@@ -4753,6 +6754,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={146}
+      key="146"
       style={
         Object {
           "height": 100,
@@ -4784,6 +6786,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={147}
+      key="147"
       style={
         Object {
           "height": 100,
@@ -4815,6 +6818,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={148}
+      key="148"
       style={
         Object {
           "height": 100,
@@ -4846,6 +6850,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={149}
+      key="149"
       style={
         Object {
           "height": 100,
@@ -4877,6 +6882,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={150}
+      key="150"
       style={
         Object {
           "height": 100,
@@ -4908,6 +6914,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={151}
+      key="151"
       style={
         Object {
           "height": 100,
@@ -4939,6 +6946,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={152}
+      key="152"
       style={
         Object {
           "height": 100,
@@ -4970,6 +6978,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={153}
+      key="153"
       style={
         Object {
           "height": 100,
@@ -5001,6 +7010,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={154}
+      key="154"
       style={
         Object {
           "height": 100,
@@ -5032,6 +7042,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={155}
+      key="155"
       style={
         Object {
           "height": 100,
@@ -5063,6 +7074,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={156}
+      key="156"
       style={
         Object {
           "height": 100,
@@ -5094,6 +7106,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={157}
+      key="157"
       style={
         Object {
           "height": 100,
@@ -5125,6 +7138,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={158}
+      key="158"
       style={
         Object {
           "height": 100,
@@ -5156,6 +7170,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={159}
+      key="159"
       style={
         Object {
           "height": 100,
@@ -5187,6 +7202,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={160}
+      key="160"
       style={
         Object {
           "height": 100,
@@ -5218,6 +7234,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={161}
+      key="161"
       style={
         Object {
           "height": 100,
@@ -5249,6 +7266,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={162}
+      key="162"
       style={
         Object {
           "height": 100,
@@ -5280,6 +7298,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={163}
+      key="163"
       style={
         Object {
           "height": 100,
@@ -5311,6 +7330,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={164}
+      key="164"
       style={
         Object {
           "height": 100,
@@ -5342,6 +7362,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={165}
+      key="165"
       style={
         Object {
           "height": 100,
@@ -5373,6 +7394,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={166}
+      key="166"
       style={
         Object {
           "height": 100,
@@ -5404,6 +7426,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={167}
+      key="167"
       style={
         Object {
           "height": 100,
@@ -5435,6 +7458,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={168}
+      key="168"
       style={
         Object {
           "height": 100,
@@ -5466,6 +7490,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={169}
+      key="169"
       style={
         Object {
           "height": 100,
@@ -5497,6 +7522,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={170}
+      key="170"
       style={
         Object {
           "height": 100,
@@ -5528,6 +7554,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={171}
+      key="171"
       style={
         Object {
           "height": 100,
@@ -5559,6 +7586,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={172}
+      key="172"
       style={
         Object {
           "height": 100,
@@ -5590,6 +7618,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={173}
+      key="173"
       style={
         Object {
           "height": 100,
@@ -5621,6 +7650,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={174}
+      key="174"
       style={
         Object {
           "height": 100,
@@ -5652,6 +7682,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={175}
+      key="175"
       style={
         Object {
           "height": 100,
@@ -5683,6 +7714,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={176}
+      key="176"
       style={
         Object {
           "height": 100,
@@ -5714,6 +7746,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={177}
+      key="177"
       style={
         Object {
           "height": 100,
@@ -5745,6 +7778,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={178}
+      key="178"
       style={
         Object {
           "height": 100,
@@ -5776,6 +7810,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={179}
+      key="179"
       style={
         Object {
           "height": 100,
@@ -5807,6 +7842,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={180}
+      key="180"
       style={
         Object {
           "height": 100,
@@ -5838,6 +7874,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={181}
+      key="181"
       style={
         Object {
           "height": 100,
@@ -5869,6 +7906,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={182}
+      key="182"
       style={
         Object {
           "height": 100,
@@ -5900,6 +7938,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={183}
+      key="183"
       style={
         Object {
           "height": 100,
@@ -5931,6 +7970,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={184}
+      key="184"
       style={
         Object {
           "height": 100,
@@ -5962,6 +8002,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={185}
+      key="185"
       style={
         Object {
           "height": 100,
@@ -5993,6 +8034,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={186}
+      key="186"
       style={
         Object {
           "height": 100,
@@ -6024,6 +8066,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={187}
+      key="187"
       style={
         Object {
           "height": 100,
@@ -6055,6 +8098,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={188}
+      key="188"
       style={
         Object {
           "height": 100,
@@ -6086,6 +8130,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={189}
+      key="189"
       style={
         Object {
           "height": 100,
@@ -6117,6 +8162,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={190}
+      key="190"
       style={
         Object {
           "height": 100,
@@ -6148,6 +8194,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={191}
+      key="191"
       style={
         Object {
           "height": 100,
@@ -6179,6 +8226,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={192}
+      key="192"
       style={
         Object {
           "height": 100,
@@ -6210,6 +8258,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={193}
+      key="193"
       style={
         Object {
           "height": 100,
@@ -6241,6 +8290,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={194}
+      key="194"
       style={
         Object {
           "height": 100,
@@ -6272,6 +8322,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={195}
+      key="195"
       style={
         Object {
           "height": 100,
@@ -6303,6 +8354,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={196}
+      key="196"
       style={
         Object {
           "height": 100,
@@ -6334,6 +8386,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={197}
+      key="197"
       style={
         Object {
           "height": 100,
@@ -6365,6 +8418,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={198}
+      key="198"
       style={
         Object {
           "height": 100,
@@ -6396,6 +8450,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={199}
+      key="199"
       style={
         Object {
           "height": 100,
@@ -6427,6 +8482,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={200}
+      key="200"
       style={
         Object {
           "height": 100,
@@ -6458,6 +8514,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={201}
+      key="201"
       style={
         Object {
           "height": 100,
@@ -6489,6 +8546,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={202}
+      key="202"
       style={
         Object {
           "height": 100,
@@ -6520,6 +8578,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={203}
+      key="203"
       style={
         Object {
           "height": 100,
@@ -6551,6 +8610,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={204}
+      key="204"
       style={
         Object {
           "height": 100,
@@ -6582,6 +8642,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={205}
+      key="205"
       style={
         Object {
           "height": 100,
@@ -6613,6 +8674,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={206}
+      key="206"
       style={
         Object {
           "height": 100,
@@ -6644,6 +8706,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={207}
+      key="207"
       style={
         Object {
           "height": 100,
@@ -6675,6 +8738,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={208}
+      key="208"
       style={
         Object {
           "height": 100,
@@ -6706,6 +8770,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={209}
+      key="209"
       style={
         Object {
           "height": 100,
@@ -6737,6 +8802,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={210}
+      key="210"
       style={
         Object {
           "height": 100,
@@ -6768,6 +8834,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={211}
+      key="211"
       style={
         Object {
           "height": 100,
@@ -6799,6 +8866,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={212}
+      key="212"
       style={
         Object {
           "height": 100,
@@ -6830,6 +8898,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={213}
+      key="213"
       style={
         Object {
           "height": 100,
@@ -6861,6 +8930,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={214}
+      key="214"
       style={
         Object {
           "height": 100,
@@ -6892,6 +8962,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={215}
+      key="215"
       style={
         Object {
           "height": 100,
@@ -6923,6 +8994,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={216}
+      key="216"
       style={
         Object {
           "height": 100,
@@ -6954,6 +9026,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={217}
+      key="217"
       style={
         Object {
           "height": 100,
@@ -6985,6 +9058,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={218}
+      key="218"
       style={
         Object {
           "height": 100,
@@ -7016,6 +9090,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={219}
+      key="219"
       style={
         Object {
           "height": 100,
@@ -7047,6 +9122,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={220}
+      key="220"
       style={
         Object {
           "height": 100,
@@ -7078,6 +9154,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={221}
+      key="221"
       style={
         Object {
           "height": 100,
@@ -7109,6 +9186,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={222}
+      key="222"
       style={
         Object {
           "height": 100,
@@ -7140,6 +9218,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={223}
+      key="223"
       style={
         Object {
           "height": 100,
@@ -7171,6 +9250,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={224}
+      key="224"
       style={
         Object {
           "height": 100,
@@ -7202,6 +9282,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={225}
+      key="225"
       style={
         Object {
           "height": 100,
@@ -7233,6 +9314,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={226}
+      key="226"
       style={
         Object {
           "height": 100,
@@ -7264,6 +9346,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={227}
+      key="227"
       style={
         Object {
           "height": 100,
@@ -7295,6 +9378,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={228}
+      key="228"
       style={
         Object {
           "height": 100,
@@ -7326,6 +9410,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={229}
+      key="229"
       style={
         Object {
           "height": 100,
@@ -7357,6 +9442,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={230}
+      key="230"
       style={
         Object {
           "height": 100,
@@ -7388,6 +9474,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={231}
+      key="231"
       style={
         Object {
           "height": 100,
@@ -7419,6 +9506,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={232}
+      key="232"
       style={
         Object {
           "height": 100,
@@ -7450,6 +9538,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={233}
+      key="233"
       style={
         Object {
           "height": 100,
@@ -7481,6 +9570,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={234}
+      key="234"
       style={
         Object {
           "height": 100,
@@ -7512,6 +9602,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={235}
+      key="235"
       style={
         Object {
           "height": 100,
@@ -7543,6 +9634,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={236}
+      key="236"
       style={
         Object {
           "height": 100,
@@ -7574,6 +9666,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={237}
+      key="237"
       style={
         Object {
           "height": 100,
@@ -7605,6 +9698,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={238}
+      key="238"
       style={
         Object {
           "height": 100,
@@ -7636,6 +9730,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={239}
+      key="239"
       style={
         Object {
           "height": 100,
@@ -7667,6 +9762,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={240}
+      key="240"
       style={
         Object {
           "height": 100,
@@ -7698,6 +9794,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={241}
+      key="241"
       style={
         Object {
           "height": 100,
@@ -7729,6 +9826,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={242}
+      key="242"
       style={
         Object {
           "height": 100,
@@ -7760,6 +9858,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={243}
+      key="243"
       style={
         Object {
           "height": 100,
@@ -7791,6 +9890,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={244}
+      key="244"
       style={
         Object {
           "height": 100,
@@ -7822,6 +9922,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={245}
+      key="245"
       style={
         Object {
           "height": 100,
@@ -7853,6 +9954,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={246}
+      key="246"
       style={
         Object {
           "height": 100,
@@ -7884,6 +9986,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={247}
+      key="247"
       style={
         Object {
           "height": 100,
@@ -7915,6 +10018,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={248}
+      key="248"
       style={
         Object {
           "height": 100,
@@ -7946,6 +10050,7 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
           }
       data-is-focusable={true}
       data-selection-index={249}
+      key="249"
       style={
         Object {
           "height": 100,
@@ -7956,5 +10061,5 @@ exports[`Component Examples renders MarqueeSelection.Basic.Example.tsx correctly
       249
     </div>
   </ul>
-</div>
+</StyledMarqueeSelectionBase>
 `;

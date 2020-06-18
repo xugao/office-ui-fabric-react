@@ -1,52 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Examples renders Stack.Horizontal.HorizontalAlign.Example.tsx correctly 1`] = `
-<div
-  className=
-      ms-Stack
-      {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: auto;
-        width: auto;
-      }
-      & > * {
-        text-overflow: ellipsis;
-      }
-      & > *:not(:first-child) {
-        margin-top: 5px;
-      }
-      & > *:not(.ms-StackItem) {
-        flex-shrink: 1;
-      }
+<Stack
+  tokens={
+    Object {
+      "childrenGap": 5,
+    }
+  }
 >
   <span>
     Left-aligned
   </span>
-  <div
-    className=
-        ms-Stack
-        {
-          background: #71afe5;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: flex-start;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 0px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 1;
-        }
+  <Stack
+    horizontal={true}
+    horizontalAlign="start"
+    styles={
+      Object {
+        "root": Object {
+          "background": "#71afe5",
+        },
+      }
+    }
   >
     <span
       style={
@@ -93,32 +67,20 @@ exports[`Component Examples renders Stack.Horizontal.HorizontalAlign.Example.tsx
     >
       3
     </span>
-  </div>
+  </Stack>
   <span>
     Horizontally centered
   </span>
-  <div
-    className=
-        ms-Stack
-        {
-          background: #71afe5;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: center;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 0px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 1;
-        }
+  <Stack
+    horizontal={true}
+    horizontalAlign="center"
+    styles={
+      Object {
+        "root": Object {
+          "background": "#71afe5",
+        },
+      }
+    }
   >
     <span
       style={
@@ -165,32 +127,20 @@ exports[`Component Examples renders Stack.Horizontal.HorizontalAlign.Example.tsx
     >
       3
     </span>
-  </div>
+  </Stack>
   <span>
     Right-aligned
   </span>
-  <div
-    className=
-        ms-Stack
-        {
-          background: #71afe5;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: flex-end;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 0px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 1;
-        }
+  <Stack
+    horizontal={true}
+    horizontalAlign="end"
+    styles={
+      Object {
+        "root": Object {
+          "background": "#71afe5",
+        },
+      }
+    }
   >
     <span
       style={
@@ -237,32 +187,20 @@ exports[`Component Examples renders Stack.Horizontal.HorizontalAlign.Example.tsx
     >
       3
     </span>
-  </div>
+  </Stack>
   <span>
     Horizontal space around items
   </span>
-  <div
-    className=
-        ms-Stack
-        {
-          background: #71afe5;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: space-around;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 0px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 1;
-        }
+  <Stack
+    horizontal={true}
+    horizontalAlign="space-around"
+    styles={
+      Object {
+        "root": Object {
+          "background": "#71afe5",
+        },
+      }
+    }
   >
     <span
       style={
@@ -309,32 +247,20 @@ exports[`Component Examples renders Stack.Horizontal.HorizontalAlign.Example.tsx
     >
       3
     </span>
-  </div>
+  </Stack>
   <span>
     Horizontal space between items
   </span>
-  <div
-    className=
-        ms-Stack
-        {
-          background: #71afe5;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: space-between;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 0px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 1;
-        }
+  <Stack
+    horizontal={true}
+    horizontalAlign="space-between"
+    styles={
+      Object {
+        "root": Object {
+          "background": "#71afe5",
+        },
+      }
+    }
   >
     <span
       style={
@@ -381,32 +307,20 @@ exports[`Component Examples renders Stack.Horizontal.HorizontalAlign.Example.tsx
     >
       3
     </span>
-  </div>
+  </Stack>
   <span>
     Items horizontally evenly spaced
   </span>
-  <div
-    className=
-        ms-Stack
-        {
-          background: #71afe5;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: space-evenly;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 0px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 1;
-        }
+  <Stack
+    horizontal={true}
+    horizontalAlign="space-evenly"
+    styles={
+      Object {
+        "root": Object {
+          "background": "#71afe5",
+        },
+      }
+    }
   >
     <span
       style={
@@ -453,6 +367,6 @@ exports[`Component Examples renders Stack.Horizontal.HorizontalAlign.Example.tsx
     >
       3
     </span>
-  </div>
-</div>
+  </Stack>
+</Stack>
 `;

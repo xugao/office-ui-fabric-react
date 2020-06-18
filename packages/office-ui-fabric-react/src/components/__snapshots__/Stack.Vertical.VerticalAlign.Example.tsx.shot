@@ -1,96 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component Examples renders Stack.Vertical.VerticalAlign.Example.tsx correctly 1`] = `
-<div
-  className=
-      ms-Stack
-      {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: auto;
-        width: auto;
-      }
-      & > * {
-        text-overflow: ellipsis;
-      }
-      & > *:not(:first-child) {
-        margin-top: 10px;
-      }
-      & > *:not(.ms-StackItem) {
-        flex-shrink: 1;
-      }
+<Stack
+  tokens={
+    Object {
+      "childrenGap": 10,
+    }
+  }
 >
-  <div
-    className=
-        ms-Stack
-        {
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: space-between;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 30px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 0;
-        }
+  <Stack
+    disableShrink={true}
+    horizontal={true}
+    horizontalAlign="space-between"
+    tokens={
+      Object {
+        "childrenGap": 30,
+      }
+    }
   >
-    <div
-      className=
-          ms-Stack
-          {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            flex-wrap: nowrap;
-            height: auto;
-            width: auto;
-          }
-          & > * {
-            text-overflow: ellipsis;
-          }
-          & > *:not(:first-child) {
-            margin-top: 0px;
-          }
-          & > *:not(.ms-StackItem) {
-            flex-shrink: 1;
-          }
+    <Stack
+      grow={true}
     >
       <span>
         Top-aligned
       </span>
-      <div
-        className=
-            ms-Stack
-            {
-              background: #71afe5;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              height: 250px;
-              justify-content: flex-start;
-              width: auto;
-            }
-            & > * {
-              text-overflow: ellipsis;
-            }
-            & > *:not(:first-child) {
-              margin-top: 0px;
-            }
-            & > *:not(.ms-StackItem) {
-              flex-shrink: 1;
-            }
+      <Stack
+        styles={
+          Object {
+            "root": Object {
+              "background": "#71afe5",
+              "height": 250,
+            },
+          }
+        }
+        verticalAlign="start"
       >
         <span
           style={
@@ -137,55 +80,24 @@ exports[`Component Examples renders Stack.Vertical.VerticalAlign.Example.tsx cor
         >
           3
         </span>
-      </div>
-    </div>
-    <div
-      className=
-          ms-Stack
-          {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            flex-wrap: nowrap;
-            height: auto;
-            width: auto;
-          }
-          & > * {
-            text-overflow: ellipsis;
-          }
-          & > *:not(:first-child) {
-            margin-top: 0px;
-          }
-          & > *:not(.ms-StackItem) {
-            flex-shrink: 1;
-          }
+      </Stack>
+    </Stack>
+    <Stack
+      grow={true}
     >
       <span>
         Vertically centered
       </span>
-      <div
-        className=
-            ms-Stack
-            {
-              background: #71afe5;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              height: 250px;
-              justify-content: center;
-              width: auto;
-            }
-            & > * {
-              text-overflow: ellipsis;
-            }
-            & > *:not(:first-child) {
-              margin-top: 0px;
-            }
-            & > *:not(.ms-StackItem) {
-              flex-shrink: 1;
-            }
+      <Stack
+        styles={
+          Object {
+            "root": Object {
+              "background": "#71afe5",
+              "height": 250,
+            },
+          }
+        }
+        verticalAlign="center"
       >
         <span
           style={
@@ -232,55 +144,24 @@ exports[`Component Examples renders Stack.Vertical.VerticalAlign.Example.tsx cor
         >
           3
         </span>
-      </div>
-    </div>
-    <div
-      className=
-          ms-Stack
-          {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            flex-wrap: nowrap;
-            height: auto;
-            width: auto;
-          }
-          & > * {
-            text-overflow: ellipsis;
-          }
-          & > *:not(:first-child) {
-            margin-top: 0px;
-          }
-          & > *:not(.ms-StackItem) {
-            flex-shrink: 1;
-          }
+      </Stack>
+    </Stack>
+    <Stack
+      grow={true}
     >
       <span>
         Bottom-aligned
       </span>
-      <div
-        className=
-            ms-Stack
-            {
-              background: #71afe5;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              height: 250px;
-              justify-content: flex-end;
-              width: auto;
-            }
-            & > * {
-              text-overflow: ellipsis;
-            }
-            & > *:not(:first-child) {
-              margin-top: 0px;
-            }
-            & > *:not(.ms-StackItem) {
-              flex-shrink: 1;
-            }
+      <Stack
+        styles={
+          Object {
+            "root": Object {
+              "background": "#71afe5",
+              "height": 250,
+            },
+          }
+        }
+        verticalAlign="end"
       >
         <span
           style={
@@ -327,78 +208,35 @@ exports[`Component Examples renders Stack.Vertical.VerticalAlign.Example.tsx cor
         >
           3
         </span>
-      </div>
-    </div>
-  </div>
-  <div
-    className=
-        ms-Stack
-        {
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: auto;
-          justify-content: space-between;
-          width: auto;
-        }
-        & > * {
-          text-overflow: ellipsis;
-        }
-        & > *:not(:first-child) {
-          margin-left: 30px;
-        }
-        & > *:not(.ms-StackItem) {
-          flex-shrink: 0;
-        }
+      </Stack>
+    </Stack>
+  </Stack>
+  <Stack
+    disableShrink={true}
+    horizontal={true}
+    horizontalAlign="space-between"
+    tokens={
+      Object {
+        "childrenGap": 30,
+      }
+    }
   >
-    <div
-      className=
-          ms-Stack
-          {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            flex-wrap: nowrap;
-            height: auto;
-            width: auto;
-          }
-          & > * {
-            text-overflow: ellipsis;
-          }
-          & > *:not(:first-child) {
-            margin-top: 0px;
-          }
-          & > *:not(.ms-StackItem) {
-            flex-shrink: 1;
-          }
+    <Stack
+      grow={true}
     >
       <span>
         Vertical space around items
       </span>
-      <div
-        className=
-            ms-Stack
-            {
-              background: #71afe5;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              height: 250px;
-              justify-content: space-around;
-              width: auto;
-            }
-            & > * {
-              text-overflow: ellipsis;
-            }
-            & > *:not(:first-child) {
-              margin-top: 0px;
-            }
-            & > *:not(.ms-StackItem) {
-              flex-shrink: 1;
-            }
+      <Stack
+        styles={
+          Object {
+            "root": Object {
+              "background": "#71afe5",
+              "height": 250,
+            },
+          }
+        }
+        verticalAlign="space-around"
       >
         <span
           style={
@@ -445,55 +283,24 @@ exports[`Component Examples renders Stack.Vertical.VerticalAlign.Example.tsx cor
         >
           3
         </span>
-      </div>
-    </div>
-    <div
-      className=
-          ms-Stack
-          {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            flex-wrap: nowrap;
-            height: auto;
-            width: auto;
-          }
-          & > * {
-            text-overflow: ellipsis;
-          }
-          & > *:not(:first-child) {
-            margin-top: 0px;
-          }
-          & > *:not(.ms-StackItem) {
-            flex-shrink: 1;
-          }
+      </Stack>
+    </Stack>
+    <Stack
+      grow={true}
     >
       <span>
         Vertical space between items
       </span>
-      <div
-        className=
-            ms-Stack
-            {
-              background: #71afe5;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              height: 250px;
-              justify-content: space-between;
-              width: auto;
-            }
-            & > * {
-              text-overflow: ellipsis;
-            }
-            & > *:not(:first-child) {
-              margin-top: 0px;
-            }
-            & > *:not(.ms-StackItem) {
-              flex-shrink: 1;
-            }
+      <Stack
+        styles={
+          Object {
+            "root": Object {
+              "background": "#71afe5",
+              "height": 250,
+            },
+          }
+        }
+        verticalAlign="space-between"
       >
         <span
           style={
@@ -540,55 +347,24 @@ exports[`Component Examples renders Stack.Vertical.VerticalAlign.Example.tsx cor
         >
           3
         </span>
-      </div>
-    </div>
-    <div
-      className=
-          ms-Stack
-          {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            flex-wrap: nowrap;
-            height: auto;
-            width: auto;
-          }
-          & > * {
-            text-overflow: ellipsis;
-          }
-          & > *:not(:first-child) {
-            margin-top: 0px;
-          }
-          & > *:not(.ms-StackItem) {
-            flex-shrink: 1;
-          }
+      </Stack>
+    </Stack>
+    <Stack
+      grow={true}
     >
       <span>
         Items vertically evenly spaced
       </span>
-      <div
-        className=
-            ms-Stack
-            {
-              background: #71afe5;
-              box-sizing: border-box;
-              display: flex;
-              flex-direction: column;
-              flex-wrap: nowrap;
-              height: 250px;
-              justify-content: space-evenly;
-              width: auto;
-            }
-            & > * {
-              text-overflow: ellipsis;
-            }
-            & > *:not(:first-child) {
-              margin-top: 0px;
-            }
-            & > *:not(.ms-StackItem) {
-              flex-shrink: 1;
-            }
+      <Stack
+        styles={
+          Object {
+            "root": Object {
+              "background": "#71afe5",
+              "height": 250,
+            },
+          }
+        }
+        verticalAlign="space-evenly"
       >
         <span
           style={
@@ -635,8 +411,8 @@ exports[`Component Examples renders Stack.Vertical.VerticalAlign.Example.tsx cor
         >
           3
         </span>
-      </div>
-    </div>
-  </div>
-</div>
+      </Stack>
+    </Stack>
+  </Stack>
+</Stack>
 `;
