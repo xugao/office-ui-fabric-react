@@ -156,6 +156,10 @@ export const CalendarInlineExample: React.FunctionComponent<ICalendarInlineExamp
         restrictedDates={props.restrictedDates}
         showSixWeeksByDefault={props.showSixWeeksByDefault}
         workWeekDays={props.workWeekDays}
+        // tslint:disable-next-line:jsx-no-lambda
+        onFocus={ev => console.log('DEBUG: onFocus from component', ev)}
+        // tslint:disable-next-line:jsx-no-lambda
+        onBlur={ev => console.log('DEBUG: onBlur from component', ev)}
       />
       {props.showNavigateButtons && (
         <div>

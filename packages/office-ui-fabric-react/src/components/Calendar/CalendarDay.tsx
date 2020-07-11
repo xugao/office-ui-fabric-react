@@ -88,6 +88,7 @@ interface IWeekCorners {
 export class CalendarDay extends React.Component<ICalendarDayProps, ICalendarDayState> {
   private navigatedDay: HTMLElement | null;
   private days: { [key: string]: HTMLElement | null } = {};
+  private _hasFocus = false;
 
   public constructor(props: ICalendarDayProps) {
     super(props);
@@ -186,6 +187,10 @@ export class CalendarDay extends React.Component<ICalendarDayProps, ICalendarDay
           <div className={css('ms-DatePicker-monthComponents', styles.monthComponents)}>
             <div className={css('ms-DatePicker-navContainer', styles.navContainer)}>
               <button
+                // tslint:disable-next-line:jsx-no-lambda
+                onFocus={event => {
+                  console.log('DEBUG:onfocus prev month');
+                }}
                 className={css('ms-DatePicker-prevMonth js-prevMonth', styles.prevMonth, {
                   ['ms-DatePicker-prevMonth--disabled ' + styles.prevMonthIsDisabled]: !prevMonthInBounds,
                 })}
@@ -353,6 +358,10 @@ export class CalendarDay extends React.Component<ICalendarDayProps, ICalendarDay
                       >
                         <button
                           key={day.key + 'button'}
+                          // tslint:disable-next-line:jsx-no-lambda
+                          onFocus={this._onFocus}
+                          // tslint:disable-next-line:jsx-no-lambda
+                          onBlur={this._onBlur}
                           onClick={day.isInBounds ? day.onSelected : undefined}
                           className={css(styles.day, 'ms-DatePicker-day-button', {
                             ['ms-DatePicker-day--disabled ' + styles.dayIsDisabled]: !day.isInBounds,
@@ -389,6 +398,14 @@ export class CalendarDay extends React.Component<ICalendarDayProps, ICalendarDay
       this.navigatedDay.focus();
     }
   }
+
+  private _onFocus = () => {
+    this._hasFocus = true;
+  };
+
+  private _onBlur = () => {
+    this._hasFocus = false;
+  };
 
   private _setDayRef(element: HTMLElement | null, day: IDayInfo, isNavigatedDate: boolean): void {
     if (isNavigatedDate) {

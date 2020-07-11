@@ -155,7 +155,10 @@ export class Calendar extends React.Component<ICalendarProps, ICalendarState> im
       yearPickerHidden,
       today,
     } = this.props;
-    const nativeProps = getNativeProps<React.HTMLAttributes<HTMLDivElement>>(this.props, divProperties, ['value']);
+    const nativeProps = getNativeProps<React.HTMLAttributes<HTMLDivElement>>(this.props, divProperties, [
+      'value',
+      'onBlur',
+    ]);
 
     const { selectedDate, navigatedDayDate, navigatedMonthDate, isMonthPickerVisible, isDayPickerVisible } = this.state;
     const onHeaderSelect = showMonthPickerAsOverlay ? this._onHeaderSelect : undefined;
@@ -176,6 +179,8 @@ export class Calendar extends React.Component<ICalendarProps, ICalendarState> im
       <div className={css(rootClass, styles.root, className)} role="application">
         <div
           {...nativeProps}
+          onBlur={this._onBlur}
+          onFocus={this._onFocus}
           className={css(
             'ms-DatePicker-picker ms-DatePicker-picker--opened ms-DatePicker-picker--focused',
             styles.picker,
@@ -276,6 +281,14 @@ export class Calendar extends React.Component<ICalendarProps, ICalendarState> im
       this._monthPicker.current.focus();
     }
   }
+
+  private _onBlur = (event: React.FocusEvent<HTMLElement>) => {
+    this.props.onBlur && this.props.onBlur(event);
+  };
+
+  private _onFocus = (event: React.FocusEvent<HTMLElement>) => {
+    this.props.onFocus && this.props.onFocus(event);
+  };
 
   private _navigateDayPickerDay = (date: Date): void => {
     this.setState({
