@@ -34,7 +34,7 @@ export function resolveClasses<TState>(
 export function appendToSlotClassName(
   slotProps: Record<string, GenericDictionary>,
   slotName: string,
-  className: string,
+  className: string | undefined,
 ) {
   if (className) {
     const slot = (slotProps[slotName] = slotProps[slotName] || {});

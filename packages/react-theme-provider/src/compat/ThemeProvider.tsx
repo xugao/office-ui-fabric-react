@@ -7,7 +7,7 @@ import { ITheme } from '@uifabric/styling';
 export { ThemeProviderProps, useTheme } from '../index';
 
 /**
- * A wrapper of ThemeProvider from react-theme-provider package.
+ * A wrapper of ThemeProvider from  react-theme-provider package.
  *
  * It also updates the theme when Customizations changes, which ensures backward compatibility with legacy ways of
  * providing theme (e.g. loadTheme, Customizations.applySettings).

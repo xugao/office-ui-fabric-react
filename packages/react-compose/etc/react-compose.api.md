@@ -13,7 +13,7 @@ export interface BaseSlots {
 }
 
 // @public
-export type ClassDictionary = Record<string, string>;
+export type ClassDictionary = Record<string, string | undefined>;
 
 // @public
 export type ClassFunction = (state: GenericDictionary, slots: GenericDictionary) => ClassDictionary;
@@ -90,7 +90,7 @@ export type ComposeRenderFunction<TElementType extends React.ElementType = 'div'
 }) => React.ReactElement | null;
 
 // @public
-export const createClassResolver: (classes: Record<string, string>) => (state: Record<string, any>) => Record<string, string>;
+export const createClassResolver: (classes: Record<string, string | undefined>) => (state: Record<string, any>) => Record<string, string | undefined>;
 
 // @public
 export type GenericDictionary = Record<string, any>;

@@ -405,14 +405,9 @@ export interface ICheckboxStyleProps {
 }
 
 // @public (undocumented)
-export interface ICheckboxStyles {
-    checkbox?: IStyle;
-    checkmark?: IStyle;
-    input?: IStyle;
-    label?: IStyle;
-    root?: IStyle;
-    text?: IStyle;
-}
+export type ICheckboxStyles = {
+    [key in keyof ICheckboxSlots]?: IStyle;
+};
 
 // @public (undocumented)
 export interface ICoachmark {

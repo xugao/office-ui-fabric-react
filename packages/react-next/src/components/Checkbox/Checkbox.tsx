@@ -1,7 +1,7 @@
 import { compose, ComposeOptions } from '@fluentui/react-compose';
 import { CheckMarkIcon } from '@fluentui/react-icons';
 import { CheckboxBase } from './Checkbox.base';
-import { useCheckboxClasses } from './useCheckboxClasses';
+import { useCheckboxClasses } from './useCheckboxClassesLegacy';
 import { ICheckboxProps } from './Checkbox.types';
 
 const composeOptions: ComposeOptions = {

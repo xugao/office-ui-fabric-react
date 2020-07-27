@@ -805,6 +805,20 @@ export { IStyleFunctionOrObject }
 // @public
 export function isVirtualElement(element: HTMLElement | IVirtualElement): element is IVirtualElement;
 
+// @public (undocumented)
+export interface IUseClassesOptions<TStylesProp, TStyleProps, TStyleSet> {
+    // (undocumented)
+    baseStyles: IStyleFunctionOrObject<TStyleProps, TStyleSet>;
+    // (undocumented)
+    customizationScopeName: string;
+    // (undocumented)
+    styleProps: Omit<TStyleProps, 'theme'>;
+    // (undocumented)
+    stylesProp: TStylesProp;
+    // (undocumented)
+    useStaticStyles: boolean;
+}
+
 // @public
 export interface IVirtualElement extends HTMLElement {
     // (undocumented)
@@ -1196,6 +1210,11 @@ export const trProperties: Record<string, number>;
 
 // @public
 export function unhoistMethods(source: any, methodNames: string[]): void;
+
+// @public (undocumented)
+export function useClasses<TStylesProp, TStyleProps extends {}, TStyleSet extends IStyleSet<TStyleSet>>(options: IUseClassesOptions<TStylesProp, TStyleProps, TStyleSet>): {
+    [key in keyof TStyleSet]: string;
+};
 
 // @public
 export function useCustomizationSettings(properties: string[], scopeName?: string, localSettings?: ICustomizations): ISettings;
