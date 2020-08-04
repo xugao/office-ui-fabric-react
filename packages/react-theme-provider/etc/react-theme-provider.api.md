@@ -4,6 +4,7 @@
 
 ```ts
 
+import { IStyleFunctionOrObject } from '@uifabric/utilities';
 import { ITheme } from '@uifabric/styling';
 import * as React from 'react';
 
@@ -44,7 +45,7 @@ export type FontTokens = Partial<{
 export const getStyleFromPropsAndOptions: <TProps extends StyleProps<import("./types").ColorPlateSet>, TOptions extends StyleOptions<TProps>>(props: TProps, options: TOptions, prefix?: string | undefined) => import("react").CSSProperties;
 
 // @public
-export const mergeThemes: (fullTheme: import("@uifabric/styling").ITheme, ...themes: (import("@uifabric/styling").ITheme | PartialTheme | undefined)[]) => import("@uifabric/styling").ITheme;
+export const mergeThemes: (fullTheme: Theme, ...themes: (Theme | PartialTheme | undefined)[]) => Theme;
 
 // @public
 export interface PartialTheme extends RecursivePartial<Theme> {
@@ -70,7 +71,14 @@ export interface StyleProps<TTokens extends ColorPlateSet = ColorPlateSet> {
 }
 
 // @public (undocumented)
-export type Theme = ITheme;
+export interface Theme extends ITheme {
+    // (undocumented)
+    components?: {
+        [componentName: string]: {
+            styles?: IStyleFunctionOrObject<any, any>;
+        };
+    };
+}
 
 // @public
 export const ThemeProvider: React.ForwardRefExoticComponent<ThemeProviderProps & React.RefAttributes<HTMLDivElement>>;
@@ -101,7 +109,7 @@ export const tokensToStyleObject: (tokens?: {
 }) => import("react").CSSProperties;
 
 // @public
-export const useTheme: () => ITheme;
+export const useTheme: () => Theme;
 
 
 // (No @packageDocumentation comment for this package)

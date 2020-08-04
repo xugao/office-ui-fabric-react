@@ -18,7 +18,7 @@ function createCustomizerContext(theme: Theme): ICustomizerContext {
     customizations: {
       inCustomizerContext: true,
       settings: { theme },
-      scopedSettings: {},
+      scopedSettings: theme.components || {},
     },
   };
 }

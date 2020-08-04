@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IStyleFunctionOrObject } from '@uifabric/utilities';
 import { ITheme } from '@uifabric/styling';
 
 /**
@@ -86,7 +87,14 @@ export type Tokens = {
   [key: string]: TokenSetType;
 };
 
-export type Theme = ITheme;
+export interface Theme extends ITheme {
+  components?: {
+    [componentName: string]: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      styles?: IStyleFunctionOrObject<any, any>;
+    };
+  };
+}
 
 /**
  * A partial theme, provided by the customer. The internal `createTheme` helper will fill in the rest.

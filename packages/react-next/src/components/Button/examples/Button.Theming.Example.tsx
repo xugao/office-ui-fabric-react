@@ -2,7 +2,7 @@ import * as React from 'react';
 import { PrimaryButton, DefaultButton } from '@fluentui/react-next/lib/compat/Button';
 import { Button } from '@fluentui/react-button';
 import { Stack } from '@fluentui/react-next/lib/Stack';
-import { loadTheme, FontWeights, FontSizes, IPartialTheme } from '@fluentui/react-next/lib/Styling';
+import { loadTheme, FontSizes, IPartialTheme } from '@fluentui/react-next/lib/Styling';
 import { ThemeProvider } from '@fluentui/react-theme-provider';
 // import { Customizer } from '@fluentui/react-next/lib/Utilities';
 
@@ -15,7 +15,7 @@ const customizedTheme: IPartialTheme = {
 
 // TODO (xgao): Remove. This example is temporary for testing backward compatibility.
 export const ButtonThemingExample: React.FunctionComponent = () => {
-  const loadCustomizedTheme = () => loadTheme({ fonts: { medium: { fontSize: FontSizes.xLarge } } });
+  // const loadCustomizedTheme = () => loadTheme({ fonts: { medium: { fontSize: FontSizes.xLarge } } });
 
   return (
     <Stack tokens={stackTokens}>
@@ -49,14 +49,12 @@ export const CompatButtonThemingExample: React.FunctionComponent = () => {
         <PrimaryButton>With ThemeProvider settings theme</PrimaryButton>
       </ThemeProvider>
 
-      {/* <ThemeProvider theme={{ DefaultButton: { styles: { root: { background: 'yellow' } } } }}>
+      <ThemeProvider theme={{ components: { DefaultButton: { styles: { root: { background: 'yellow' } } } } }}>
         <DefaultButton>With ThemeProvider scopedSettings Component styles</DefaultButton>
       </ThemeProvider>
-
+      {/*
       <ThemeProvider theme={{ DefaultButton: { theme: customizedTheme } }}>
-        <DefaultButton>
-          With ThemeProvider scopedSettings Component theme (not really a supported scenario)
-        </DefaultButton>
+        <DefaultButton>With ThemeProvider scopedSettings Component theme (NOT supported)</DefaultButton>
       </ThemeProvider> */}
 
       {/* eslint-disable-next-line react/jsx-no-bind */}
