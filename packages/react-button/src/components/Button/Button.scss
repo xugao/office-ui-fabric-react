@@ -9,74 +9,75 @@
 **/
 :root {
   /* sizing */
-  --button-size-smallest: 24px;
-  --button-size-smaller: 24px;
-  --button-size-small: 24px;
-  --button-size-regular: 32px;
-  --button-size-large: 40px;
-  --button-size-larger: 48px;
-  --button-size-largest: 64px;
+  --button-size-smallest: 24px; // NOT IN THEME
+  --button-size-smaller: 24px; // NOT IN THEME
+  --button-size-small: 24px; // NOT IN THEME
+  --button-size-regular: 32px; // NOT IN THEME, default value 32px
+  --button-size-large: 40px; // NOT IN THEME
+  --button-size-larger: 48px; // NOT IN THEME
+  --button-size-largest: 64px; // NOT IN THEME
 
-  --button-padding: 0 24px;
-  --button-margin: 0;
-  --button-width: auto;
-  --button-minHeight: var(--button-size-regular);
-  --button-minWidth: 96px;
-  --button-maxWidth: 280px;
+  --button-padding: 0 24px; // NOT IN THEME, default value 16px
+  // --button-margin: 0; // NOT IN THEME, default no margin
+  // --button-width: auto; // NOT IN THEME, not set
+  --button-minHeight: var(--button-size-regular); // NOT IN THEME, not set (`height` is set)
+  --button-minWidth: 96px; // NOT IN THEME, default value 80px
+  --button-maxWidth: 280px; // NOT IN THEME, not set
 
-  --button-contentGap: 10px;
-  --button-iconSize: 16px;
+  --button-contentGap: 10px; // NOT IN THEME
+  --button-iconSize: 16px; // fonts.mediumPlus.fontSize
 
   /* borders and shadow */
-  --button-borderRadius: 2px;
-  --button-borderWidth: 1px;
-  --button-boxShadow: 0px 2px 4px -0.75px rgba(0, 0, 0, 0.1);
-  --button-disabled-boxShadow: none;
+  --button-borderRadius: 2px; // effects.roundedCorner2
+  --button-borderWidth: 1px; // NOT IN THEME, default value 1px
+  --button-boxShadow: 0px 2px 4px -0.75px rgba(0, 0, 0, 0.1); // NOT IN THEME, not set
+  --button-disabled-boxShadow: none; // NOT IN THEME, not set
 
   /* transforms */
-  --button-pressed-transform: scale(0.95);
-  --button-transition: transform 0.1s linear;
+  --button-pressed-transform: scale(0.95); // NOT IN THEME, not set
+  --button-transition: transform 0.1s linear; // NOT IN THEME, not set
 
   /* TODO: Remove. Fonts should only be defined in the theme. */
+  /* fonts.medium */
   --button-fontFamily: 'Segoe UI', 'Helvetica Neue', 'Apple Color Emoji', 'Segoe UI Emoji', Helvetica, Arial, sans-serif;
   --button-fontSize: 14px;
   --button-fontWeight: 600;
 
   /* TODO: Consider remove. Colors should only be defined in the theme. */
 
-  --button-focusColor: #000;
-  --button-focusInnerColor: #fff;
+  --button-focusColor: #000; // palette.neutralSecondary
+  --button-focusInnerColor: #fff; // palette.white
 
-  --button-background: white;
-  --button-borderColor: rgb(225, 223, 221);
-  --button-contentColor: rgb(44, 38, 33);
-  --button-iconColor: inherit;
+  --button-background: white; // semanticColors.buttonBackground
+  --button-borderColor: rgb(225, 223, 221); // semanticColors.buttonBorder
+  --button-contentColor: rgb(44, 38, 33); // semanticColors.buttonText
+  --button-iconColor: inherit; // ??? semanticColors.link
 
-  --button-hovered-background: rgb(237, 235, 233);
-  --button-hovered-borderColor: var(--button-borderColor);
-  --button-hovered-contentColor: var(--button-contentColor);
-  --button-hovered-iconColor: var(--button-iconColor);
+  --button-hovered-background: rgb(237, 235, 233); // semanticColors.buttonBackgroundHovered
+  --button-hovered-borderColor: var(--button-borderColor); // NOT IN THEME, not set
+  --button-hovered-contentColor: var(--button-contentColor); // NOT IN THEME, not set
+  --button-hovered-iconColor: var(--button-iconColor); // NOT IN THEME, not set
 
-  --button-focused-background: var(--button-background);
-  --button-focused-borderColor: var(--button-borderColor);
-  --button-focused-contentColor: var(--button-contentColor);
-  --button-focused-iconColor: var(--button-iconColor);
+  // --button-focused-background: var(--button-background);
+  // --button-focused-borderColor: var(--button-borderColor);
+  // --button-focused-contentColor: var(--button-contentColor);
+  // --button-focused-iconColor: var(--button-iconColor);
 
-  --button-pressed-background: rgb(225, 223, 221);
-  --button-pressed-borderColor: var(--button-borderColor);
-  --button-pressed-contentColor: var(--button-contentColor);
-  --button-pressed-iconColor: var(--button-iconColor);
+  --button-pressed-background: rgb(225, 223, 221); // semanticColors.buttonBackgroundPressed
+  --button-pressed-borderColor: var(--button-borderColor); // NOT IN THEME, not set
+  --button-pressed-contentColor: var(--button-contentColor); // semanticColors.buttonTextPressed
+  --button-pressed-iconColor: var(--button-iconColor); // NOT IN THEME, not set
 
-  --button-disabled-background: rgb(237, 235, 233);
-  --button-disabled-borderColor: var(--button-disabled-background);
-  --button-disabled-contentColor: rgb(200, 198, 196);
-  --button-disabled-iconColor: var(--button-disabled-contentColor);
+  --button-disabled-background: rgb(237, 235, 233); // semanticColors.buttonBackgroundDisabled
+  --button-disabled-borderColor: var(--button-disabled-background); // semanticColors.buttonBorderDisabled
+  --button-disabled-contentColor: rgb(200, 198, 196); // semanticColors.buttonTextDisabled
+  --button-disabled-iconColor: var(--button-disabled-contentColor); // NOT IN THEME, not set
 
   /* TODO: Remove. Accent should only be defined in the theme, though primary depends on it. */
-  --accent-background: rgb(98, 100, 167);
-  --accent-borderColor: transparent;
-  --accent-contentColor: white;
-  --accent-iconColor: inherit;
+  // --accent-background: rgb(98, 100, 167);
+  // --accent-borderColor: transparent;
+  // --accent-contentColor: white;
+  // --accent-iconColor: inherit;
 
   --accent-hovered-background: rgb(88, 90, 150);
   --accent-hovered-borderColor: var(--accent-borderColor);
@@ -161,30 +162,32 @@
   * 3. Avoid defining styles directly.
  **/
   &._primary {
-    --button-background: var(--accent-background);
-    --button-borderColor: var(--accent-borderColor);
-    --button-contentColor: var(--accent-contentColor);
-    --button-iconColor: var(--accent-iconColor);
+    --button-background: var(--accent-background); // ??? semanticColors.primaryButtonBackground (p.themePrimary)
+    --button-borderColor: var(--accent-borderColor); // ??? semanticColor.primaryButtonBorder
+    --button-contentColor: var(--accent-contentColor); // ??? semanitcColors.primaryButtonText
+    --button-iconColor: var(--accent-iconColor); // NOT IN THEME, not set
 
-    --button-hovered-background: var(--accent-hovered-background);
-    --button-hovered-borderColor: var(--accent-hovered-borderColor);
-    --button-hovered-contentColor: var(--accent-hovered-contentColor);
-    --button-hovered-iconColor: var(--accent-hovered-iconColor);
+    --button-hovered-background: var(--accent-hovered-background); // ??? semanticColors.primaryButtonBackgroundHovered
+    --button-hovered-borderColor: var(--accent-hovered-borderColor); // ??? semanticColor.primaryButtonBorder
+    --button-hovered-contentColor: var(--accent-hovered-contentColor); // ??? semanticColor.primaryButtonTextHovered
+    --button-hovered-iconColor: var(--accent-hovered-iconColor); // NOT IN THEME, not set
 
-    --button-focused-background: var(--accent-focused-background);
-    --button-focused-borderColor: var(--accent-focused-borderColor);
-    --button-focused-contentColor: var(--accent-focused-contentColor);
-    --button-focused-iconColor: var(--accent-focused-iconColor);
+    // --button-focused-background: var(--accent-focused-background);
+    // --button-focused-borderColor: var(--accent-focused-borderColor);
+    // --button-focused-contentColor: var(--accent-focused-contentColor);
+    // --button-focused-iconColor: var(--accent-focused-iconColor);
 
-    --button-pressed-background: var(--accent-pressed-background);
-    --button-pressed-borderColor: var(--accent-pressed-borderColor);
-    --button-pressed-contentColor: var(--accent-pressed-contentColor);
-    --button-pressed-iconColor: var(--accent-pressed-iconColor);
+    --button-pressed-background: var(--accent-pressed-background); // ??? semanticColors.primaryButtonBackgroundHovered
+    --button-pressed-borderColor: var(--accent-pressed-borderColor); // ??? semanticColor.primaryButtonBorder
+    --button-pressed-contentColor: var(--accent-pressed-contentColor); // ??? semanticColor.primaryButtonTextPressed
+    --button-pressed-iconColor: var(--accent-pressed-iconColor); // NOT IN THEME, not set
 
-    --button-disabled-background: var(--accent-disabled-background);
-    --button-disabled-borderColor: var(--accent-disabled-borderColor);
-    --button-disabled-contentColor: var(--accent-disabled-contentColor);
-    --button-disabled-iconColor: var(--accent-disabled-iconColor);
+    --button-disabled-background: var(
+      --accent-disabled-background
+    ); // ??? semanticColor.primaryButtonBackgroundDisabled
+    --button-disabled-borderColor: var(--accent-disabled-borderColor); // ??? semanticColor.buttonBorderDisabled
+    --button-disabled-contentColor: var(--accent-disabled-contentColor); // ??? semanticColor.primaryButtonTextDisabled
+    --button-disabled-iconColor: var(--accent-disabled-iconColor); // NOT IN THEME, not set
   }
 
   &._iconOnly {
@@ -261,7 +264,7 @@
   box-shadow: var(--button-hovered-boxShadow, var(--button-boxShadow));
 
   .icon {
-    color: var(--button-hovered-iconColor, var(--button-hovered-contentColor));
+    color: var(--button-hovered-iconColor, var(--button-iconColor));
   }
 }
 
@@ -271,10 +274,10 @@
   border-color: var(--button-pressed-borderColor, var(--button-hovered-borderColor, var(--button-borderColor)));
   box-shadow: var(--button-pressed-boxShadow, var(--button-hovered-boxShadow, var(--button-boxShadow)));
 
-  transform: var(--button-pressed-transform);
-  transition: var(--button-pressed-transition);
+  // transform: var(--button-pressed-transform);
+  // transition: var(--button-pressed-transition);
 
   .icon {
-    color: var(--button-pressed-iconColor, var(--button-pressed-contentColor));
+    color: var(--button-pressed-iconColor, var(--button-iconColor));
   }
 }

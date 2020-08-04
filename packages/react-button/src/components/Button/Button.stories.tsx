@@ -20,7 +20,7 @@ const Text = (props: React.PropsWithChildren<{}>) => <h2 {...props} className={c
 
 const ButtonVariants = (props: ButtonProps) => (
   <Stack horizontal>
-    <Button {...props} icon="O">
+    {/* <Button {...props} icon="O">
       Hello, world
     </Button>
     <Button {...props} primary icon="X">
@@ -30,6 +30,17 @@ const ButtonVariants = (props: ButtonProps) => (
       Hello, world
     </Button>
     <Button {...props} primary disabled icon="X">
+      Hello, world
+    </Button> */}
+
+    <Button {...props}>Hello, world</Button>
+    <Button {...props} primary>
+      Hello, world
+    </Button>
+    <Button {...props} disabled>
+      Hello, world
+    </Button>
+    <Button {...props} primary disabled>
       Hello, world
     </Button>
   </Stack>
@@ -60,10 +71,10 @@ export const ButtonCss = () => (
     </Stack>
 
     <Text>A button can contain only an icon using the `iconOnly` prop.</Text>
-    <ButtonVariants iconOnly />
+    <ButtonVariants iconOnly icon="X" />
 
     <Text>A button can be both `circular` and `iconOnly`.</Text>
-    <ButtonVariants circular iconOnly />
+    <ButtonVariants circular iconOnly icon="X" />
 
     <Text>An icon button can format its Icon to appear before or after its content.</Text>
     <Stack>

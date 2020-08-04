@@ -9,8 +9,62 @@ import { useTheme } from './useTheme';
 import * as classes from './ThemeProvider.scss';
 
 function convertThemeToTokens(theme: Theme): Tokens {
-  // TODO: impl
-  return (theme as unknown) as Tokens;
+  const { fonts, effects, palette, semanticColors } = theme;
+  const { components, schemes, rtl, isInverted, ...passThroughTokens } = theme;
+  const tokens = {
+    accent: {
+      background: palette.themePrimary,
+      borderColor: 'transparent',
+      contentColor: palette.white,
+      iconColor: palette.white,
+
+      hovered: {
+        background: palette.themeDarkAlt,
+        borderColor: 'transparent',
+        contentColor: palette.white,
+        iconColor: palette.white,
+      },
+    },
+
+    button: {
+      contentGap: '8px',
+      padding: '0 16px',
+      minWidth: '80px',
+      iconSize: fonts.mediumPlus.fontSize,
+      borderRadius: effects.roundedCorner2,
+      focusColor: palette.neutralSecondary,
+      focusInnerColor: palette.white,
+
+      background: semanticColors.buttonBackground,
+      borderColor: semanticColors.buttonBorder,
+      contentColor: semanticColors.buttonText,
+
+      hovered: {
+        background: semanticColors.buttonBackgroundHovered,
+        borderColor: semanticColors.buttonBorder,
+        contentColor: semanticColors.buttonTextHovered,
+      },
+
+      pressed: {
+        background: semanticColors.buttonBackgroundPressed,
+        contentColor: semanticColors.buttonTextPressed,
+      },
+
+      disabled: {
+        background: semanticColors.buttonBackgroundDisabled,
+        borderColor: semanticColors.buttonBorderDisabled,
+        contentColor: semanticColors.buttonTextDisabled,
+      },
+
+      primary: {
+        background: semanticColors.primaryButtonBackground,
+        borderColor: semanticColors.buttonBorder,
+        contentColor: semanticColors.buttonText,
+      },
+    },
+    ...passThroughTokens,
+  };
+  return (tokens as unknown) as Tokens;
 }
 
 function createCustomizerContext(theme: Theme): ICustomizerContext {
