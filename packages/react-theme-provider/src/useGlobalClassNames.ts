@@ -1,8 +1,9 @@
 import { getGlobalClassNames, GlobalClassNames } from '@uifabric/styling';
-import { useTheme } from '../useTheme';
+import { useTheme } from './useTheme';
 
+// TODO: find better place for this.
 export function useGlobalClassNames<T>(classNames: GlobalClassNames<T>): GlobalClassNames<T> {
-  const { tokens: theme } = useTheme();
+  const theme = useTheme();
 
   return getGlobalClassNames(
     classNames,

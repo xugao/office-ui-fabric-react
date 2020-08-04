@@ -1,6 +1,6 @@
 import { Theme } from '@fluentui/react-theme-provider';
 
-export const FluentTheme: Theme = {
+export const FluentTheme = ({
   tokens: {
     palette: {
       accent: '#0078D4',
@@ -38,4 +38,4 @@ export const FluentTheme: Theme = {
     },
   },
   stylesheets: [],
-};
+} as unknown) as Theme; // TODO: fix this

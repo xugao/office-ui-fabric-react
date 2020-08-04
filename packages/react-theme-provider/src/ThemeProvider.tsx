@@ -1,13 +1,27 @@
 import * as React from 'react';
 import cx from 'classnames';
-import { useStylesheet } from '@fluentui/react-stylesheets';
+import { CustomizerContext, ICustomizerContext } from '@uifabric/utilities';
 import { tokensToStyleObject } from './tokensToStyleObject';
 import { ThemeContext } from './ThemeContext';
-import { PartialTheme, Theme } from './types';
+import { PartialTheme, Theme, Tokens } from './types';
 import { mergeThemes } from './mergeThemes';
 import { useTheme } from './useTheme';
 import * as classes from './ThemeProvider.scss';
 
+function convertThemeToTokens(theme: Theme): Tokens {
+  // TODO: impl
+  return (theme as unknown) as Tokens;
+}
+
+function createCustomizerContext(theme: Theme): ICustomizerContext {
+  return {
+    customizations: {
+      inCustomizerContext: true,
+      settings: { theme },
+      scopedSettings: {},
+    },
+  };
+}
 /**
  * Props for the ThemeProvider component.
  */
@@ -34,19 +48,21 @@ export const ThemeProvider = React.forwardRef<HTMLDivElement, ThemeProviderProps
 
     // Generate the inline style object only when merged theme mutates.
     const inlineStyle = React.useMemo<React.CSSProperties>(
-      () => tokensToStyleObject(fullTheme.tokens, undefined, { ...style }),
+      () => tokensToStyleObject(convertThemeToTokens(fullTheme), undefined, { ...style }),
       [fullTheme, style],
     );
 
     const rootClass = cx(className, classes.root) || undefined;
 
     // Register stylesheets as needed.
-    useStylesheet(fullTheme.stylesheets);
+    // TODO: useStylesheet(fullTheme.stylesheets);
 
     // Provide the theme in case it's required through context.
     return (
       <ThemeContext.Provider value={fullTheme}>
-        <div {...rest} ref={ref} className={rootClass} style={inlineStyle} />
+        <CustomizerContext.Provider value={createCustomizerContext(fullTheme)}>
+          <div {...rest} ref={ref} className={rootClass} style={inlineStyle} />
+        </CustomizerContext.Provider>
       </ThemeContext.Provider>
     );
   },

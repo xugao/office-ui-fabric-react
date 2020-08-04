@@ -7,7 +7,6 @@ import {
   mergeCustomizations,
   ICustomizerContext,
 } from 'office-ui-fabric-react/lib/Utilities';
-import { convertLegacyTheme } from '../Styling';
 import { ICustomizerProps } from '../Utilities';
 
 /**
@@ -35,13 +34,9 @@ export const Customizer: React.FunctionComponent<ICustomizerProps> = props => {
           newContext = contextTransform(newContext);
         }
 
-        const globalTheme = newContext.customizations.settings.theme;
+        const theme = newContext.customizations.settings.theme;
         const content =
-          globalTheme && !disableThemeProvider ? (
-            <ThemeProvider theme={convertLegacyTheme(globalTheme)}>{props.children}</ThemeProvider>
-          ) : (
-            children
-          );
+          theme && !disableThemeProvider ? <ThemeProvider theme={theme}>{props.children}</ThemeProvider> : children;
 
         return <CustomizerContext.Provider value={newContext}>{content}</CustomizerContext.Provider>;
       }}

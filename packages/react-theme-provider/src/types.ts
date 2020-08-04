@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ITheme } from '@uifabric/styling';
 
 /**
  * A baseline set of color plates.
@@ -71,14 +72,21 @@ export type RecursivePartial<T> = {
 /**
  * A prepared (fully expanded) theme object.
  */
-export interface Theme {
-  tokens: {
-    body: ColorPlateSet & TokenSetType;
-    [key: string]: TokenSetType;
-  };
+// export interface Theme {
+//   tokens: {
+//     body: ColorPlateSet & TokenSetType;
+//     [key: string]: TokenSetType;
+//   };
 
-  stylesheets: string[];
-}
+//   stylesheets: string[];
+// }
+
+export type Tokens = {
+  body: ColorPlateSet & TokenSetType;
+  [key: string]: TokenSetType;
+};
+
+export type Theme = ITheme;
 
 /**
  * A partial theme, provided by the customer. The internal `createTheme` helper will fill in the rest.
