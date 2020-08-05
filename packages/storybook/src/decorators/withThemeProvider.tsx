@@ -4,12 +4,9 @@ import { useTheme } from '../knobs/useTheme';
 
 const ThemeProviderWrapper: React.FunctionComponent<{}> = props => {
   const { theme, isDark } = useTheme();
-  const style = {
-    background: isDark ? 'black' : undefined,
-  };
 
   return (
-    <ThemeProvider style={style} theme={theme}>
+    <ThemeProvider theme={theme} applyThemeToBody={isDark}>
       {props.children}
     </ThemeProvider>
   );

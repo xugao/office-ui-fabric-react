@@ -83,7 +83,7 @@ export type RecursivePartial<T> = {
 // }
 
 export type Tokens = {
-  // body: ColorPlateSet & TokenSetType;
+  body: ColorPlateSet & TokenSetType;
   [key: string]: TokenSetType;
 };
 

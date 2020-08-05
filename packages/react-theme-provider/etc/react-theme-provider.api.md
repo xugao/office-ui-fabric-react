@@ -85,6 +85,8 @@ export const ThemeProvider: React.ForwardRefExoticComponent<ThemeProviderProps &
 
 // @public
 export interface ThemeProviderProps extends React.HTMLAttributes<HTMLDivElement> {
+    // (undocumented)
+    applyThemeToBody?: boolean;
     theme?: PartialTheme | Theme;
 }
 
@@ -95,15 +97,13 @@ export type Tokens = {
 };
 
 // @public
-export type TokenSetType = string | {
+export type TokenSetType = string | number | undefined | {
     [key: string]: TokenSetType | undefined;
 };
 
 // @public (undocumented)
 export const tokensToStyleObject: (tokens?: {
-    [key: string]: string | {
-        [key: string]: string | any | undefined;
-    } | undefined;
+    [key: string]: TokenSetType;
 } | undefined, prefix?: string | undefined, style?: {
     [key: string]: string | number | undefined;
 }) => import("react").CSSProperties;

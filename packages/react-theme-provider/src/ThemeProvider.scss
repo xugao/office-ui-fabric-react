@@ -3,15 +3,15 @@
  * token values to the container DIV, so that fonts and default colors, which
  * refer to token values, can be applied.
  */
-.root {
+.body {
   background: var(--body-background);
-  color: var(--body-contentColor);
-  font-family: var(--body-fontFamily);
-  font-weight: var(--body-fontWeight);
-  font-size: var(--body-fontSize);
-  line-height: var(--body-fontLineHeight);
+  // color: var(--body-contentColor);
+  // font-family: var(--body-fontFamily);
+  // font-weight: var(--body-fontWeight);
+  // font-size: var(--body-fontSize);
+  // line-height: var(--body-fontLineHeight);
 
-  > * {
-    box-sizing: border-box;
-  }
+  // > * {
+  //   box-sizing: border-box;
+  // }
 }
