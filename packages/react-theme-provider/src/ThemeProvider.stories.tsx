@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { PartialTheme } from '@fluentui/theme';
 import { ThemeProvider } from './ThemeProvider';
-import { PartialTheme } from './types';
 
 const lightTheme: PartialTheme = {
   tokens: {
