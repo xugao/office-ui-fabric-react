@@ -1,8 +1,17 @@
 # Change Log - @uifabric/utilities
 
-This log was last generated on Tue, 22 Sep 2020 12:25:45 GMT and should not be manually modified.
+This log was last generated on Mon, 28 Sep 2020 21:06:02 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [7.32.4](https://github.com/microsoft/fluentui/tree/@uifabric/utilities_v7.32.4)
+
+Mon, 28 Sep 2020 21:06:02 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@uifabric/utilities_v7.32.3..@uifabric/utilities_v7.32.4)
+
+### Patches
+
+- dummy change ([commit](https://github.com/microsoft/fluentui/commit/1e2056eb163cd3f8bd0ca011382a0197aa1aeb4d) by xgao@microsoft.com)
 
 ## [7.32.3](https://github.com/microsoft/fluentui/tree/@uifabric/utilities_v7.32.3)
 
