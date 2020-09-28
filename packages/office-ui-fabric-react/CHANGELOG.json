@@ -2,6 +2,21 @@
   "name": "office-ui-fabric-react",
   "entries": [
     {
+      "date": "Mon, 28 Sep 2020 22:09:29 GMT",
+      "tag": "office-ui-fabric-react_v7.142.1",
+      "version": "7.142.1",
+      "comments": {
+        "patch": [
+          {
+            "comment": "dummy change",
+            "author": "xgao@microsoft.com",
+            "commit": "7e83f690c616148da92d9c06d76fd791fc86eeac",
+            "package": "office-ui-fabric-react"
+          }
+        ]
+      }
+    },
+    {
       "date": "Sun, 27 Sep 2020 04:20:52 GMT",
       "tag": "office-ui-fabric-react_v7.142.0",
       "version": "7.142.0",
