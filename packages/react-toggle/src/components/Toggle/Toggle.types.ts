@@ -3,7 +3,6 @@
 import * as React from 'react';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject, IStyleFunctionOrObject, IComponentAs } from '@uifabric/utilities';
-import { IKeytipProps } from 'office-ui-fabric-react/lib/Keytip';
 
 /**
  * {@docCategory Toggle}
@@ -103,13 +102,6 @@ export interface IToggleProps extends React.HTMLAttributes<HTMLElement>, React.R
    * Optional styles for the component.
    */
   styles?: IStyleFunctionOrObject<IToggleStyleProps, IToggleStyles>;
-
-  /**
-   * Optional keytip.
-   *
-   * @deprecated This no longer works. Use `useKeytipData` hook instead.
-   */
-  keytipProps?: IKeytipProps;
 
   /**
    * (Optional) Specify whether to use the "switch" role (ARIA 1.1) or the checkbox role (ARIA 1.0).

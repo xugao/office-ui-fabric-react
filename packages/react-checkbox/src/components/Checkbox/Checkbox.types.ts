@@ -4,7 +4,6 @@ import * as React from 'react';
 import { IStyle, ITheme } from '@uifabric/styling';
 import { IRefObject, IRenderFunction, IStyleFunctionOrObject } from '@uifabric/utilities';
 import { IIconProps } from 'office-ui-fabric-react/lib/Icon';
-import { IKeytipProps } from 'office-ui-fabric-react/lib/Keytip';
 
 /**
  * Checkbox class interface.
@@ -124,11 +123,6 @@ export interface ICheckboxProps
    * Custom icon props for the check mark rendered by the checkbox
    */
   checkmarkIconProps?: IIconProps;
-
-  /**
-   * Optional keytip for this checkbox
-   */
-  keytipProps?: IKeytipProps;
 
   /**
    * Optional controlled indeterminate visual state for checkbox. Setting indeterminate state takes visual precedence

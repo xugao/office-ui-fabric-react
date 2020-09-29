@@ -5,7 +5,6 @@
 ```ts
 
 import { IIconProps } from 'office-ui-fabric-react/lib/Icon';
-import { IKeytipProps } from 'office-ui-fabric-react/lib/Keytip';
 import { IRefObject } from '@uifabric/utilities';
 import { IRenderFunction } from '@uifabric/utilities';
 import { IStyle } from '@uifabric/styling';
@@ -43,7 +42,6 @@ export interface ICheckboxProps extends React.ButtonHTMLAttributes<HTMLElement |
     disabled?: boolean;
     indeterminate?: boolean;
     inputProps?: React.ButtonHTMLAttributes<HTMLElement | HTMLButtonElement>;
-    keytipProps?: IKeytipProps;
     label?: string;
     onChange?: (ev?: React.FormEvent<HTMLElement | HTMLInputElement>, checked?: boolean) => void;
     onRenderLabel?: IRenderFunction<ICheckboxProps>;

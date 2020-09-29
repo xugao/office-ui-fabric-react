@@ -4,7 +4,6 @@
 
 ```ts
 
-import { IKeytipProps } from 'office-ui-fabric-react/lib/Keytip';
 import { IRefObject } from '@uifabric/utilities';
 import { IStyle } from '@uifabric/styling';
 import { IStyleFunctionOrObject } from '@uifabric/utilities';
@@ -61,8 +60,6 @@ export interface ILinkProps extends ILinkHTMLAttributes<HTMLAnchorElement | HTML
     as?: React.ElementType;
     componentRef?: IRefObject<ILink>;
     disabled?: boolean;
-    // @deprecated
-    keytipProps?: IKeytipProps;
     styles?: IStyleFunctionOrObject<ILinkStyleProps, ILinkStyles>;
     theme?: ITheme;
 }
