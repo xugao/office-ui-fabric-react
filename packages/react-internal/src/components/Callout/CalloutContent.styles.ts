@@ -21,7 +21,7 @@ export const getStyles = (props: ICalloutContentStyleProps): ICalloutContentStyl
 
   const classNames = getGlobalClassNames(GlobalClassNames, theme);
 
-  const { semanticColors, effects } = theme;
+  const { palette, semanticColors, effects } = theme;
 
   return {
     container: [
@@ -34,6 +34,7 @@ export const getStyles = (props: ICalloutContentStyleProps): ICalloutContentStyl
       classNames.root,
       theme.fonts.medium,
       {
+        color: palette.neutralPrimary,
         position: 'absolute',
         boxSizing: 'border-box',
         borderRadius: effects.roundedCorner2,

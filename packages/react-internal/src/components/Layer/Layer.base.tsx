@@ -1,7 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
-import { Fabric } from '../../Fabric';
 import { ILayerProps, ILayerStyleProps, ILayerStyles } from './Layer.types';
 import {
   classNamesFunction,
@@ -60,9 +58,9 @@ export class LayerBase extends React.Component<ILayerProps, ILayerBaseState> {
       <span className="ms-layer" ref={this._rootRef}>
         {layerElement &&
           ReactDOM.createPortal(
-            <Fabric {...(!eventBubblingEnabled && _getFilteredEvents())} className={classNames.content}>
+            <div {...(!eventBubblingEnabled && _getFilteredEvents())} className={classNames.content}>
               {this.props.children}
-            </Fabric>,
+            </div>,
             layerElement,
           )}
       </span>
