@@ -4,7 +4,6 @@ import Screener from 'screener-storybook/src/screener';
 import { storiesOf } from '@storybook/react';
 import { FabricDecoratorFixedWidth, FabricDecorator } from '../utilities';
 import {
-  Fabric,
   SpinButton,
   TextField,
   ISpinButtonProps,
@@ -46,25 +45,9 @@ storiesOf('SpinButton Next', module)
       {story()}
     </Screener>
   ))
-  .addStory('Root', () => (
-    <Fabric>
-      <SpinButton {...props} />
-    </Fabric>
-  ))
-  .addStory('Disabled', () => (
-    <Fabric>
-      <SpinButton {...props} disabled />
-    </Fabric>
-  ))
-  .addStory(
-    'With icon',
-    () => (
-      <Fabric>
-        <SpinButton {...props} iconProps={iconProps} />
-      </Fabric>
-    ),
-    { rtl: true },
-  );
+  .addStory('Root', () => <SpinButton {...props} />)
+  .addStory('Disabled', () => <SpinButton {...props} disabled />)
+  .addStory('With icon', () => <SpinButton {...props} iconProps={iconProps} />, { rtl: true });
 
 // The stories for label placement are separate since they don't need to include hover/click states
 storiesOf('SpinButton', module)
@@ -76,24 +59,18 @@ storiesOf('SpinButton', module)
   ))
   .addStory(
     'Label at end',
-    () => (
-      <Fabric>
-        <SpinButton {...props} styles={styles} labelPosition={Position.end} />
-      </Fabric>
-    ),
+    () => <SpinButton {...props} styles={styles} labelPosition={Position.end} />,
     { rtl: true },
   )
   .addStory(
     'Label at end with icon',
     () => (
-      <Fabric>
-        <SpinButton {...props} styles={styles} labelPosition={Position.end} iconProps={iconProps} />
-      </Fabric>
+      <SpinButton {...props} styles={styles} labelPosition={Position.end} iconProps={iconProps} />
     ),
     { rtl: true },
   )
   .addStory('Label on top', () => (
-    <Fabric>
+    <div>
       <SpinButton
         {...props}
         styles={{ root: { width: 120, display: 'inline-block' } }}
@@ -107,10 +84,10 @@ storiesOf('SpinButton', module)
         placeholder="(verify field and label alignment)"
         styles={textFieldStyles}
       />
-    </Fabric>
+    </div>
   ))
   .addStory('Label on top with icon', () => (
-    <Fabric>
+    <div>
       <SpinButton
         {...props}
         styles={{ root: { width: 150, display: 'inline-block' } }}
@@ -125,20 +102,11 @@ storiesOf('SpinButton', module)
         placeholder="(verify field and label alignment)"
         styles={textFieldStyles}
       />
-    </Fabric>
+    </div>
   ))
   .addStory('Label on bottom', () => (
-    <Fabric>
-      <SpinButton {...props} styles={styles} labelPosition={Position.bottom} />
-    </Fabric>
+    <SpinButton {...props} styles={styles} labelPosition={Position.bottom} />
   ))
   .addStory('Label on bottom with icon', () => (
-    <Fabric>
-      <SpinButton
-        {...props}
-        styles={styles}
-        labelPosition={Position.bottom}
-        iconProps={iconProps}
-      />
-    </Fabric>
+    <SpinButton {...props} styles={styles} labelPosition={Position.bottom} iconProps={iconProps} />
   ));

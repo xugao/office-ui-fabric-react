@@ -24,7 +24,6 @@ import {
 import Screener from 'screener-storybook/src/screener';
 import { storiesOf } from '@storybook/react';
 import { FabricDecorator } from '../utilities';
-import { Fabric } from '@fluentui/react';
 
 interface ISignalExampleProps {
   name: string;
@@ -36,9 +35,7 @@ const SignalExample: React.FunctionComponent<ISignalExampleProps> = (
 ): JSX.Element => {
   return (
     <div>
-      <Fabric>
-        <SignalField before={props.signal}>{props.name}</SignalField>
-      </Fabric>
+      <SignalField before={props.signal}>{props.name}</SignalField>
     </div>
   );
 };

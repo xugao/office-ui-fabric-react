@@ -20,7 +20,6 @@ import { Sticky, StickyPositionType } from '@fluentui/react/lib/Sticky';
 import { MarqueeSelection } from '@fluentui/react/lib/MarqueeSelection';
 import { SelectionMode } from '@fluentui/react/lib/Selection';
 import { Breadcrumb } from '@fluentui/react/lib/Breadcrumb';
-import { Fabric } from '@fluentui/react/lib/Fabric';
 import { getTheme } from '@fluentui/react/lib/Styling';
 
 const _columns: IColumn[] = [
@@ -133,44 +132,42 @@ export class ScrollablePaneStickyBreadcrumbExample extends React.Component<{}, {
           width: '900px',
         }}
       >
-        <Fabric>
-          <ScrollablePane
-            scrollbarVisibility={ScrollbarVisibility.auto}
-            style={{ maxWidth: '900px', border: '1px solid #edebe9' }}
+        <ScrollablePane
+          scrollbarVisibility={ScrollbarVisibility.auto}
+          style={{ maxWidth: '900px', border: '1px solid #edebe9' }}
+        >
+          <Sticky
+            stickyPosition={StickyPositionType.Header}
+            stickyBackgroundColor={getTheme().palette.white}
           >
-            <Sticky
-              stickyPosition={StickyPositionType.Header}
-              stickyBackgroundColor={getTheme().palette.white}
-            >
-              <Breadcrumb
-                styles={breadcrumbStyle}
-                items={[
-                  { text: 'Files', key: 'Files' },
-                  { text: 'This is folder 1', key: 'f1' },
-                  { text: 'This is folder 2', key: 'f2' },
-                  { text: 'This is folder 3', key: 'f3', isCurrentItem: true },
-                ]}
-                ariaLabel={'breadcrumb-test'}
-              />
-            </Sticky>
-            <MarqueeSelection selection={this._selection}>
-              <DetailsList
-                items={this._items}
-                columns={_columns}
-                setKey="set"
-                layoutMode={DetailsListLayoutMode.fixedColumns}
-                constrainMode={ConstrainMode.unconstrained}
-                onRenderDetailsHeader={onRenderDetailsHeader}
-                onRenderDetailsFooter={onRenderDetailsFooter}
-                selection={this._selection}
-                selectionPreservedOnEmptyClick={true}
-                ariaLabelForSelectionColumn="Toggle selection"
-                ariaLabelForSelectAllCheckbox="Toggle selection for all items"
-                onItemInvoked={item => console.log(`Item invoked: ${item.name}`)}
-              />
-            </MarqueeSelection>
-          </ScrollablePane>
-        </Fabric>
+            <Breadcrumb
+              styles={breadcrumbStyle}
+              items={[
+                { text: 'Files', key: 'Files' },
+                { text: 'This is folder 1', key: 'f1' },
+                { text: 'This is folder 2', key: 'f2' },
+                { text: 'This is folder 3', key: 'f3', isCurrentItem: true },
+              ]}
+              ariaLabel={'breadcrumb-test'}
+            />
+          </Sticky>
+          <MarqueeSelection selection={this._selection}>
+            <DetailsList
+              items={this._items}
+              columns={_columns}
+              setKey="set"
+              layoutMode={DetailsListLayoutMode.fixedColumns}
+              constrainMode={ConstrainMode.unconstrained}
+              onRenderDetailsHeader={onRenderDetailsHeader}
+              onRenderDetailsFooter={onRenderDetailsFooter}
+              selection={this._selection}
+              selectionPreservedOnEmptyClick={true}
+              ariaLabelForSelectionColumn="Toggle selection"
+              ariaLabelForSelectAllCheckbox="Toggle selection for all items"
+              onItemInvoked={item => console.log(`Item invoked: ${item.name}`)}
+            />
+          </MarqueeSelection>
+        </ScrollablePane>
       </div>
     );
   }

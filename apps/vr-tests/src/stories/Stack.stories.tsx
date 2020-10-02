@@ -3,7 +3,7 @@ import * as React from 'react';
 import Screener from 'screener-storybook/src/screener';
 import { storiesOf } from '@storybook/react';
 import { FabricDecoratorFullWidth } from '../utilities';
-import { Fabric, mergeStyleSets, DefaultPalette, IStyle, Stack } from '@fluentui/react';
+import { mergeStyleSets, DefaultPalette, IStyle, Stack } from '@fluentui/react';
 
 const rootStyles = {
   background: DefaultPalette.themeTertiary,
@@ -81,71 +81,31 @@ storiesOf('Stack', module)
       {story()}
     </Screener>,
   )
-  .addStory(
-    'Vertical Stack - Default',
-    () => (
-      <Fabric>
-        <Stack {...defaultProps} />
-      </Fabric>
-    ),
-    { rtl: true },
-  )
-  .addStory(
-    'Vertical Stack - Reversed',
-    () => (
-      <Fabric>
-        <Stack reversed {...defaultProps} />
-      </Fabric>
-    ),
-    { rtl: true },
-  )
-  .addStory('Vertical Stack - Padding', () => (
-    <Fabric>
-      <Stack {...defaultProps} padding={10} />
-    </Fabric>
-  ))
-  .addStory('Vertical Stack - Gap', () => (
-    <Fabric>
-      <Stack {...defaultProps} tokens={{ childrenGap: 10 }} />
-    </Fabric>
-  ))
+  .addStory('Vertical Stack - Default', () => <Stack {...defaultProps} />, { rtl: true })
+  .addStory('Vertical Stack - Reversed', () => <Stack reversed {...defaultProps} />, { rtl: true })
+  .addStory('Vertical Stack - Padding', () => <Stack {...defaultProps} padding={10} />)
+  .addStory('Vertical Stack - Gap', () => <Stack {...defaultProps} tokens={{ childrenGap: 10 }} />)
   .addStory('Vertical Stack - Vertically centered', () => (
-    <Fabric>
-      <Stack {...defaultProps} verticalAlign="center" className={styles.fixedHeight} />
-    </Fabric>
+    <Stack {...defaultProps} verticalAlign="center" className={styles.fixedHeight} />
   ))
   .addStory('Vertical Stack - Bottom-aligned', () => (
-    <Fabric>
-      <Stack {...defaultProps} verticalAlign="end" className={styles.fixedHeight} />
-    </Fabric>
+    <Stack {...defaultProps} verticalAlign="end" className={styles.fixedHeight} />
   ))
   .addStory('Vertical Stack - Space around', () => (
-    <Fabric>
-      <Stack {...defaultProps} verticalAlign="space-around" className={styles.fixedHeight} />
-    </Fabric>
+    <Stack {...defaultProps} verticalAlign="space-around" className={styles.fixedHeight} />
   ))
   .addStory('Vertical Stack - Space between', () => (
-    <Fabric>
-      <Stack {...defaultProps} verticalAlign="space-between" className={styles.fixedHeight} />
-    </Fabric>
+    <Stack {...defaultProps} verticalAlign="space-between" className={styles.fixedHeight} />
   ))
   .addStory('Vertical Stack - Space evenly', () => (
-    <Fabric>
-      <Stack {...defaultProps} verticalAlign="space-evenly" className={styles.fixedHeight} />
-    </Fabric>
+    <Stack {...defaultProps} verticalAlign="space-evenly" className={styles.fixedHeight} />
   ))
   .addStory('Vertical Stack - Horizontally centered', () => (
-    <Fabric>
-      <Stack {...defaultProps} horizontalAlign="center" />
-    </Fabric>
+    <Stack {...defaultProps} horizontalAlign="center" />
   ))
   .addStory(
     'Vertical Stack - Right-aligned',
-    () => (
-      <Fabric>
-        <Stack {...defaultProps} horizontalAlign="end" />
-      </Fabric>
-    ),
+    () => <Stack {...defaultProps} horizontalAlign="end" />,
     { rtl: true },
   )
   .addStory(
@@ -201,114 +161,69 @@ storiesOf('Stack', module)
   .addStory(
     'Vertical Stack - Wrap',
     () => (
-      <Fabric>
-        <Stack
-          {...defaultProps}
-          tokens={{ childrenGap: '10 0' }}
-          wrap
-          className={styles.fixedHeight}
-        >
-          <span className={styles.boxItem}>1</span>
-          <span className={styles.boxItem}>2</span>
-          <span className={styles.boxItem}>3</span>
-          <span className={styles.boxItem}>4</span>
-          <span className={styles.boxItem}>5</span>
-          <span className={styles.boxItem}>6</span>
-          <span className={styles.boxItem}>7</span>
-          <span className={styles.boxItem}>8</span>
-          <span className={styles.boxItem}>9</span>
-          <span className={styles.boxItem}>10</span>
-          <span className={styles.boxItem}>11</span>
-          <span className={styles.boxItem}>12</span>
-          <span className={styles.boxItem}>13</span>
-          <span className={styles.boxItem}>14</span>
-          <span className={styles.boxItem}>15</span>
-        </Stack>
-      </Fabric>
+      <Stack {...defaultProps} tokens={{ childrenGap: '10 0' }} wrap className={styles.fixedHeight}>
+        <span className={styles.boxItem}>1</span>
+        <span className={styles.boxItem}>2</span>
+        <span className={styles.boxItem}>3</span>
+        <span className={styles.boxItem}>4</span>
+        <span className={styles.boxItem}>5</span>
+        <span className={styles.boxItem}>6</span>
+        <span className={styles.boxItem}>7</span>
+        <span className={styles.boxItem}>8</span>
+        <span className={styles.boxItem}>9</span>
+        <span className={styles.boxItem}>10</span>
+        <span className={styles.boxItem}>11</span>
+        <span className={styles.boxItem}>12</span>
+        <span className={styles.boxItem}>13</span>
+        <span className={styles.boxItem}>14</span>
+        <span className={styles.boxItem}>15</span>
+      </Stack>
     ),
     { rtl: true },
   )
   .addStory('Vertical Stack - Box shadow around items', () => (
-    <Fabric>
-      <Stack {...defaultProps} tokens={{ childrenGap: 25 }}>
-        <span className={styles.shadowItem}>1</span>
-        <span className={styles.shadowItem}>2</span>
-        <span className={styles.shadowItem}>3</span>
-        <span className={styles.shadowItem}>4</span>
-        <span className={styles.shadowItem}>5</span>
-      </Stack>
-    </Fabric>
+    <Stack {...defaultProps} tokens={{ childrenGap: 25 }}>
+      <span className={styles.shadowItem}>1</span>
+      <span className={styles.shadowItem}>2</span>
+      <span className={styles.shadowItem}>3</span>
+      <span className={styles.shadowItem}>4</span>
+      <span className={styles.shadowItem}>5</span>
+    </Stack>
   ))
-  .addStory(
-    'Horizontal Stack - Default',
-    () => (
-      <Fabric>
-        <Stack horizontal {...defaultProps} />
-      </Fabric>
-    ),
-    { rtl: true },
-  )
-  .addStory(
-    'Horizontal Stack - Reversed',
-    () => (
-      <Fabric>
-        <Stack horizontal reversed {...defaultProps} />
-      </Fabric>
-    ),
-    { rtl: true },
-  )
-  .addStory('Horizontal Stack - Padding', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} padding={10} />
-    </Fabric>
-  ))
+  .addStory('Horizontal Stack - Default', () => <Stack horizontal {...defaultProps} />, {
+    rtl: true,
+  })
+  .addStory('Horizontal Stack - Reversed', () => <Stack horizontal reversed {...defaultProps} />, {
+    rtl: true,
+  })
+  .addStory('Horizontal Stack - Padding', () => <Stack horizontal {...defaultProps} padding={10} />)
   .addStory(
     'Horizontal Stack - Gap',
-    () => (
-      <Fabric>
-        <Stack horizontal {...defaultProps} tokens={{ childrenGap: 10 }} />
-      </Fabric>
-    ),
+    () => <Stack horizontal {...defaultProps} tokens={{ childrenGap: 10 }} />,
     { rtl: true },
   )
   .addStory('Horizontal Stack - Horizontally centered', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} horizontalAlign="center" />
-    </Fabric>
+    <Stack horizontal {...defaultProps} horizontalAlign="center" />
   ))
   .addStory(
     'Horizontal Stack - Right-aligned',
-    () => (
-      <Fabric>
-        <Stack horizontal {...defaultProps} horizontalAlign="end" />
-      </Fabric>
-    ),
+    () => <Stack horizontal {...defaultProps} horizontalAlign="end" />,
     { rtl: true },
   )
   .addStory('Horizontal Stack - Space around', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} horizontalAlign="space-around" />
-    </Fabric>
+    <Stack horizontal {...defaultProps} horizontalAlign="space-around" />
   ))
   .addStory('Horizontal Stack - Space between', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} horizontalAlign="space-between" />
-    </Fabric>
+    <Stack horizontal {...defaultProps} horizontalAlign="space-between" />
   ))
   .addStory('Horizontal Stack - Space evenly', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} horizontalAlign="space-evenly" />
-    </Fabric>
+    <Stack horizontal {...defaultProps} horizontalAlign="space-evenly" />
   ))
   .addStory('Horizontal Stack - Vertically centered', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} verticalAlign="center" className={styles.fixedHeight} />
-    </Fabric>
+    <Stack horizontal {...defaultProps} verticalAlign="center" className={styles.fixedHeight} />
   ))
   .addStory('Horizontal Stack - Bottom-aligned', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} verticalAlign="end" className={styles.fixedHeight} />
-    </Fabric>
+    <Stack horizontal {...defaultProps} verticalAlign="end" className={styles.fixedHeight} />
   ))
   .addStory(
     'Horizontal Stack - Item alignments',
@@ -370,45 +285,7 @@ storiesOf('Stack', module)
   .addStory(
     'Horizontal Stack - Wrap',
     () => (
-      <Fabric>
-        <Stack horizontal {...defaultProps} tokens={{ childrenGap: 10 }} wrap>
-          <span className={styles.boxItem}>1</span>
-          <span className={styles.boxItem}>2</span>
-          <span className={styles.boxItem}>3</span>
-          <span className={styles.boxItem}>4</span>
-          <span className={styles.boxItem}>5</span>
-          <span className={styles.boxItem}>6</span>
-          <span className={styles.boxItem}>7</span>
-          <span className={styles.boxItem}>8</span>
-          <span className={styles.boxItem}>9</span>
-          <span className={styles.boxItem}>10</span>
-          <span className={styles.boxItem}>11</span>
-          <span className={styles.boxItem}>12</span>
-          <span className={styles.boxItem}>13</span>
-          <span className={styles.boxItem}>14</span>
-          <span className={styles.boxItem}>15</span>
-          <span className={styles.boxItem}>16</span>
-          <span className={styles.boxItem}>17</span>
-          <span className={styles.boxItem}>18</span>
-          <span className={styles.boxItem}>19</span>
-          <span className={styles.boxItem}>20</span>
-          <span className={styles.boxItem}>22</span>
-          <span className={styles.boxItem}>23</span>
-          <span className={styles.boxItem}>24</span>
-          <span className={styles.boxItem}>25</span>
-          <span className={styles.boxItem}>26</span>
-          <span className={styles.boxItem}>27</span>
-          <span className={styles.boxItem}>28</span>
-          <span className={styles.boxItem}>29</span>
-          <span className={styles.boxItem}>30</span>
-        </Stack>
-      </Fabric>
-    ),
-    { rtl: true },
-  )
-  .addStory('Horizontal Stack - Wrap with specified vertical gap', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} wrap tokens={{ childrenGap: '40 10' }}>
+      <Stack horizontal {...defaultProps} tokens={{ childrenGap: 10 }} wrap>
         <span className={styles.boxItem}>1</span>
         <span className={styles.boxItem}>2</span>
         <span className={styles.boxItem}>3</span>
@@ -439,16 +316,48 @@ storiesOf('Stack', module)
         <span className={styles.boxItem}>29</span>
         <span className={styles.boxItem}>30</span>
       </Stack>
-    </Fabric>
+    ),
+    { rtl: true },
+  )
+  .addStory('Horizontal Stack - Wrap with specified vertical gap', () => (
+    <Stack horizontal {...defaultProps} wrap tokens={{ childrenGap: '40 10' }}>
+      <span className={styles.boxItem}>1</span>
+      <span className={styles.boxItem}>2</span>
+      <span className={styles.boxItem}>3</span>
+      <span className={styles.boxItem}>4</span>
+      <span className={styles.boxItem}>5</span>
+      <span className={styles.boxItem}>6</span>
+      <span className={styles.boxItem}>7</span>
+      <span className={styles.boxItem}>8</span>
+      <span className={styles.boxItem}>9</span>
+      <span className={styles.boxItem}>10</span>
+      <span className={styles.boxItem}>11</span>
+      <span className={styles.boxItem}>12</span>
+      <span className={styles.boxItem}>13</span>
+      <span className={styles.boxItem}>14</span>
+      <span className={styles.boxItem}>15</span>
+      <span className={styles.boxItem}>16</span>
+      <span className={styles.boxItem}>17</span>
+      <span className={styles.boxItem}>18</span>
+      <span className={styles.boxItem}>19</span>
+      <span className={styles.boxItem}>20</span>
+      <span className={styles.boxItem}>22</span>
+      <span className={styles.boxItem}>23</span>
+      <span className={styles.boxItem}>24</span>
+      <span className={styles.boxItem}>25</span>
+      <span className={styles.boxItem}>26</span>
+      <span className={styles.boxItem}>27</span>
+      <span className={styles.boxItem}>28</span>
+      <span className={styles.boxItem}>29</span>
+      <span className={styles.boxItem}>30</span>
+    </Stack>
   ))
   .addStory('Horizontal Stack - Box shadow around items', () => (
-    <Fabric>
-      <Stack horizontal {...defaultProps} tokens={{ childrenGap: 25 }}>
-        <span className={styles.shadowItem}>1</span>
-        <span className={styles.shadowItem}>2</span>
-        <span className={styles.shadowItem}>3</span>
-        <span className={styles.shadowItem}>4</span>
-        <span className={styles.shadowItem}>5</span>
-      </Stack>
-    </Fabric>
+    <Stack horizontal {...defaultProps} tokens={{ childrenGap: 25 }}>
+      <span className={styles.shadowItem}>1</span>
+      <span className={styles.shadowItem}>2</span>
+      <span className={styles.shadowItem}>3</span>
+      <span className={styles.shadowItem}>4</span>
+      <span className={styles.shadowItem}>5</span>
+    </Stack>
   ));

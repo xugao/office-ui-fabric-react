@@ -5,7 +5,6 @@ import { storiesOf } from '@storybook/react';
 import { FabricDecorator } from '../utilities';
 import { DevOnlyStoryHeader } from '../utilities';
 import { Suggestions, ISuggestionsProps } from '@fluentui/react/lib/Pickers';
-import { Fabric } from '@fluentui/react/lib/Fabric';
 
 type Province = {
   name: string;
@@ -93,29 +92,27 @@ export class SimpleSuggestionsExample extends React.Component<{}, { Provinces: P
           width: '400px',
         }}
       >
-        <Fabric>
-          <DevOnlyStoryHeader>
-            This story tests that wide dynamically-sized custom SuggestionItems shrink to fit the
-            available space when the Close button appears on hover.
-          </DevOnlyStoryHeader>
+        <DevOnlyStoryHeader>
+          This story tests that wide dynamically-sized custom SuggestionItems shrink to fit the
+          available space when the Close button appears on hover.
+        </DevOnlyStoryHeader>
 
-          <ProvinceSuggestions
-            showRemoveButtons={true}
-            suggestions={Object.keys(this.state.Provinces).map(key =>
-              makeProvinceIntoSuggestion(this.state.Provinces[key]),
-            )}
-            onSuggestionClick={(_: any, province: Province) => {
-              console.log(`clicked ${province.name} `);
-            }}
-            onRenderNoResultFound={NoResultFound}
-            onRenderSuggestion={ProvinceSuggestionItem}
-            // TODO (ajective-object) update this once I fix the Suggestions
-            // typedef for onSuggestionRemove.
-            onSuggestionRemove={(_ev?: any, removedProvince?: any, _index?: any) =>
-              removedProvince && this._removeProvince(removedProvince as Province)
-            }
-          />
-        </Fabric>
+        <ProvinceSuggestions
+          showRemoveButtons={true}
+          suggestions={Object.keys(this.state.Provinces).map(key =>
+            makeProvinceIntoSuggestion(this.state.Provinces[key]),
+          )}
+          onSuggestionClick={(_: any, province: Province) => {
+            console.log(`clicked ${province.name} `);
+          }}
+          onRenderNoResultFound={NoResultFound}
+          onRenderSuggestion={ProvinceSuggestionItem}
+          // TODO (ajective-object) update this once I fix the Suggestions
+          // typedef for onSuggestionRemove.
+          onSuggestionRemove={(_ev?: any, removedProvince?: any, _index?: any) =>
+            removedProvince && this._removeProvince(removedProvince as Province)
+          }
+        />
       </div>
     );
   }

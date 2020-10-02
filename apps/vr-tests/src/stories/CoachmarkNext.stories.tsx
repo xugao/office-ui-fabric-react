@@ -2,7 +2,7 @@ import * as React from 'react';
 import Screener from 'screener-storybook/src/screener';
 import { storiesOf } from '@storybook/react';
 import { FabricDecorator } from '../utilities';
-import { Coachmark, DirectionalHint, TeachingBubbleContent, Fabric } from '@fluentui/react-next';
+import { Coachmark, DirectionalHint, TeachingBubbleContent } from '@fluentui/react-next';
 import { useId } from '@uifabric/react-hooks';
 import { DefaultButton } from '@fluentui/react';
 
@@ -58,13 +58,5 @@ storiesOf('Coachmark Next', module)
       {story()}
     </Screener>,
   )
-  .addStory('Collapsed', () => (
-    <Fabric>
-      <CoachmarkUsage />
-    </Fabric>
-  ))
-  .addStory('Expanded', () => (
-    <Fabric>
-      <CoachmarkUsage isCollapsed={false} />
-    </Fabric>
-  ));
+  .addStory('Collapsed', () => <CoachmarkUsage />)
+  .addStory('Expanded', () => <CoachmarkUsage isCollapsed={false} />);

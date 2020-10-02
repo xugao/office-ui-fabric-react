@@ -19,7 +19,6 @@ import { ScrollablePane, ScrollbarVisibility } from '@fluentui/react/lib/Scrolla
 import { Sticky, StickyPositionType } from '@fluentui/react/lib/Sticky';
 import { MarqueeSelection } from '@fluentui/react/lib/MarqueeSelection';
 import { SelectionMode } from '@fluentui/react/lib/Selection';
-import { Fabric } from '@fluentui/react/lib/Fabric';
 import { getTheme, mergeStyles } from '@fluentui/react/lib/Styling';
 
 const stickyListTitleClass = mergeStyles({
@@ -122,34 +121,32 @@ class ScrollablePaneDetailsListStory extends React.Component<{}, {}> {
           width: '500px',
         }}
       >
-        <Fabric>
-          <ScrollablePane
-            scrollbarVisibility={ScrollbarVisibility.auto}
-            style={{ maxWidth: '500px', border: '1px solid #edebe9' }}
+        <ScrollablePane
+          scrollbarVisibility={ScrollbarVisibility.auto}
+          style={{ maxWidth: '500px', border: '1px solid #edebe9' }}
+        >
+          {/* providing backgroundColor as no parent element for the test has this property defined */}
+          <Sticky
+            stickyPosition={StickyPositionType.Header}
+            stickyBackgroundColor={getTheme().palette.white}
+            stickyClassName={stickyListTitleClass}
           >
-            {/* providing backgroundColor as no parent element for the test has this property defined */}
-            <Sticky
-              stickyPosition={StickyPositionType.Header}
-              stickyBackgroundColor={getTheme().palette.white}
-              stickyClassName={stickyListTitleClass}
-            >
-              <h1 style={{ margin: '0px' }}>Item List</h1>
-            </Sticky>
-            <MarqueeSelection selection={this._selection}>
-              <DetailsList
-                items={this._items}
-                columns={_columns}
-                setKey="set"
-                layoutMode={DetailsListLayoutMode.fixedColumns}
-                constrainMode={ConstrainMode.unconstrained}
-                onRenderDetailsHeader={onRenderDetailsHeader}
-                onRenderDetailsFooter={onRenderDetailsFooter}
-                selection={this._selection}
-                selectionPreservedOnEmptyClick={true}
-              />
-            </MarqueeSelection>
-          </ScrollablePane>
-        </Fabric>
+            <h1 style={{ margin: '0px' }}>Item List</h1>
+          </Sticky>
+          <MarqueeSelection selection={this._selection}>
+            <DetailsList
+              items={this._items}
+              columns={_columns}
+              setKey="set"
+              layoutMode={DetailsListLayoutMode.fixedColumns}
+              constrainMode={ConstrainMode.unconstrained}
+              onRenderDetailsHeader={onRenderDetailsHeader}
+              onRenderDetailsFooter={onRenderDetailsFooter}
+              selection={this._selection}
+              selectionPreservedOnEmptyClick={true}
+            />
+          </MarqueeSelection>
+        </ScrollablePane>
       </div>
     );
   }

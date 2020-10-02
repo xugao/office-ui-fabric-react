@@ -3,7 +3,6 @@ import * as React from 'react';
 import Screener from 'screener-storybook/src/screener';
 import { storiesOf } from '@storybook/react';
 import { FabricDecoratorFixedWidth } from '../utilities';
-import { Fabric } from '@fluentui/react';
 import { DatePicker } from '@fluentui/react';
 
 const date = new Date(2010, 1, 12);
@@ -27,40 +26,12 @@ storiesOf('DatePicker', module)
       {story()}
     </Screener>
   ))
-  .addStory(
-    'Root',
-    () => (
-      <Fabric>
-        <DatePicker value={date} />
-      </Fabric>
-    ),
-    { rtl: true },
-  )
-  .addStory('Placeholder', () => (
-    <Fabric>
-      <DatePicker value={date} placeholder="Enter date" />
-    </Fabric>
-  ))
-  .addStory('Allow text input', () => (
-    <Fabric>
-      <DatePicker value={date} allowTextInput />
-    </Fabric>
-  ))
-  .addStory('Required', () => (
-    <Fabric>
-      <DatePicker value={date} isRequired />
-    </Fabric>
-  ))
-  .addStory('Underlined', () => (
-    <Fabric>
-      <DatePicker value={date} underlined />
-    </Fabric>
-  ))
-  .addStory('Underlined and Required', () => (
-    <Fabric>
-      <DatePicker value={date} underlined isRequired />
-    </Fabric>
-  ));
+  .addStory('Root', () => <DatePicker value={date} />, { rtl: true })
+  .addStory('Placeholder', () => <DatePicker value={date} placeholder="Enter date" />)
+  .addStory('Allow text input', () => <DatePicker value={date} allowTextInput />)
+  .addStory('Required', () => <DatePicker value={date} isRequired />)
+  .addStory('Underlined', () => <DatePicker value={date} underlined />)
+  .addStory('Underlined and Required', () => <DatePicker value={date} underlined isRequired />);
 
 storiesOf('DatePicker - No Month Option', module)
   .addDecorator(FabricDecoratorFixedWidth)
@@ -81,9 +52,7 @@ storiesOf('DatePicker - No Month Option', module)
     </Screener>
   ))
   .addStory('Show Month as Overlay and no Go To Today', () => (
-    <Fabric>
-      <DatePicker value={date} showGoToToday={false} showMonthPickerAsOverlay={true} />
-    </Fabric>
+    <DatePicker value={date} showGoToToday={false} showMonthPickerAsOverlay={true} />
   ));
 
 storiesOf('DatePicker - Disabled', module)
@@ -102,18 +71,6 @@ storiesOf('DatePicker - Disabled', module)
       {story()}
     </Screener>
   ))
-  .addStory('Without Label', () => (
-    <Fabric>
-      <DatePicker value={date} disabled />
-    </Fabric>
-  ))
-  .addStory('With Label', () => (
-    <Fabric>
-      <DatePicker label="This is my label" value={date} disabled />
-    </Fabric>
-  ))
-  .addStory('Without Value', () => (
-    <Fabric>
-      <DatePicker label="This is my label" disabled />
-    </Fabric>
-  ));
+  .addStory('Without Label', () => <DatePicker value={date} disabled />)
+  .addStory('With Label', () => <DatePicker label="This is my label" value={date} disabled />)
+  .addStory('Without Value', () => <DatePicker label="This is my label" disabled />);

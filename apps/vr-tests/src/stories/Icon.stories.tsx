@@ -3,7 +3,7 @@ import * as React from 'react';
 import Screener from 'screener-storybook/src/screener';
 import { storiesOf } from '@storybook/react';
 import { FabricDecorator } from '../utilities';
-import { Icon, IconType, getIconClassName, Fabric } from '@fluentui/react';
+import { Icon, IconType, getIconClassName } from '@fluentui/react';
 import * as IconNames from '../../../../packages/icons/src/IconNames';
 
 import { TestImages } from '@uifabric/example-data';
@@ -28,26 +28,20 @@ storiesOf('Icon', module)
     </Screener>,
   )
   .addStory('Root', () => (
-    <Fabric>
+    <div>
       <div>{allIcons}</div>
       <Icon className={getIconClassName('CompassNW')} />
       <Icon className={getIconClassName('Upload')} />
       <Icon className={getIconClassName('Share')} />
-    </Fabric>
+    </div>
   ))
-  .addStory('Color', () => (
-    <Fabric>
-      <Icon iconName={'CompassNW'} style={{ color: 'red' }} />
-    </Fabric>
-  ))
+  .addStory('Color', () => <Icon iconName={'CompassNW'} style={{ color: 'red' }} />)
   .addStory('Image', () => (
-    <Fabric>
-      <Icon
-        iconName={'None'}
-        iconType={IconType.image}
-        imageProps={{
-          src: TestImages.iconOne,
-        }}
-      />
-    </Fabric>
+    <Icon
+      iconName={'None'}
+      iconType={IconType.image}
+      imageProps={{
+        src: TestImages.iconOne,
+      }}
+    />
   ));

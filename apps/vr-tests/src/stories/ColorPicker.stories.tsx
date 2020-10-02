@@ -3,7 +3,7 @@ import * as React from 'react';
 import Screener from 'screener-storybook/src/screener';
 import { storiesOf } from '@storybook/react';
 import { FabricDecorator } from '../utilities';
-import { ColorPicker, Fabric } from '@fluentui/react';
+import { ColorPicker } from '@fluentui/react';
 
 storiesOf('ColorPicker', module)
   .addDecorator(FabricDecorator)
@@ -20,26 +20,22 @@ storiesOf('ColorPicker', module)
   .addStory(
     'Root',
     () => (
-      <Fabric>
-        <ColorPicker
-          color="#FFF"
-          styles={{
-            input: { fontFamily: 'Segoe UI' },
-          }}
-        />
-      </Fabric>
+      <ColorPicker
+        color="#FFF"
+        styles={{
+          input: { fontFamily: 'Segoe UI' },
+        }}
+      />
     ),
     {
       rtl: true,
     },
   )
   .addStory('Blue', () => (
-    <Fabric>
-      <ColorPicker
-        color="#48B"
-        styles={{
-          input: { fontFamily: 'Segoe UI' },
-        }}
-      />
-    </Fabric>
+    <ColorPicker
+      color="#48B"
+      styles={{
+        input: { fontFamily: 'Segoe UI' },
+      }}
+    />
   ));

@@ -15,7 +15,6 @@ import {
 } from '@uifabric/react-cards';
 import {
   ActionButton,
-  Fabric,
   FontWeights,
   Icon,
   IIconStyles,
@@ -188,148 +187,134 @@ storiesOf('Card', module)
     </Screener>,
   )
   .addStory('Vertical Card - Basic - Non hoverable', () => (
-    <Fabric>
-      <Card>
-        <Card.Item>
-          <Text>Basic vertical card</Text>
-        </Card.Item>
-      </Card>
-    </Fabric>
+    <Card>
+      <Card.Item>
+        <Text>Basic vertical card</Text>
+      </Card.Item>
+    </Card>
   ))
   .addStory('Vertical Card - Basic - Hoverable', () => (
-    <Fabric>
-      <Card onClick={cardClicked}>
-        <Card.Item>
-          <Text>Basic vertical card</Text>
-        </Card.Item>
-      </Card>
-    </Fabric>
+    <Card onClick={cardClicked}>
+      <Card.Item>
+        <Text>Basic vertical card</Text>
+      </Card.Item>
+    </Card>
   ))
   .addStory('Vertical Card - Example with contents - Image on top', () => (
-    <Fabric>
-      <Card onClick={cardClicked} tokens={cardTokens}>
-        <Card.Item>
-          <Persona text="Kevin Jameson" secondaryText="Feb 2, 2019" />
-        </Card.Item>
-        <Card.Item fill>
-          <Image src="https://placehold.it/256x144" width="100%" alt="Placeholder image." />
-        </Card.Item>
-        <Card.Section>
-          <Text variant="medium" styles={siteTextStyles}>
-            Contoso
-          </Text>
-          <Text styles={descriptionTextStyles}>
-            Contoso Denver expansion design marketing hero guidelines
-          </Text>
-          <Text variant="medium" styles={helpfulTextStyles}>
-            Is this recommendation helpful?
-          </Text>
-        </Card.Section>
-        <Card.Section horizontal styles={footerCardSectionStyles} tokens={footerCardSectionTokens}>
-          <Icon iconName="RedEye" styles={iconStyles} />
-          <Icon iconName="SingleBookmark" styles={iconStyles} />
-          <Stack.Item grow={1}>
-            <span />
-          </Stack.Item>
-          <Icon iconName="MoreVertical" styles={iconStyles} />
-        </Card.Section>
-      </Card>
-    </Fabric>
+    <Card onClick={cardClicked} tokens={cardTokens}>
+      <Card.Item>
+        <Persona text="Kevin Jameson" secondaryText="Feb 2, 2019" />
+      </Card.Item>
+      <Card.Item fill>
+        <Image src="https://placehold.it/256x144" width="100%" alt="Placeholder image." />
+      </Card.Item>
+      <Card.Section>
+        <Text variant="medium" styles={siteTextStyles}>
+          Contoso
+        </Text>
+        <Text styles={descriptionTextStyles}>
+          Contoso Denver expansion design marketing hero guidelines
+        </Text>
+        <Text variant="medium" styles={helpfulTextStyles}>
+          Is this recommendation helpful?
+        </Text>
+      </Card.Section>
+      <Card.Section horizontal styles={footerCardSectionStyles} tokens={footerCardSectionTokens}>
+        <Icon iconName="RedEye" styles={iconStyles} />
+        <Icon iconName="SingleBookmark" styles={iconStyles} />
+        <Stack.Item grow={1}>
+          <span />
+        </Stack.Item>
+        <Icon iconName="MoreVertical" styles={iconStyles} />
+      </Card.Section>
+    </Card>
   ))
   .addStory('Vertical Card - Example with contents - Image in middle', () => (
-    <Fabric>
-      <Card onClick={cardClicked} tokens={cardTokens}>
-        <Card.Section
-          fill
-          verticalAlign="end"
-          styles={backgroundImageCardSectionStyles}
-          tokens={backgroundImageCardSectionTokens}
-        >
-          <Text variant="xLarge" styles={dateTextStyles}>
-            NOVEMBER
-          </Text>
-          <Text variant="superLarge" styles={dateTextStyles}>
-            26
-          </Text>
-        </Card.Section>
-        <Card.Section>
-          <Text variant="medium" styles={subduedTextStyles}>
-            Category
-          </Text>
-          <Text styles={descriptionTextStyles}>
-            Contoso marketing customer visit and survey results
-          </Text>
-        </Card.Section>
-        <Card.Section tokens={agendaCardSectionTokens}>
-          <Text variant="medium" styles={descriptionTextStyles}>
-            Tuesday 2:00-4:30 pm
-          </Text>
-          <Text variant="medium" styles={subduedTextStyles}>
-            Conf Room 34/1301
-          </Text>
-        </Card.Section>
-        <Card.Item grow={1}>
-          <span />
-        </Card.Item>
-        <Card.Section horizontal tokens={attendantsCardSectionTokens}>
-          <ActionButton content="12 Attendees" styles={actionButtonStyles} />
-          <ActionButton content="4 Accepted" styles={actionButtonStyles} />
-          <ActionButton content="3 Declined" styles={actionButtonStyles} />
-        </Card.Section>
-        <Card.Item styles={footerCardSectionStyles} tokens={footerCardItemTokens}>
-          <Button icon="Add" content="Add to Outlook" tokens={addEventButtonTokens} />
-        </Card.Item>
-      </Card>
-    </Fabric>
+    <Card onClick={cardClicked} tokens={cardTokens}>
+      <Card.Section
+        fill
+        verticalAlign="end"
+        styles={backgroundImageCardSectionStyles}
+        tokens={backgroundImageCardSectionTokens}
+      >
+        <Text variant="xLarge" styles={dateTextStyles}>
+          NOVEMBER
+        </Text>
+        <Text variant="superLarge" styles={dateTextStyles}>
+          26
+        </Text>
+      </Card.Section>
+      <Card.Section>
+        <Text variant="medium" styles={subduedTextStyles}>
+          Category
+        </Text>
+        <Text styles={descriptionTextStyles}>
+          Contoso marketing customer visit and survey results
+        </Text>
+      </Card.Section>
+      <Card.Section tokens={agendaCardSectionTokens}>
+        <Text variant="medium" styles={descriptionTextStyles}>
+          Tuesday 2:00-4:30 pm
+        </Text>
+        <Text variant="medium" styles={subduedTextStyles}>
+          Conf Room 34/1301
+        </Text>
+      </Card.Section>
+      <Card.Item grow={1}>
+        <span />
+      </Card.Item>
+      <Card.Section horizontal tokens={attendantsCardSectionTokens}>
+        <ActionButton content="12 Attendees" styles={actionButtonStyles} />
+        <ActionButton content="4 Accepted" styles={actionButtonStyles} />
+        <ActionButton content="3 Declined" styles={actionButtonStyles} />
+      </Card.Section>
+      <Card.Item styles={footerCardSectionStyles} tokens={footerCardItemTokens}>
+        <Button icon="Add" content="Add to Outlook" tokens={addEventButtonTokens} />
+      </Card.Item>
+    </Card>
   ))
   .addStory('Horizontal Card - Basic - Non hoverable', () => (
-    <Fabric>
-      <Card horizontal>
-        <Card.Item>
-          <Text>Basic horizontal card</Text>
-        </Card.Item>
-      </Card>
-    </Fabric>
+    <Card horizontal>
+      <Card.Item>
+        <Text>Basic horizontal card</Text>
+      </Card.Item>
+    </Card>
   ))
   .addStory('Horizontal Card - Basic - Hoverable', () => (
-    <Fabric>
-      <Card horizontal onClick={cardClicked}>
-        <Card.Item>
-          <Text>Basic horizontal card</Text>
-        </Card.Item>
-      </Card>
-    </Fabric>
+    <Card horizontal onClick={cardClicked}>
+      <Card.Item>
+        <Text>Basic horizontal card</Text>
+      </Card.Item>
+    </Card>
   ))
   .addStory('Horizontal Card - Example with contents', () => (
-    <Fabric>
-      <Card horizontal onClick={cardClicked} tokens={cardTokens}>
-        <Card.Item fill>
-          <Image src="https://placehold.it/180x135" alt="Placeholder image." />
-        </Card.Item>
-        <Card.Section>
-          <Text variant="medium" styles={siteTextStyles}>
-            Contoso
-          </Text>
-          <Text styles={descriptionTextStyles}>
-            Contoso Denver expansion design marketing hero guidelines
-          </Text>
-          <Text variant="medium" styles={helpfulTextStyles}>
-            Is this recommendation helpful?
-          </Text>
-        </Card.Section>
-        <Card.Section
-          styles={footerHorizontalCardSectionStyles}
-          tokens={footerHorizontalCardSectionTokens}
-        >
-          <Icon iconName="RedEye" styles={iconStyles} />
-          <Icon iconName="SingleBookmark" styles={iconStyles} />
-          <Stack.Item grow={1}>
-            <span />
-          </Stack.Item>
-          <Icon iconName="MoreVertical" styles={iconStyles} />
-        </Card.Section>
-      </Card>
-    </Fabric>
+    <Card horizontal onClick={cardClicked} tokens={cardTokens}>
+      <Card.Item fill>
+        <Image src="https://placehold.it/180x135" alt="Placeholder image." />
+      </Card.Item>
+      <Card.Section>
+        <Text variant="medium" styles={siteTextStyles}>
+          Contoso
+        </Text>
+        <Text styles={descriptionTextStyles}>
+          Contoso Denver expansion design marketing hero guidelines
+        </Text>
+        <Text variant="medium" styles={helpfulTextStyles}>
+          Is this recommendation helpful?
+        </Text>
+      </Card.Section>
+      <Card.Section
+        styles={footerHorizontalCardSectionStyles}
+        tokens={footerHorizontalCardSectionTokens}
+      >
+        <Icon iconName="RedEye" styles={iconStyles} />
+        <Icon iconName="SingleBookmark" styles={iconStyles} />
+        <Stack.Item grow={1}>
+          <span />
+        </Stack.Item>
+        <Icon iconName="MoreVertical" styles={iconStyles} />
+      </Card.Section>
+    </Card>
   ))
   .addStory('Card with first CardSection filled', () => (
     <Card styles={cardStyles} tokens={cardTokens}>

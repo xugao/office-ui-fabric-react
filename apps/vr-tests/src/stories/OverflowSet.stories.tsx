@@ -27,21 +27,19 @@ storiesOf('OverflowSet', module)
   .addStory(
     'Root',
     () => (
-      <Fabric>
-        <OverflowSet
-          items={[
-            { key: 'item1', name: 'Link 1' },
-            { key: 'item2', name: 'Link 2' },
-            { key: 'item3', name: 'Link 3' },
-          ]}
-          overflowItems={[
-            { key: 'item4', name: 'Overflow Link 1' },
-            { key: 'item5', name: 'Overflow Link 2' },
-          ]}
-          onRenderOverflowButton={onRenderOverflowButton}
-          onRenderItem={onRenderItem}
-        />
-      </Fabric>
+      <OverflowSet
+        items={[
+          { key: 'item1', name: 'Link 1' },
+          { key: 'item2', name: 'Link 2' },
+          { key: 'item3', name: 'Link 3' },
+        ]}
+        overflowItems={[
+          { key: 'item4', name: 'Overflow Link 1' },
+          { key: 'item5', name: 'Overflow Link 2' },
+        ]}
+        onRenderOverflowButton={onRenderOverflowButton}
+        onRenderItem={onRenderItem}
+      />
     ),
     { rtl: true },
   );
@@ -59,20 +57,18 @@ storiesOf('OverflowSet variant', module)
     </Screener>,
   )
   .addStory('Vertical Direction', () => (
-    <Fabric>
-      <OverflowSet
-        vertical
-        items={[
-          { key: 'item1', name: 'Link 1' },
-          { key: 'item2', name: 'Link 2' },
-          { key: 'item3', name: 'Link 3' },
-        ]}
-        overflowItems={[
-          { key: 'item4', name: 'Overflow Link 1' },
-          { key: 'item5', name: 'Overflow Link 2' },
-        ]}
-        onRenderOverflowButton={onRenderOverflowButton}
-        onRenderItem={onRenderItem}
-      />
-    </Fabric>
+    <OverflowSet
+      vertical
+      items={[
+        { key: 'item1', name: 'Link 1' },
+        { key: 'item2', name: 'Link 2' },
+        { key: 'item3', name: 'Link 3' },
+      ]}
+      overflowItems={[
+        { key: 'item4', name: 'Overflow Link 1' },
+        { key: 'item5', name: 'Overflow Link 2' },
+      ]}
+      onRenderOverflowButton={onRenderOverflowButton}
+      onRenderItem={onRenderItem}
+    />
   ));
