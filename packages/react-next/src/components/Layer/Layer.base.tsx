@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Fabric } from '../../Fabric';
 import { ILayerProps, ILayerStyleProps, ILayerStyles } from './Layer.types';
 import { classNamesFunction, setPortalAttribute, setVirtualParent } from '../../Utilities';
 import { registerLayer, getDefaultTarget, unregisterLayer } from './Layer.notification';
@@ -126,9 +125,9 @@ export const LayerBase: React.FunctionComponent<ILayerProps> = React.forwardRef<
       <span className="ms-layer" ref={mergedRef}>
         {currentLayerElement &&
           ReactDOM.createPortal(
-            <Fabric {...(!eventBubblingEnabled && getFilteredEvents())} className={classNames.content}>
+            <div {...(!eventBubblingEnabled && getFilteredEvents())} className={classNames.content}>
               {children}
-            </Fabric>,
+            </div>,
             currentLayerElement,
           )}
       </span>

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { AppCustomizationsContext } from '../../utilities/customizations';
-import { classNamesFunction, css, styled, Customizer } from '@fluentui/react/lib/Utilities';
+import { classNamesFunction, css, styled, Customizer } from '@fluentui/react';
 import { ExampleStatus, IAppProps, IAppStyleProps, IAppStyles } from './App.types';
-import { Fabric } from '@fluentui/react/lib/Fabric';
+import { ThemeProvider } from '@fluentui/react/lib/Styling';
 import { getStyles } from './App.styles';
 import { Header } from '../Header/Header';
 import { INavLink, Nav } from '@fluentui/react/lib/Nav';
@@ -64,7 +64,7 @@ export class AppBase extends React.Component<IAppProps, IAppState> {
     );
 
     let app = (
-      <Fabric className={classNames.root}>
+      <ThemeProvider className={classNames.root}>
         {!onlyExamples && (
           <div className={classNames.headerContainer}>
             <Header
@@ -100,7 +100,7 @@ export class AppBase extends React.Component<IAppProps, IAppState> {
             {nav}
           </Panel>
         )}
-      </Fabric>
+      </ThemeProvider>
     );
 
     if (customizations) {

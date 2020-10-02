@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { mergeStyles } from '@uifabric/merge-styles';
-import { Fabric } from '../../Fabric';
+import { ThemeProvider } from '../../Styling';
 import { isConformant } from '../../common/isConformant';
 import { Stack } from './Stack';
 
@@ -197,12 +197,12 @@ describe('Stack', () => {
 
   it('renders horizontal Stack with a gap in rtl context correctly', () => {
     const component = renderer.create(
-      <Fabric dir="rtl">
+      <ThemeProvider theme={{ rtl: true }}>
         <Stack horizontal tokens={{ childrenGap: 10 }}>
           <Stack.Item>Item 1</Stack.Item>
           <Stack.Item>Item 2</Stack.Item>
         </Stack>
-      </Fabric>,
+      </ThemeProvider>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Fabric, Icon, Label, Toggle } from '@fluentui/react';
+import { ThemeProvider, Icon, Label, Toggle } from '@fluentui/react';
 import { useBoolean } from '@uifabric/react-hooks';
 import { IPivotItemProps, Pivot, PivotItem } from '@fluentui/react-tabs';
 
@@ -15,7 +15,7 @@ export const PivotOverflowMenuExample: React.FunctionComponent = () => {
         <Toggle label="linkFormat" offText="links" onText="tabs" checked={tabs} onChange={toggleTabs} />
         <Toggle label="direction" offText="ltr" onText="rtl" checked={rtl} onChange={toggleRtl} />
       </div>
-      <Fabric dir={rtl ? 'rtl' : 'ltr'}>
+      <ThemeProvider theme={{ rtl }}>
         <Pivot
           aria-label="Pivot Overflow Menu Example"
           linkFormat={tabs ? 'tabs' : 'links'}
@@ -46,7 +46,7 @@ export const PivotOverflowMenuExample: React.FunctionComponent = () => {
             <Label>Pivot #8</Label>
           </PivotItem>
         </Pivot>
-      </Fabric>
+      </ThemeProvider>
     </>
   );
 };

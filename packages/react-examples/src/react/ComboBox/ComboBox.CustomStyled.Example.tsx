@@ -1,11 +1,5 @@
 import * as React from 'react';
-import {
-  ComboBox,
-  IComboBoxOption,
-  SelectableOptionMenuItemType,
-  Fabric,
-  mergeStyles,
-} from '@fluentui/react/lib/index';
+import { ComboBox, IComboBoxOption, SelectableOptionMenuItemType, mergeStyles } from '@fluentui/react';
 
 const wrapperClassName = mergeStyles({
   selectors: {
@@ -71,7 +65,7 @@ const onRenderOption = (item: IComboBoxOption) => {
 };
 
 export const ComboBoxCustomStyledExample: React.FC = () => (
-  <Fabric className={wrapperClassName}>
+  <div className={wrapperClassName}>
     <ComboBox
       defaultSelectedKey="Calibri"
       label="Custom styled ComboBox"
@@ -86,5 +80,5 @@ export const ComboBoxCustomStyledExample: React.FC = () => (
       options={optionsForCustomRender}
       onRenderOption={onRenderOption}
     />
-  </Fabric>
+  </div>
 );

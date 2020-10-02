@@ -55,9 +55,8 @@ const headerStackStyles = (p: IStackProps, theme: ITheme) => ({
 const codepenHeader = `const {
   createTheme,
   Checkbox,
-  Customizations,
+  ThemeProvider,
   DefaultButton,
-  Fabric,
   loadTheme,
   Pivot,
   PivotItem,
@@ -67,9 +66,8 @@ const codepenHeader = `const {
 } = Fabric;\n\n`;
 const codepenSamples = `\n\n
 const Content = () => {
-    Customizations.applySettings({ theme: myTheme });
     return (
-      <Fabric applyThemeToBody>
+      <ThemeProvider applyTo="body" theme={myTheme}>
         <Stack tokens={{childrenGap: 8, maxWidth: 300}}>
           <Pivot>
             <PivotItem headerText="Home" />
@@ -86,7 +84,7 @@ const Content = () => {
           <Checkbox label="Checkbox"/>
           <Checkbox checked label="Checkbox Checked" />
         </Stack>
-      </Fabric>
+      </ThemeProvider>
     );
 }
 ReactDOM.render(<Content />,document.getElementById('content'));`;
