@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Shimmer, ShimmerElementsGroup, ShimmerElementType, Fabric, mergeStyles } from '@fluentui/react-next';
+import { Shimmer, ShimmerElementsGroup, ShimmerElementType, mergeStyles } from '@fluentui/react-next';
 
 const wrapperClass = mergeStyles({
   padding: 2,
@@ -95,10 +95,10 @@ const getCustomElementsExampleThree = (): JSX.Element => {
 };
 
 export const ShimmerCustomElementsExample: React.FunctionComponent = () => (
-  <Fabric className={wrapperClass}>
+  <div className={wrapperClass}>
     Using ShimmerElementsGroup component to build complex structures of the placeholder you need.
     <Shimmer customElementsGroup={getCustomElementsExampleOne()} width="350" />
     <Shimmer customElementsGroup={getCustomElementsExampleTwo()} width="550" />
     <Shimmer customElementsGroup={getCustomElementsExampleThree()} width="90%" />
-  </Fabric>
+  </div>
 );

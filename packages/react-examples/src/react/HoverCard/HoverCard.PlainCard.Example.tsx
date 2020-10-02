@@ -3,7 +3,6 @@ import { HoverCard, IPlainCardProps, HoverCardType } from '@fluentui/react/lib/H
 import { DetailsList, buildColumns, IColumn } from '@fluentui/react/lib/DetailsList';
 import { createListItems, IExampleItem } from '@uifabric/example-data';
 import { Image, ImageFit } from '@fluentui/react/lib/Image';
-import { Fabric } from '@fluentui/react/lib/Fabric';
 import { getColorFromString } from '@fluentui/react/lib/Color';
 import { mergeStyles } from '@fluentui/react/lib/Styling';
 
@@ -45,11 +44,11 @@ const onRenderItemColumn = (item: IExampleItem, index: number, column: IColumn):
 
 export const HoverCardPlainCardExample: React.FunctionComponent = () => {
   return (
-    <Fabric>
+    <div>
       <p>
         Hover over the <i>color</i> cell of a row item to see the card.
       </p>
       <DetailsList setKey="hoverSet" items={items} columns={columns} onRenderItemColumn={onRenderItemColumn} />
-    </Fabric>
+    </div>
   );
 };

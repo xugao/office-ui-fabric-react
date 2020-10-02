@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { TextField } from '@fluentui/react/lib/TextField';
 import { Toggle } from '@fluentui/react/lib/Toggle';
-import { Fabric } from '@fluentui/react/lib/Fabric';
 import { Announced } from '@fluentui/react/lib/Announced';
 import { DetailsList, DetailsListLayoutMode, Selection, SelectionMode, IColumn } from '@fluentui/react/lib/DetailsList';
 import { MarqueeSelection } from '@fluentui/react/lib/MarqueeSelection';
@@ -181,7 +180,7 @@ export class DetailsListDocumentsExample extends React.Component<{}, IDetailsLis
     const { columns, isCompactMode, items, selectionDetails, isModalSelection, announcedMessage } = this.state;
 
     return (
-      <Fabric>
+      <div>
         <div className={classNames.controlWrapper}>
           <Toggle
             label="Enable compact mode"
@@ -238,7 +237,7 @@ export class DetailsListDocumentsExample extends React.Component<{}, IDetailsLis
             onItemInvoked={this._onItemInvoked}
           />
         )}
-      </Fabric>
+      </div>
     );
   }
 

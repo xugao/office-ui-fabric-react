@@ -34,7 +34,7 @@ export const HoverCardEventListenerTargetExample: React.FunctionComponent = () =
     directionalHint: DirectionalHint.rightTopEdge,
   };
   return (
-    <Fabric>
+    <div>
       <p>
         Using the target to tag hover card on the right side of Emoji icon, and using eventListenerTarget to launch the
         card only when hovering over the text field, hovering over the icon doesn't trigger card open.
@@ -51,6 +51,6 @@ export const HoverCardEventListenerTargetExample: React.FunctionComponent = () =
           eventListenerTarget={eventListenerTargetRef.current}
         />
       </span>
-    </Fabric>
+    </div>
   );
 };

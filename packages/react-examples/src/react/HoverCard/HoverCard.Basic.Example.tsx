@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { HoverCard, IExpandingCardProps } from '@fluentui/react/lib/HoverCard';
-import { Fabric } from '@fluentui/react/lib/Fabric';
 import { DetailsList, buildColumns, IColumn } from '@fluentui/react/lib/DetailsList';
 import { createListItems, IExampleItem } from '@uifabric/example-data';
 import { mergeStyleSets } from '@fluentui/react/lib/Styling';
@@ -69,11 +68,11 @@ const onRenderItemColumn = (item: IExampleItem, index: number, column: IColumn):
 };
 
 export const HoverCardBasicExample: React.FunctionComponent = () => (
-  <Fabric>
+  <div>
     <p>
       Hover over the <i>location</i> cell of a row item to see the card or use the keyboard to navigate to it.
     </p>
     <p>When using the keyboard to tab to it, the card will open but navigation inside of it will not be available.</p>
     <DetailsList setKey="hoverSet" items={items} columns={columns} onRenderItemColumn={onRenderItemColumn} />
-  </Fabric>
+  </div>
 );
