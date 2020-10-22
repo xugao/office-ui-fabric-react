@@ -1,8 +1,22 @@
 # Change Log - @uifabric/date-time
 
-This log was last generated on Fri, 25 Sep 2020 12:25:17 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [8.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@uifabric/date-time_v8.0.0-beta.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@uifabric/date-time_v7.17.15..@uifabric/date-time_v8.0.0-beta.0)
+
+### Changes
+
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
+- Rename @uifabric/styling to @fluentui/style-utilities ([PR #15567](https://github.com/microsoft/fluentui/pull/15567) by elcraig@microsoft.com)
+- Don't publish demo app; remove unused example-app-base dev dependency ([PR #15414](https://github.com/microsoft/fluentui/pull/15414) by elcraig@microsoft.com)
+- Fix imports to reference physical files. ([PR #15340](https://github.com/microsoft/fluentui/pull/15340) by xgao@microsoft.com)
+- Rename office-ui-fabric-react package and update references ([PR #15271](https://github.com/microsoft/fluentui/pull/15271) by elcraig@microsoft.com)
+- Implementing ref conformance tests and updating CalendarDayGrid's FocusZone ref to an elementRef. ([PR #15537](https://github.com/microsoft/fluentui/pull/15537) by czearing@outlook.com)
 
 ## [7.17.15](https://github.com/microsoft/fluentui/tree/@uifabric/date-time_v7.17.15)
 

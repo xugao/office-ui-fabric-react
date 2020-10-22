@@ -1,8 +1,22 @@
 # Change Log - @fluentui/react-link
 
-This log was last generated on Fri, 25 Sep 2020 12:25:17 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [1.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@fluentui/react-link_v1.0.0-beta.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@fluentui/react-link_v0.4.3..@fluentui/react-link_v1.0.0-beta.0)
+
+### Changes
+
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
+- Rename @uifabric/icons to @fluentui/font-icons-mdl2 ([PR #15603](https://github.com/microsoft/fluentui/pull/15603) by ololubek@microsoft.com)
+- Rename @uifabric/styling to @fluentui/style-utilities ([PR #15567](https://github.com/microsoft/fluentui/pull/15567) by elcraig@microsoft.com)
+- Rename office-ui-fabric-react package and update references ([PR #15271](https://github.com/microsoft/fluentui/pull/15271) by elcraig@microsoft.com)
+- Add missing version.ts; Remove unneeded package dependencies. ([PR #15456](https://github.com/microsoft/fluentui/pull/15456) by xgao@microsoft.com)
+- Remove keytipProps from props. ([PR #15534](https://github.com/microsoft/fluentui/pull/15534) by xgao@microsoft.com)
 
 ## [0.4.3](https://github.com/microsoft/fluentui/tree/@fluentui/react-link_v0.4.3)
 

@@ -2,6 +2,21 @@
   "name": "@fluentui/web-components",
   "entries": [
     {
+      "date": "Thu, 22 Oct 2020 02:14:24 GMT",
+      "tag": "@fluentui/web-components_v0.6.3",
+      "version": "0.6.3",
+      "comments": {
+        "none": [
+          {
+            "comment": "Add beachball config for disallowed change types",
+            "author": "xgao@microsoft.com",
+            "commit": "70b50d9111970db304f08566f7ff15fe3699fae5",
+            "package": "@fluentui/web-components"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 25 Sep 2020 12:25:17 GMT",
       "tag": "@fluentui/web-components_v0.4.0",
       "version": "0.4.0",

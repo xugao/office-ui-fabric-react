@@ -1,8 +1,19 @@
 # Change Log - @uifabric/react-hooks
 
-This log was last generated on Fri, 11 Sep 2020 12:27:31 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [8.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@uifabric/react-hooks_v8.0.0-beta.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@uifabric/react-hooks_v7.13.5..@uifabric/react-hooks_v8.0.0-beta.0)
+
+### Changes
+
+- Remove react-dom from peerDependencies ([PR #15634](https://github.com/microsoft/fluentui/pull/15634) by elcraig@microsoft.com)
+- Improvement for `useBoolean` hook ([PR #15607](https://github.com/microsoft/fluentui/pull/15607) by fu.juntao358@gmail.com)
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
 
 ## [7.13.0](https://github.com/microsoft/fluentui/tree/@uifabric/react-hooks_v7.13.0)
 

@@ -1,6 +1,17 @@
-# Change Log - @uifabric/set-version
+# Change Log - @fluentui/set-version
 
-This log was last generated on Wed, 25 Mar 2020 12:30:04 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
+
+<!-- Start content -->
+
+## [8.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@fluentui/set-version_v8.0.0-beta.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@uifabric/set-version_v7.0.16..@fluentui/set-version_v8.0.0-beta.0)
+
+### Changes
+
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
 
 ## 7.0.9
 Wed, 25 Mar 2020 12:30:04 GMT
@@ -62,4 +73,3 @@ Fri, 21 Sep 2018 14:25:46 GMT
 ### Minor changes
 
 - Adding a set-version package to manage duplicated version code
-

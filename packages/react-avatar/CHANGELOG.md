@@ -1,8 +1,24 @@
 # Change Log - @fluentui/react-avatar
 
-This log was last generated on Fri, 25 Sep 2020 12:25:17 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [0.8.0](https://github.com/microsoft/fluentui/tree/@fluentui/react-avatar_v0.8.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@fluentui/react-avatar_v0.6.4..@fluentui/react-avatar_v0.8.0)
+
+### Minor changes
+
+- Rename @fluentui/react-icons to @fluentui/react-icons-mdl2 ([PR #15599](https://github.com/microsoft/fluentui/pull/15599) by ololubek@microsoft.com)
+
+### Patches
+
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
+- Design updates and clean up for Avatar styles. ([PR #15352](https://github.com/microsoft/fluentui/pull/15352) by behowell@microsoft.com)
+- Animations for avatar's active/inactive state ([PR #15255](https://github.com/microsoft/fluentui/pull/15255) by behowell@microsoft.com)
+- Remove unneeded package dependencies. ([PR #15456](https://github.com/microsoft/fluentui/pull/15456) by xgao@microsoft.com)
 
 ## [0.6.4](https://github.com/microsoft/fluentui/tree/@fluentui/react-avatar_v0.6.4)
 

@@ -1,8 +1,21 @@
 # Change Log - @fluentui/codemods
 
-This log was last generated on Thu, 24 Sep 2020 00:46:56 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [1.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@fluentui/codemods_v1.0.0-beta.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@fluentui/codemods_v0.11.14..@fluentui/codemods_v1.0.0-beta.0)
+
+### Changes
+
+- Fixes tests to correctly run on Windows machines. ([PR #15576](https://github.com/microsoft/fluentui/pull/15576) by humbertomakotomorimoto@gmail.com)
+- Rename office-ui-fabric-react package and update references ([PR #15271](https://github.com/microsoft/fluentui/pull/15271) by elcraig@microsoft.com)
+- Codemods: Tighten up NoOp return types ([PR #15377](https://github.com/microsoft/fluentui/pull/15377) by joschect@microsoft.com)
+- fix memory overflow in codemods ([PR #15353](https://github.com/microsoft/fluentui/pull/15353) by joschect@microsoft.com)
+- Remove unneeded package dependencies. ([PR #15456](https://github.com/microsoft/fluentui/pull/15456) by xgao@microsoft.com)
 
 ## [0.11.14](https://github.com/microsoft/fluentui/tree/@fluentui/codemods_v0.11.14)
 

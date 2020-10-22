@@ -1,8 +1,17 @@
 # Change Log - @uifabric/webpack-utils
 
-This log was last generated on Thu, 16 Apr 2020 04:01:45 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [8.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@uifabric/webpack-utils_v8.0.0-beta.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@uifabric/webpack-utils_v7.0.24..@uifabric/webpack-utils_v8.0.0-beta.0)
+
+### Changes
+
+- Rename office-ui-fabric-react package and update references ([PR #15271](https://github.com/microsoft/fluentui/pull/15271) by elcraig@microsoft.com)
 
 ## [7.0.12](https://github.com/microsoft/fluentui/tree/@uifabric/webpack-utils_v7.0.12)
 

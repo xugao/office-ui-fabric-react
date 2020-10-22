@@ -1,8 +1,20 @@
-# Change Log - @fluentui/react-icons
+# Change Log - @fluentui/react-icons-mdl2
 
-This log was last generated on Fri, 12 Jun 2020 18:29:07 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [1.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@fluentui/react-icons-mdl2_v1.0.0-beta.0)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@fluentui/react-icons_v0.3.5..@fluentui/react-icons-mdl2_v1.0.0-beta.0)
+
+### Changes
+
+- Remove react-dom from peerDependencies ([PR #15634](https://github.com/microsoft/fluentui/pull/15634) by elcraig@microsoft.com)
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
+- Rename @fluentui/react-icons to @fluentui/react-icons-mdl2 ([PR #15599](https://github.com/microsoft/fluentui/pull/15599) by ololubek@microsoft.com)
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
 
 ## [0.1.27](https://github.com/microsoft/fluentui/tree/@fluentui/react-icons_v0.1.27)
 

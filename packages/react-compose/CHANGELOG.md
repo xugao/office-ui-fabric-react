@@ -1,8 +1,18 @@
 # Change Log - @fluentui/react-compose
 
-This log was last generated on Tue, 15 Sep 2020 12:26:06 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 02:14:24 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [0.19.7](https://github.com/microsoft/fluentui/tree/@fluentui/react-compose_v0.19.7)
+
+Thu, 22 Oct 2020 02:14:24 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@fluentui/react-compose_v0.19.1..@fluentui/react-compose_v0.19.7)
+
+### Patches
+
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
+- Add missing version.ts; Remove unneeded package dependencies. ([PR #15456](https://github.com/microsoft/fluentui/pull/15456) by xgao@microsoft.com)
 
 ## [0.19.0](https://github.com/microsoft/fluentui/tree/@fluentui/react-compose_v0.19.0)
 
