@@ -1,8 +1,20 @@
 # Change Log - @fluentui/react-window-provider
 
-This log was last generated on Wed, 19 Aug 2020 12:44:33 GMT and should not be manually modified.
+This log was last generated on Thu, 22 Oct 2020 23:23:50 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [2.0.0-beta.0](https://github.com/microsoft/fluentui/tree/@fluentui/react-window-provider_v2.0.0-beta.0)
+
+Thu, 22 Oct 2020 23:23:50 GMT 
+[Compare changes](https://github.com/microsoft/fluentui/compare/@fluentui/react-window-provider_v0.3.2..@fluentui/react-window-provider_v2.0.0-beta.0)
+
+### Changes
+
+- Add missing version.ts; Remove unneeded package dependencies. ([PR #15456](https://github.com/microsoft/fluentui/pull/15456) by xgao@microsoft.com)
+- Remove react-dom from peerDependencies ([PR #15634](https://github.com/microsoft/fluentui/pull/15634) by elcraig@microsoft.com)
+- Rename @uifabric/set-version to @fluentui/set-version ([PR #15616](https://github.com/microsoft/fluentui/pull/15616) by ololubek@microsoft.com)
+- Fix version.ts to have correct package name.  ([PR #15532](https://github.com/microsoft/fluentui/pull/15532) by xgao@microsoft.com)
 
 ## [0.2.0](https://github.com/microsoft/fluentui/tree/@fluentui/react-window-provider_v0.2.0)
 
