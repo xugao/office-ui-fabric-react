@@ -4,6 +4,7 @@ import { CheckboxBase } from './Checkbox.base';
 import { getStyles } from './Checkbox.styles';
 import { ICheckboxProps, ICheckboxStyleProps, ICheckboxStyles } from './Checkbox.types';
 
+// test
 export const Checkbox: React.FunctionComponent<ICheckboxProps> = styled<
   ICheckboxProps,
   ICheckboxStyleProps,

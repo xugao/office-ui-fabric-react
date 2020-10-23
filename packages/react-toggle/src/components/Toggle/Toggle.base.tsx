@@ -8,6 +8,7 @@ const getClassNames = classNamesFunction<IToggleStyleProps, IToggleStyles>();
 
 const COMPONENT_NAME = 'Toggle';
 
+// test
 export const ToggleBase: React.FunctionComponent<IToggleProps> = React.forwardRef<HTMLElement, IToggleProps>(
   (props, forwardedRef) => {
     const {

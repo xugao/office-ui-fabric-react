@@ -6,6 +6,7 @@ import { Icon } from '@fluentui/react-internal/lib/Icon';
 
 const getClassNames = classNamesFunction<ICheckboxStyleProps, ICheckboxStyles>();
 
+// test
 export const CheckboxBase: React.FunctionComponent<ICheckboxProps> = React.forwardRef<HTMLDivElement, ICheckboxProps>(
   (props, forwardedRef) => {
     const {

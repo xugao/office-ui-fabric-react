@@ -35,6 +35,7 @@ import { IKeytipProps } from '../../../Keytip';
 /**
  * {@docCategory CompatButton}
  */
+// test
 export interface IBaseButtonProps extends IButtonProps {
   baseClassName?: string;
   variantClassName?: string;

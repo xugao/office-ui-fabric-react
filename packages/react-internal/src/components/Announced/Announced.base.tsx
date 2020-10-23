@@ -7,6 +7,8 @@ const getClassNames = classNamesFunction<{}, IAnnouncedStyles>();
 /**
  * {@docCategory Announced}
  */
+
+// test
 export class AnnouncedBase extends React.Component<IAnnouncedProps> {
   public static defaultProps: Partial<IAnnouncedProps> = {
     'aria-live': 'polite',
