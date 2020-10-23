@@ -2,6 +2,21 @@
   "name": "@fluentui/react-toggle",
   "entries": [
     {
+      "date": "Fri, 23 Oct 2020 21:24:10 GMT",
+      "tag": "@fluentui/react-toggle_v1.0.0-beta.1",
+      "version": "1.0.0-beta.1",
+      "comments": {
+        "prerelease": [
+          {
+            "comment": "Major bump react-compose package since it dependes on packages with new major.",
+            "author": "xgao@microsoft.com",
+            "commit": "10139707e430fa80f1970780f6075a2a40fc1b51",
+            "package": "@fluentui/react-toggle"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 23 Oct 2020 03:26:15 GMT",
       "tag": "@fluentui/react-toggle_v1.0.0-beta.0",
       "version": "1.0.0-beta.0",
