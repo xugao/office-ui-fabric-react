@@ -9,7 +9,6 @@ export function makeSemanticColors(
   e: IEffects,
   s: Partial<ISemanticColors> | undefined,
   isInverted: boolean,
-  depComments: boolean = false,
 ): ISemanticColors {
   const semanticColors: Partial<ISemanticColors> = {
     primaryButtonBorder: 'transparent',
@@ -34,15 +33,10 @@ export function makeSemanticColors(
     severeWarningBackground: !isInverted ? '#FED9CC' : '#4F2A0F',
     successBackground: !isInverted ? '#DFF6DD' : '#393D1B',
 
-    // deprecated
-    warningHighlight: !isInverted ? '#ffb900' : '#fff100',
-    successText: !isInverted ? '#107C10' : '#92c353',
-
     ...s,
   };
 
-  const fullSemanticColors = getSemanticColors<ISemanticColors>(p, e, semanticColors, isInverted);
-  return _fixDeprecatedSlots(fullSemanticColors, depComments);
+  return getSemanticColors<ISemanticColors>(p, e, semanticColors, isInverted);
 }
 
 /**
@@ -53,7 +47,6 @@ export function getSemanticColors<TResult = Partial<ISemanticColors>>(
   e: Partial<IEffects> | undefined,
   s: Partial<ISemanticColors> | undefined,
   isInverted: boolean,
-  depComments: boolean = false,
 ): TResult {
   let result: Partial<ISemanticColors> = {};
 
@@ -132,8 +125,6 @@ export function getSemanticColors<TResult = Partial<ISemanticColors>>(
     result.listItemBackgroundChecked = neutralLight;
     result.listHeaderBackgroundPressed = neutralLight;
     result.menuItemBackgroundPressed = neutralLight;
-    // eslint-disable-next-line deprecation/deprecation
-    result.menuItemBackgroundChecked = neutralLight;
   }
   if (neutralLighter) {
     result.bodyBackgroundHovered = neutralLighter;
@@ -218,21 +209,4 @@ export function getSemanticColors<TResult = Partial<ISemanticColors>>(
   };
 
   return result as TResult;
-}
-
-function _fixDeprecatedSlots(s: ISemanticColors, depComments: boolean): ISemanticColors {
-  // Add @deprecated tag as comment if enabled
-  let dep = '';
-  if (depComments === true) {
-    dep = ' /* @deprecated */';
-  }
-
-  /* eslint-disable deprecation/deprecation */
-  s.listTextColor = s.listText + dep;
-  s.menuItemBackgroundChecked += dep;
-  s.warningHighlight += dep;
-  s.warningText = s.messageText + dep;
-  s.successText += dep;
-  /* eslint-enable deprecation/deprecation */
-  return s;
 }
