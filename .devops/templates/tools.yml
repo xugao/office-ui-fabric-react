@@ -11,3 +11,4 @@ steps:
       versionSpec: 1.19.x
       checkLatest: true
       includePrerelease: false
+      arguments: --verbose
