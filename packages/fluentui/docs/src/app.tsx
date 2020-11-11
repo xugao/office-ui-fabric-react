@@ -63,6 +63,7 @@ const App: React.FC = () => {
 
   const rendererFactory = useRendererFactory();
 
+  // provider is here
   return (
     <ThemeContext.Provider value={themeContext}>
       <RendererContext.Provider value={rendererFactory}>
