@@ -62,12 +62,13 @@ export const useMenuButtonClasses = makeVariantClasses<MenuButtonState, MenuButt
   },
 
   variants: (theme: Theme): MenuButtonVariants => {
-    const { palette } = theme;
+    const { palette, tokens } = theme;
+    const body = tokens?.color?.body;
 
     return {
       root: {
         menuIconSize: '12px',
-        menuIconColor: 'var(--body-menuIconColor)',
+        menuIconColor: body?.menuIconColor,
       },
 
       ghost: {
