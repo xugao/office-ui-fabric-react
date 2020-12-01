@@ -1,11 +1,4 @@
-import {
-  Chat,
-  Provider,
-  Avatar,
-  ChatMessageProps,
-  ShorthandCollection,
-  ReactionProps,
-} from '@fluentui/react-northstar';
+import { Chat, Avatar, ChatMessageProps, ShorthandCollection, ReactionProps } from '@fluentui/react-northstar';
 import * as React from 'react';
 import Popover from './Popover';
 import ReactionPopup from './ReactionPopup';
@@ -35,93 +28,46 @@ const janeAvatar = {
 
 const ChatWithPopover = () => {
   return (
-    <Provider
-      theme={{
-        componentStyles: {
-          ChatMessage: {
-            root: ({ props: p, theme: { siteVariables } }) => ({
-              '& a': {
-                color: siteVariables.colors.brand[600],
-              },
-            }),
-          },
-          Menu: {
-            root: {
-              background: '#fff',
-              transition: 'opacity 0.2s',
-              position: 'absolute',
-
-              '& a:focus': {
-                textDecoration: 'none',
-                color: 'inherit',
-              },
-              '& a': {
-                color: 'inherit',
-              },
-
-              '& .smile-emoji': {
-                position: 'absolute',
-                opacity: 0,
-                zIndex: -1,
-              },
-
-              '&.focused .smile-emoji': {
-                position: 'initial',
-                zIndex: 'initial',
-                opacity: 1,
-              },
-
-              '&:hover .smile-emoji': {
-                position: 'initial',
-                zIndex: 'initial',
-                opacity: 1,
-              },
-            },
-          },
+    <Chat
+      items={[
+        {
+          key: 'a',
+          message: (
+            <TeamsChatMessage
+              author="Jane Doe"
+              content={
+                <div>
+                  <a href="/">Link</a> Hover me to see the actions <a href="/">Some Link</a>
+                </div>
+              }
+              reactionGroup={{
+                items: reactions,
+              }}
+              timestamp="Yesterday, 10:15 PM"
+            />
+          ),
+          gutter: <Avatar {...janeAvatar} />,
         },
-      }}
-    >
-      <Chat
-        items={[
-          {
-            key: 'a',
-            message: (
-              <TeamsChatMessage
-                author="Jane Doe"
-                content={
-                  <div>
-                    <a href="/">Link</a> Hover me to see the actions <a href="/">Some Link</a>
-                  </div>
-                }
-                reactionGroup={{
-                  items: reactions,
-                }}
-                timestamp="Yesterday, 10:15 PM"
-              />
-            ),
-            gutter: <Avatar {...janeAvatar} />,
-          },
-          {
-            key: 'b',
-            message: (
-              <TeamsChatMessage
-                author="Jane Doe"
-                content={
-                  <div>
-                    <a href="/">Link</a> Hover me to see the actions <a href="/">Some Link</a>
-                  </div>
-                }
-                reactionGroup={{
-                  items: reactions,
-                }}
-                timestamp="Yesterday, 10:15 PM"
-              />
-            ),
-            gutter: <Avatar {...janeAvatar} />,
-          },
-        ]}
-      />
-    </Provider>
+        {
+          key: 'b',
+          message: (
+            <TeamsChatMessage
+              author="Jane Doe"
+              content={
+                <div>
+                  <a href="/">Link</a> Hover me to see the actions <a href="/">Some Link</a>
+                </div>
+              }
+              reactionGroup={{
+                items: reactions,
+              }}
+              timestamp="Yesterday, 10:15 PM"
+            />
+          ),
+          gutter: <Avatar {...janeAvatar} />,
+        },
+      ]}
+    />
   );
 };
 

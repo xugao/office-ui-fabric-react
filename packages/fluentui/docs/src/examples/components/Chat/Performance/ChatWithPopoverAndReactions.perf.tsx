@@ -1,4 +1,13 @@
-import { Accessibility, Chat, Menu, menuAsToolbarBehavior } from '@fluentui/react-northstar';
+import {
+  Accessibility,
+  Chat,
+  Menu,
+  menuAsToolbarBehavior,
+  Popup,
+  Reaction,
+  ReactionProps,
+  ShorthandCollection,
+} from '@fluentui/react-northstar';
 import * as _ from 'lodash';
 import cx from 'classnames';
 import * as React from 'react';
@@ -19,8 +28,8 @@ interface PopoverState {
   focused: boolean;
 }
 
-const popoverBehavior: Accessibility = () => {
-  const behavior = menuAsToolbarBehavior();
+const popoverBehavior: Accessibility = (props: any) => {
+  const behavior = menuAsToolbarBehavior(props);
 
   behavior.focusZone.props.defaultTabbableElement = (root: HTMLElement): HTMLElement => {
     return root.querySelector('[aria-label="thumbs up"]');
@@ -28,6 +37,69 @@ const popoverBehavior: Accessibility = () => {
 
   return behavior;
 };
+
+const reactions: ShorthandCollection<ReactionProps> = [
+  {
+    icon: <LikeIcon />,
+    content: '1K',
+    key: 'likes',
+    variables: { meReacting: true },
+    children: (Component, props) => <ReactionPopup {...props} />,
+  },
+  {
+    icon: <EmojiIcon />,
+    content: 2,
+    key: 'smiles',
+    children: (Component, props) => <ReactionPopup {...props} />,
+  },
+];
+
+const getAriaLabel = ({ content: numberOfPersons, icon: emojiType }: ReactionProps) => {
+  if (numberOfPersons === 1) {
+    return `One person reacted to this message with a ${emojiType} emoji. Open menu to see person who reacted.`;
+  }
+  return `${numberOfPersons} people reacted this message with a ${emojiType} emoji. Open menu to see people who reacted.`;
+};
+
+class ReactionPopup extends React.Component<ReactionProps, { open: boolean }> {
+  state = {
+    open: false,
+  };
+
+  handleKeyDownOnMenu = e => {
+    if (e.keyCode === '') {
+      this.setState({ open: false });
+    }
+  };
+
+  handleOpenChange = (e, { open }) => {
+    this.setState({ open });
+  };
+
+  render() {
+    return (
+      <Popup
+        autoFocus
+        trigger={<Reaction as="button" aria-haspopup="true" {...this.props} aria-label={getAriaLabel(this.props)} />}
+        content={{
+          children: () => (
+            <Menu
+              items={['Jane Doe', 'John Doe']}
+              vertical
+              variables={{ borderColor: 'transparent' }}
+              onKeyDown={this.handleKeyDownOnMenu}
+            />
+          ),
+        }}
+        inline
+        on="hover"
+        position="below"
+        open={this.state.open}
+        onOpenChange={this.handleOpenChange}
+      />
+    );
+  }
+}
 
 class Popover extends React.Component<PopoverProps, PopoverState> {
   state = {
@@ -94,7 +166,7 @@ class Popover extends React.Component<PopoverProps, PopoverState> {
   }
 }
 
-const ChatWithPopoverPerf = () => {
+const ChatWithPopoverAndReactionsPerf = () => {
   return (
     <Chat
       items={_.times(100, i => ({
@@ -109,6 +181,7 @@ const ChatWithPopoverPerf = () => {
               </div>
             }
             timestamp="Yesterday, 10:15 PM"
+            reactionGroup={reactions}
           />
         ),
       }))}
@@ -116,7 +189,7 @@ const ChatWithPopoverPerf = () => {
   );
 };
 
-ChatWithPopoverPerf.iterations = 1;
-ChatWithPopoverPerf.filename = 'ChatWithPopover.perf.tsx';
+ChatWithPopoverAndReactionsPerf.iterations = 1;
+ChatWithPopoverAndReactionsPerf.filename = 'ChatWithPopoverAndReactions.perf.tsx';
 
-export default ChatWithPopoverPerf;
+export default ChatWithPopoverAndReactionsPerf;

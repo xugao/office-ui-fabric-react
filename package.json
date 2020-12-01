@@ -37,6 +37,7 @@
     "check-for-changed-files": "cd scripts && just-scripts check-for-modified-files",
     "perf": "cross-env PERF=true gulp perf --times=100",
     "perf:debug": "cross-env PERF=true gulp perf:debug --debug",
+    "memory:measure": "cross-env PERF=true gulp memory",
     "preinstall": "node ./scripts/use-yarn-please.js",
     "prelint": "yarn satisfied && yarn syncpack:list && node ./scripts/lint-files/index.js",
     "postinstall": "node ./scripts/postinstall.js",

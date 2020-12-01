@@ -1,4 +1,4 @@
-import { Avatar, Chat, Provider } from '@fluentui/react-northstar';
+import { Avatar, Chat } from '@fluentui/react-northstar';
 import * as _ from 'lodash';
 import * as React from 'react';
 import { AcceptIcon } from '@fluentui/react-icons-northstar';
@@ -13,43 +13,29 @@ const janeAvatar = {
   status: { color: 'green', icon: <AcceptIcon /> },
 };
 
-const ChatDuplicateMessagesPerf = () => {
+const ChatWithAvatarMessagesPerf = () => {
   return (
-    <Provider
-      theme={{
-        componentStyles: {
-          ChatMessage: {
-            root: ({ props: p, theme: { siteVariables } }) => ({
-              '& a': {
-                color: siteVariables.colors.brand[600],
-              },
-            }),
-          },
-        },
-      }}
-    >
-      <Chat
-        items={_.times(100, i => ({
-          key: `a${i}`,
-          message: (
-            <Chat.Message
-              author="Jane Doe"
-              content={
-                <div>
-                  <a href="/">Link</a> Hover me to see the actions <a href="/">Some Link</a>
-                </div>
-              }
-              timestamp="Yesterday, 10:15 PM"
-            />
-          ),
-          gutter: <Avatar {...janeAvatar} />,
-        }))}
-      />
-    </Provider>
+    <Chat
+      items={_.times(100, i => ({
+        key: `a${i}`,
+        message: (
+          <Chat.Message
+            author="Jane Doe"
+            content={
+              <div>
+                <a href="/">Link</a> Hover me to see the actions <a href="/">Some Link</a>
+              </div>
+            }
+            timestamp="Yesterday, 10:15 PM"
+          />
+        ),
+        gutter: <Avatar {...janeAvatar} />,
+      }))}
+    />
   );
 };
 
-ChatDuplicateMessagesPerf.iterations = 1;
-ChatDuplicateMessagesPerf.filename = 'ChatDuplicateMessages.perf.tsx';
+ChatWithAvatarMessagesPerf.iterations = 1;
+ChatWithAvatarMessagesPerf.filename = 'ChatWithAvatarMessages.perf.tsx';
 
-export default ChatDuplicateMessagesPerf;
+export default ChatWithAvatarMessagesPerf;

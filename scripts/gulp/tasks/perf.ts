@@ -211,3 +211,10 @@ task('perf:serve:stop', cb => {
 
 task('perf', series('perf:clean', 'perf:build', 'perf:serve', 'perf:run', 'perf:serve:stop'));
 task('perf:debug', series('perf:clean', 'perf:build', 'perf:serve'));
+
+task('memory', async () => {
+  const browserName: 'chrome' | 'electron' = (argv.browser as 'chrome' | 'electron') || 'chrome';
+  const browser = browserName === 'electron' ? await createElectron(argv.electronPath as string) : await createChrome();
+
+  await browser.openPage(argv.url as string);
+});
