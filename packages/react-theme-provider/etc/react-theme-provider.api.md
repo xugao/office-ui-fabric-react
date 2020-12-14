@@ -5,6 +5,7 @@
 ```ts
 
 import { ColorTokenSet } from '@fluentui/theme';
+import * as CSS from 'csstype';
 import { ICustomizerContext } from '@fluentui/utilities';
 import { IFontFace } from '@fluentui/merge-styles';
 import { IKeyframes } from '@fluentui/merge-styles';
@@ -13,6 +14,7 @@ import { IRawStyle } from '@fluentui/merge-styles';
 import { IStyle } from '@fluentui/merge-styles';
 import { IStyleFunctionOrObject } from '@fluentui/merge-styles';
 import { PartialTheme } from '@fluentui/theme';
+import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { Theme } from '@fluentui/theme';
 import { TokenSetType } from '@fluentui/theme';
@@ -87,6 +89,8 @@ export interface StyleProps<TTokens extends ColorTokenSet = ColorTokenSet> {
 export interface StyleRenderer {
     getId: () => number;
     renderFontFace: (fontFace: FontFace, options: StyleRendererOptions) => void;
+    // Warning: (ae-forgotten-export) The symbol "React" needs to be exported by the entry point index.d.ts
+    renderGlobal: (styles: React_2.CSSProperties | string, options: StyleRendererOptions) => void;
     renderKeyframes: (keyframes: KeyFrames, options: StyleRendererOptions) => string;
     renderStyles: <TRuleSet>(ruleSet: TRuleSet, options: StyleRendererOptions) => {
         [key in keyof TRuleSet]: string;

@@ -7,6 +7,8 @@ import {
   fontFace as mergeFontFace,
   keyframes as mergeKeyframes,
 } from '@fluentui/merge-styles';
+import { getStyleOptions } from '@fluentui/merge-styles/lib/StyleOptionsState';
+import { serializeRuleEntries } from '@fluentui/merge-styles/lib/styleToClassName';
 
 let _seed = 0;
 
@@ -30,6 +32,13 @@ export const mergeStylesRenderer: StyleRenderer = {
   renderKeyframes: keyframes => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return mergeKeyframes(keyframes as any);
+  },
+
+  renderGlobal: (styles: React.CSSProperties | string) => {
+    Stylesheet.getInstance().insertRule(
+      typeof styles === 'string' ? styles : serializeRuleEntries(getStyleOptions(), styles as any),
+      true,
+    );
   },
 };
 

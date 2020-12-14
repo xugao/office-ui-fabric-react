@@ -30,7 +30,12 @@ export interface StyleRenderer {
   renderKeyframes: (keyframes: KeyFrames, options: StyleRendererOptions) => string;
 
   /**
-   * Renders fontfaces.
+   * Renders font faces.
    */
   renderFontFace: (fontFace: FontFace, options: StyleRendererOptions) => void;
+
+  /**
+   * Renders global styles.
+   */
+  renderGlobal: (styles: React.CSSProperties | string, options: StyleRendererOptions) => void;
 }
