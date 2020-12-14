@@ -12,6 +12,238 @@ import { IStyleFunctionOrObject } from '@fluentui/utilities';
 export const AnimationStyles: IAnimationStyles;
 
 // @public
+export const AnimationStylesNext: {
+    slideRightIn10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideRightIn20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideRightIn40: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideRightIn400: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftIn10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftIn20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftIn40: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftIn400: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideUpIn10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideUpIn20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideDownIn10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideDownIn20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideRightOut10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideRightOut20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideRightOut40: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideRightOut400: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftOut10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftOut20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftOut40: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideLeftOut400: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideUpOut10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideUpOut20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideDownOut10: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    slideDownOut20: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    scaleUpIn100: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    scaleDownIn100: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    scaleUpOut103: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    scaleDownOut98: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeIn100: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeIn200: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeIn400: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeIn500: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeOut100: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeOut200: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeOut400: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    fadeOut500: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    rotate90deg: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+    rotateN90deg: {
+        keyframes: any;
+        duration: string;
+        timingFunction: string;
+        fillMode: string;
+    };
+};
+
+// @public
 export const AnimationVariables: IAnimationVariables;
 
 // @public

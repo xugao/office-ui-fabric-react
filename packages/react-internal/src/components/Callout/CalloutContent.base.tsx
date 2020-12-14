@@ -19,21 +19,22 @@ import {
   IPositionProps,
   getMaxHeight,
   IPosition,
-  RectangleEdge,
   positionCard,
   getBoundsFromTargetWindow,
+  RectangleEdge,
 } from '../../Positioning';
 import { Popup } from '../../Popup';
 import { classNamesFunction } from '../../Utilities';
-import { AnimationClassNames } from '../../Styling';
 import { useMergedRefs, useAsync, useConst, useTarget } from '@fluentui/react-hooks';
+import { makeAnimations } from '@fluentui/react-theme-provider/lib/makeAnimations2';
+import { AnimationStylesNext } from '@fluentui/theme/lib/motion/AnimationStylesNext';
 
-const ANIMATIONS: { [key: number]: string | undefined } = {
-  [RectangleEdge.top]: AnimationClassNames.slideUpIn10,
-  [RectangleEdge.bottom]: AnimationClassNames.slideDownIn10,
-  [RectangleEdge.left]: AnimationClassNames.slideLeftIn10,
-  [RectangleEdge.right]: AnimationClassNames.slideRightIn10,
-};
+const useAnimationStyles = makeAnimations({
+  top: AnimationStylesNext.slideUpIn10,
+  left: AnimationStylesNext.slideLeftIn10,
+  right: AnimationStylesNext.slideRightIn10,
+  down: AnimationStylesNext.slideDownIn10,
+});
 
 const getClassNames = classNamesFunction<ICalloutContentStyleProps, ICalloutContentStyles>({
   disableCaching: true, // disabling caching because stylesProp.position mutates often
@@ -458,6 +459,14 @@ export const CalloutContentBase: React.FunctionComponent<ICalloutProps> = React.
 
     useAutoFocus(props, positions, calloutElement);
 
+    const animations = useAnimationStyles(); // TODO: fix typing
+    const animationClasses: { [key: number]: string | undefined } = {
+      [RectangleEdge.top]: animations.top,
+      [RectangleEdge.bottom]: animations.down,
+      [RectangleEdge.left]: animations.left,
+      [RectangleEdge.right]: animations.right,
+    };
+
     React.useEffect(() => {
       if (!hidden) {
         onLayerMounted?.();
@@ -497,11 +506,12 @@ export const CalloutContentBase: React.FunctionComponent<ICalloutProps> = React.
 
     const visibilityStyle: React.CSSProperties | undefined = props.hidden ? { visibility: 'hidden' } : undefined;
     // React.CSSProperties does not understand IRawStyle, so the inline animations will need to be cast as any for now.
+
     const content = (
       <div ref={rootRef} className={classNames.container} style={visibilityStyle}>
         <div
           {...getNativeProps(props, divProperties, ARIA_ROLE_ATTRIBUTES)}
-          className={css(classNames.root, positions && positions.targetEdge && ANIMATIONS[positions.targetEdge!])}
+          className={css(classNames.root, positions && positions.targetEdge && animationClasses[positions.targetEdge!])}
           style={positions ? positions.elementPosition : OFF_SCREEN_STYLE}
           // Safari and Firefox on Mac OS requires this to back-stop click events so focus remains in the Callout.
           // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#Clicking_and_focus
