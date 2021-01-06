@@ -103,6 +103,7 @@ export async function createElectron(electronPath: string): Promise<Browser> {
   }).stdout.trim();
   const devtoolsPort = 9222;
 
+  console.log(`Electron path: ${electronPath}`);
   console.log(`Electron version: ${electronVersion}`);
 
   return {
