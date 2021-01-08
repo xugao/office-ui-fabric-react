@@ -106,7 +106,9 @@ export type StyleRendererOptions = {
 export { Theme }
 
 // @public (undocumented)
-export const ThemeContext: React.Context<Theme | undefined>;
+export const ThemeContext: React.Context<(Theme & {
+    [key: string]: any;
+}) | undefined>;
 
 // @public
 export const ThemeProvider: React.FunctionComponent<ThemeProviderProps>;
@@ -117,7 +119,9 @@ export interface ThemeProviderProps extends React.HTMLAttributes<HTMLDivElement>
     as?: React.ElementType;
     ref?: React.Ref<HTMLElement>;
     renderer?: StyleRenderer;
-    theme?: PartialTheme | Theme;
+    theme?: (PartialTheme | Theme) & {
+        [key: string]: any;
+    };
 }
 
 // @public
@@ -146,7 +150,7 @@ export type UseStylesOptions = {
 };
 
 // @public
-export const useTheme: () => Theme;
+export const useTheme: <TTheme extends Theme = Theme>() => TTheme;
 
 // @public
 export const useThemeProvider: (props: ThemeProviderProps, ref: React.Ref<HTMLElement>, defaultProps: ThemeProviderProps) => {

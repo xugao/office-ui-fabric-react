@@ -21,7 +21,8 @@ export interface ThemeProviderProps extends React.HTMLAttributes<HTMLDivElement>
   /**
    * Defines the theme provided by the user.
    */
-  theme?: PartialTheme | Theme;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  theme?: (PartialTheme | Theme) & { [key: string]: any };
 
   /**
    * Optional interface for registering dynamic styles. Defaults to using `merge-styles`. Use this
