@@ -69,6 +69,7 @@ function loadStories() {
 
   for (const req of contexts) {
     req.keys().forEach(key => {
+      console.log('key', key);
       generateStoriesFromExamples(key, stories, req);
     });
   }
