@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { makeVariantClasses, Theme } from '@fluentui/react-theme-provider';
+import { makeVariantClasses, Theme } from '@fluentui/react-theme-provider/lib/compat';
 import { EdgeChromiumHighContrastSelector } from '@fluentui/style-utilities';
 import { ButtonState, ButtonVariants } from './Button.types';
 

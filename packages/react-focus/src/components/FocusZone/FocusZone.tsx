@@ -28,7 +28,7 @@ import {
   createMergedRef,
 } from '@fluentui/utilities';
 import { mergeStyles } from '@fluentui/merge-styles';
-import { ThemeContext, Theme } from '@fluentui/react-theme-provider';
+import { ThemeContext, Theme } from '@fluentui/react-theme-provider/lib/compat';
 import { getTheme } from '@fluentui/style-utilities';
 
 const IS_FOCUSABLE_ATTRIBUTE = 'data-is-focusable';
