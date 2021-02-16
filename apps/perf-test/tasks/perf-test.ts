@@ -188,8 +188,42 @@ export async function getPerfRegressions() {
       // Removing the timeout to avoid perf-test failures but be cautious about long test runs.
       page.setDefaultTimeout(0);
 
+      /**
+       * rawEvents = []
+         Tracing.dataCollected(function(data){
+                         var events = data.value;
+                         rawEvents = rawEvents.concat(events);
+                     });
+         Page.loadEventFired(function(){Tracing.end()});
+         Tracing.start(); Page.navigate({'url': 'http://github.com'});
+
+         https://github.com/cyrus-and/chrome-remote-interface/issues/350
+         https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/gather/driver.js#L838
+
+         https://github.com/catapult-project/catapult/tree/master/tracing
+         https://github.com/catapult-project/catapult/blob/master/tracing/README.md
+         https://github.com/catapult-project/catapult/blob/master/tracing/bin/memory_infra_remote_dump
+       */
+
+      const client = await page.target().createCDPSession();
+
       await page.goto(options.url);
       await page.waitForSelector('#render-done');
+
+      await client.send('Tracing.start', {
+        traceConfig: {
+          excludedCategories: ['*'],
+          includedCategories: ['disabled-by-default-memory-infra'],
+          memoryDumpConfig: { triggers: [] },
+        },
+        transferMode: 'ReturnAsStream',
+      });
+
+      const memDump = await client.send('Tracing.requestMemoryDump');
+      if (memDump['success'] === false) {
+        console.error('request memory dump failed');
+        return;
+      }
     },
   };
 
